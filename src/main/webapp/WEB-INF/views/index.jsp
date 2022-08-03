@@ -15,6 +15,8 @@
 <a href="/students/addstudents">Add Student</a>	
 <br>
 <a href="/course/list">Course list</a>	
+<br>
+<a href="/details/carddetails">Add Student</a>	
 </body>
 </body>
 </html>

@@ -21,9 +21,7 @@ public class CourseController {
 
 	    @GetMapping("/list")
 	    public String getDetails(Model model) {
-	    	 System.out.println("listCourse");
 	        List<Course> course = courseService.getCourse();
-	        System.out.println("listCourse");
 	        model.addAttribute("allCourse", course );
 	        return "list-course";
 	    }
@@ -50,7 +48,7 @@ public class CourseController {
 	    }
 
 	    @PostMapping("/add")
-	    public String addEmployeeDetails(@ModelAttribute("addcoursedetail")  Course course) {
+	    public String addCourseDetails(@ModelAttribute("addcoursedetail")  Course course) {
 	    	courseService.save(course);
 	        return "redirect:/course/list";
 	    }
@@ -62,7 +60,7 @@ public class CourseController {
 		}
 
 		@PostMapping("/update")
-		public String updatecourse(@ModelAttribute("updatecourse") Course course) {
+		public String updateCourse(@ModelAttribute("updatecourse") Course course) {
 			courseService.save(course);
 			return "redirect:/course/list";
 		}

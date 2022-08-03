@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Course</title>
 </head>
 <body style="background-color: powderblue;">
 	<div id="root">
@@ -55,11 +55,8 @@
 						<form:input path="totalSeats" />
 					</div>
 				</div>
-				
 				</div>
-				
 				</div>
-				
 				<div>
 					<form:button>Click Update</form:button>
 				</div>
