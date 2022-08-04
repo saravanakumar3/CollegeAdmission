@@ -1,9 +1,15 @@
 package com.chainsys.admissionforcollege.model;
 
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.Table;
 
 
@@ -25,6 +31,24 @@ public class Course {
 	private int tuitionFee;
 	@Column(name = "totalseats")
 	private int totalSeats;
+	
+	 @JoinTable(
+		        name = "studentcoursedetails",
+		        joinColumns = {
+		            @JoinColumn(name = "CourseId")
+		        },
+		        inverseJoinColumns = {
+		            @JoinColumn(name = "UserId")
+		        })
+	    List<Student > student;
+	
+	
+	public List<Student> getStudent() {
+		return student;
+	}
+	public void setStudent(List<Student> student) {
+		this.student = student;
+	}
 	public int getCourseId() {
 		return courseId;
 	}

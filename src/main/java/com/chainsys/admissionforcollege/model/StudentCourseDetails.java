@@ -2,28 +2,26 @@ package com.chainsys.admissionforcollege.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "paymentsdetails")
-@IdClass(StudentCompositeKey.class)
-public class PaymentDetails {
-	@Id
-	@Column(name ="CourseId")
-	private int  courseId ;
-	@Id
-	@Column(name ="Userid")
-	private int userId;
+@Table(name = "studentcoursedetails")
+
+public class StudentCourseDetails {
 	@Id
 	@Column(name ="Registrationnumber")
-	private long registrationNumber;
+	private int registrationNumber;
+//	@Id
+	@Column(name ="Courseid")
+	private int  courseId ;
+//	@Id
+	@Column(name ="Userid")
+	private int userId;
+	
 	@Column(name ="paymentstatus")
-	private int paymentstatus ;
+     private String paymentstatus ;
+	
 	public int getCourseId() {
 		return courseId;
 	}
@@ -36,21 +34,20 @@ public class PaymentDetails {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public long getRegistrationNumber() {
+	public int getRegistrationNumber() {
 		return registrationNumber;
 	}
-	public void setRegistrationNumber(long registrationNumber) {
+	public void setRegistrationNumber(int registrationNumber) {
 		this.registrationNumber = registrationNumber;
 	}
-	public int getPaymentstatus() {
+	public String getPaymentstatus() {
 		return paymentstatus;
 	}
-	public void setPaymentstatus(int paymentstatus) {
+	public void setPaymentstatus(String paymentstatus) {
 		this.paymentstatus = paymentstatus;
 	}
-	
-//	 @OneToOne(fetch = FetchType.LAZY, optional = false)
-//	    @JoinColumn(name = "Course_id", nullable = false)
+
+
 	
 	
 }

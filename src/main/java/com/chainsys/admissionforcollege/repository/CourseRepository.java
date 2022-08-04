@@ -11,4 +11,5 @@ public interface CourseRepository extends CrudRepository<Course, Integer> {
 	   Course save(Course course); 
 	    void deleteById(int id);
 	    List<Course> findAll();
+	    List<Course> findBy();
 }

@@ -14,9 +14,6 @@
 	
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addstudentdetail">
-		
-
-				
 				<div>
 					<label for="id">Id</label>
 					<div>

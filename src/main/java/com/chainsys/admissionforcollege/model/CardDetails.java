@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class CardDetails {
 	@Id
 	@Column(name="registrationnumber")
-	private long registrationNumber;
+	private int registrationNumber;
 	@Column(name="amount")
    private long amount;
 	@Column(name="paymentdate")
@@ -21,10 +21,10 @@ public class CardDetails {
 	private long cvvNumber;
 	@Column(name="cardholdername")
 	private String cardholderName ;
-	public long getRegistrationNumber() {
+	public int getRegistrationNumber() {
 		return registrationNumber;
 	}
-	public void setRegistrationNumber(long registrationNumber) {
+	public void setRegistrationNumber(int registrationNumber) {
 		this.registrationNumber = registrationNumber;
 	}
 	public long getAmount() {

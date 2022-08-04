@@ -17,6 +17,9 @@
 <a href="/course/list">Course list</a>	
 <br>
 <a href="/details/carddetails">Add Student</a>	
+<br>
+<a href="/payment/paymentlist">Payment list</a>	
+<a href="/payment/addpaymentform" >Paymentform</a>
 </body>
 </body>
 </html>

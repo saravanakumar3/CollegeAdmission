@@ -50,7 +50,7 @@ public class StudentController {
     }
 
     @PostMapping("/add")
-    public String addEmployeeDetails(@ModelAttribute("addstudentdetail")  Student student) {
+    public String addStudentDetails(@ModelAttribute("addstudentdetail")  Student student) {
     	studentService.save(student);
         return "redirect:/students/list";
     }

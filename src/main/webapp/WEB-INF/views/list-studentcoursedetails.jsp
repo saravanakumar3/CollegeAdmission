@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,15 +21,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="PaymentDetails" items="${allpaymentlist}">
+				<c:forEach var="StudentCourseDetails" items= "${allstudencourse}">
 					<tr>
-						<td>${PaymentDetails.courseId}</td>
-						<td>${PaymentDetails.userId}</td>
-
-						<td>${PaymentDetails.registrationNumber}</td>
-						<td>${PaymentDetails.paymentstatus}</td>
-
-
+						<td>${StudentCourseDetails.courseId}</td>
+						<td>${StudentCourseDetails.userId}</td>
+						<td>${StudentCourseDetails.registrationNumber}</td>
+						<td>${StudentCourseDetails.paymentstatus}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

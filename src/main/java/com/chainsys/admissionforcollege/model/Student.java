@@ -1,10 +1,14 @@
 package com.chainsys.admissionforcollege.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -37,8 +41,18 @@ public class Student {
 	private String email;
 	@Column(name = "userpassword")
 	private String userPassword;
+	 @ManyToMany(mappedBy = "Student", cascade = { CascadeType.ALL })
+	 private Set<Course> course = new HashSet<Course>();
+	
 
-	@OneToOne(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	public Set<Course> getCourse() {
+		return course;
+	}
+
+	public void setCourse(Set<Course> course) {
+		this.course = course;
+	}
+
 	public int getId() {
 		return id;
 	}
