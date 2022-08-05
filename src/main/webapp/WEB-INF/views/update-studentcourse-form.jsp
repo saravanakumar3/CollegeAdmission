@@ -1,19 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>PaymentDetals</title>
+<title>Updates</title>
 </head>
 <body style="background-color: powderblue;">
-
 	<div id="root">
-	
 		<div id="form">
-			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourseDetails">
+			<form:form action="updatestudentCompositeKey" method="post" modelAttribute="updatestudentcoursedetails">
 				<div>
 					<label for="courseId">CourseId</label>
 					<div>

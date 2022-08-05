@@ -13,7 +13,7 @@
 
 	<div id="root">
 		<div id="form">
-			<form:form action="" method="post" modelAttribute="getstudentCourseDetails">
+			<form:form action="" method="post" modelAttribute="getbyidstudentcoursedetails">
 					<div>
 					<label for="courseId">CourseId</label>
 					<div>

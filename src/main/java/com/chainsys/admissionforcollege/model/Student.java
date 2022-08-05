@@ -1,6 +1,7 @@
 package com.chainsys.admissionforcollege.model;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -8,17 +9,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 
 @Entity
 @Table(name = "student")
 public class Student {
-
 	@Id
 	@Column(name = "userid")
-	private int id;
+	private int userid;
 	@Column(name = "name")
 	private String username;
 	@Column(name = "qualification")
@@ -41,25 +45,24 @@ public class Student {
 	private String email;
 	@Column(name = "userpassword")
 	private String userPassword;
-	 @ManyToMany(mappedBy = "Student", cascade = { CascadeType.ALL })
-	 private Set<Course> course = new HashSet<Course>();
-	
+   
+   @OneToMany(mappedBy="student",fetch=FetchType.LAZY)
+	private List<StudentCourseDetails> studentCourseDetails;
+   
+	public List<StudentCourseDetails> getStudentCourseDetails() {
+	return studentCourseDetails;
+}
 
-	public Set<Course> getCourse() {
-		return course;
-	}
+public void setStudentCourseDetails(List<StudentCourseDetails> studentCourseDetails) {
+	this.studentCourseDetails = studentCourseDetails;
+}
+	public int getUserid() {
+	return userid;
+}
 
-	public void setCourse(Set<Course> course) {
-		this.course = course;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+public void setUserid(int userid) {
+	this.userid = userid;
+}
 
 	public String getUsername() {
 		return username;

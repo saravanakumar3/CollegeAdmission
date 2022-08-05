@@ -1,21 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Registration Student</title>
+<title>Insert title here</title>
 </head>
 <body style="background-color: powderblue;">
 
 	<div id="root">
 	
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addstudentdetail">
+			<form:form action="" method="post" modelAttribute="getstudent">
 				<div>
-					<label for="userid">Id</label>
+					<label for="userid">UserId</label>
 					<div>
 						<form:input path="userid" />
 					</div>
@@ -88,12 +88,30 @@
 				</div>
 				
 				</div>
-				
-				<div>
-					<form:button>Registration</form:button>
-				</div>
 			</form:form>
+			
 		</div>
+		<div id="table root">
+		<table border="2" width="100%" cellpadding="2">
+			<thead>
+				<tr>
+					<th>CourseId</th>
+					<th>UserId</th>
+					<th>RegistrationNumber</th>
+					<th>Payment Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="StudentCourseDetails" items= "${studentcourselist}">
+					<tr>
+						<td>${StudentCourseDetails.courseId}</td>
+						<td>${StudentCourseDetails.userid}</td>
+						<td>${StudentCourseDetails.registrationNumber}</td>
+						<td>${StudentCourseDetails.paymentstatus}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 	</div>
-</body>
+	</div>
 </html>

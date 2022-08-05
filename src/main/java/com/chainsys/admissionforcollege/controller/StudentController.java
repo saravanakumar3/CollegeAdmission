@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.service.StudentService;
+import com.chainsys.admissionforcolllege.dto.StudentCourseDto;
 
 @Controller
 @RequestMapping("/students")
@@ -67,5 +68,19 @@ public class StudentController {
     	studentService.save(student);
         return "redirect:/students/list";
     }
+//    @GetMapping("/getstudent")
+//	public String getStudent(@RequestParam("id") int id, Model model) {
+//    	Student student = studentService.findByid(id);
+//		model.addAttribute("findStudentbyid", student);
+//		return "find-student-by-id";
+//	}
+	@GetMapping("/getidbystudent")
+	public String getPetVaccine(@RequestParam("id") int id,Model model) {
+		StudentCourseDto dto=studentService.getStudentCourseDto(id);
+		model.addAttribute("getstudent",dto.getStudent());
+		model.addAttribute("studentcourselist",dto.getStudentCourseDetails());
+		return "find-student-by-id";
+	}
+
 
 }

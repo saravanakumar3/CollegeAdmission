@@ -31,7 +31,7 @@
 			<tbody>
 				<c:forEach var="Student" items="${allstudent}">
 					<tr>
-						<td>${Student.id}</td>
+						<td>${Student.userid}</td>
 						<td>${Student.username}</td>			
 						<td>${Student.qualification}</td>
 						<td>${Student.sslcMark}</td>

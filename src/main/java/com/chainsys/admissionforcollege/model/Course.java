@@ -32,23 +32,14 @@ public class Course {
 	@Column(name = "totalseats")
 	private int totalSeats;
 	
-	 @JoinTable(
-		        name = "studentcoursedetails",
-		        joinColumns = {
-		            @JoinColumn(name = "CourseId")
-		        },
-		        inverseJoinColumns = {
-		            @JoinColumn(name = "UserId")
-		        })
-	    List<Student > student;
-	
-	
-	public List<Student> getStudent() {
-		return student;
-	}
-	public void setStudent(List<Student> student) {
-		this.student = student;
-	}
+//	 @JoinTable(
+//		        name = "studentcoursedetails",
+//		        joinColumns = {
+//		            @JoinColumn(name = "CourseId")
+//		        },
+//		        inverseJoinColumns = {
+//		            @JoinColumn(name = "UserId")
+//		        })
 	public int getCourseId() {
 		return courseId;
 	}

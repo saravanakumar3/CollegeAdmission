@@ -12,7 +12,6 @@
 	<div id="table root">
 		<table border="2" width="100%" cellpadding="2">
 			<thead>
-
 				<tr>
 					<th>CourseId</th>
 					<th>UserId</th>
@@ -21,7 +20,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="StudentCourseDetails" items= "${allstudencourse}">
+				<c:forEach var="StudentCourseDetails" items= "${alladdstudentCourseDetails}">
 					<tr>
 						<td>${StudentCourseDetails.courseId}</td>
 						<td>${StudentCourseDetails.userId}</td>
