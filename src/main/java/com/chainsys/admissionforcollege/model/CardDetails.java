@@ -7,6 +7,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Range;
+
 @Entity
 @Table(name="carddetails")
 public class CardDetails {
@@ -19,8 +21,10 @@ public class CardDetails {
 	private String paymentDate; 
 	@Column(name="cardnumber")
 	private long cardNumber ;
+	@NotBlank( message ="")
 	@Column(name="cvvnumber")
 	private long cvvNumber;
+	
 	@Size(min =3,max =50,message =" Username Size not less then 3")
 	@NotBlank( message ="cardholder name can not be Empty")
 	@Column(name="cardholdername")
