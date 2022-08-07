@@ -1,19 +1,22 @@
 package com.chainsys.admissionforcollege.model;
 
-import java.util.HashSet;
+import java.sql.Date;
 import java.util.List;
-import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
 
 import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 
@@ -23,26 +26,39 @@ public class Student {
 	@Id
 	@Column(name = "userid")
 	private int userid;
+	@Size(min =3,max =50,message =" Username Size not less then 2")
+	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "name")
 	private String username;
+	@Column(name = "dob")
+	private Date dob;
+	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "qualification")
 	private String qualification;
+	@Range(min=350,max=500,message="To register, you must have an SSCmark of at least 350")
 	@Column(name = "sslcmark")
 	private float sslcMark;
+	@Range(min=750,max=1200,message="To register, you must have an HSCmark of at least 750")
 	@Column(name = "hscmark")
 	private float hscMark;
+	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "gender")
 	private String gender;
+	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "address")
 	private String address;
+	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "User_location")
 	private String userlocation;
+	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "Nationally")
 	private String nation;
 	@Column(name = "phonenumber")
 	private long phoneNumber;
+	@Email(message="Please enter a volid email !!")
 	@Column(name = "email")
 	private String email;
+	@Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The password can contain only characters and digits")
 	@Column(name = "userpassword")
 	private String userPassword;
    
@@ -151,5 +167,11 @@ public void setUserid(int userid) {
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
+	public Date getDob() {
+		return dob;
+	}
 
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
 }

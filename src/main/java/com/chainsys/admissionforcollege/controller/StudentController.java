@@ -2,9 +2,13 @@ package com.chainsys.admissionforcollege.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,10 +55,14 @@ public class StudentController {
     }
 
     @PostMapping("/add")
-    public String addStudentDetails(@ModelAttribute("addstudentdetail")  Student student) {
-    	studentService.save(student);
+    public String addStudentDetails(@Valid@ModelAttribute("addstudentdetail") Student student,
+    BindingResult bindingResult){
+    	if (bindingResult.hasErrors()) {
+    		return "add-student-form";}
+    	else {
+    		studentService.save(student);
         return "redirect:/students/list";
-    }
+    }}
 
     @GetMapping("/updatestudentdetails")
     public String showUpdateForm(@RequestParam("id") int id, Model model) {
@@ -75,12 +83,11 @@ public class StudentController {
 //		return "find-student-by-id";
 //	}
 	@GetMapping("/getidbystudent")
-	public String getPetVaccine(@RequestParam("id") int id,Model model) {
+	public String getStudent(@RequestParam("id") int id,Model model) {
 		StudentCourseDto dto=studentService.getStudentCourseDto(id);
 		model.addAttribute("getstudent",dto.getStudent());
 		model.addAttribute("studentcourselist",dto.getStudentCourseDetails());
 		return "find-student-by-id";
 	}
-
 
 }

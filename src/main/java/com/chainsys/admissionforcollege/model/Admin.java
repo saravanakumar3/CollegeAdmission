@@ -4,42 +4,52 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 @Entity
 @Table(name=" admin")
 public class Admin {
 	@Id
-	@Column(name="adminId")
-	private int Id; 
-	@Column(name="adminName")
-	private String AdminName ;
-	@Column(name="adminPhoneNo")
-	private int AdminPhoneNo ;
-	@Column(name="adminEmail")
-	private String AdminEmail;
+	@Column(name="adminid")
+	private int id; 
+	@Column(name="adminname")
+	private String adminName ;
+	@Column(name="phoneno")
+	private long adminPhoneNo ;
+	@Column(name="adminemail")
+	private String adminEmail;
+	@Column(name="password")
+	private String password;
 	public int getId() {
-		return Id;
+		return id;
 	}
 	public void setId(int id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getAdminName() {
-		return AdminName;
+		return adminName;
 	}
 	public void setAdminName(String adminName) {
-		AdminName = adminName;
+		this.adminName = adminName;
 	}
-	public int getAdminPhoneNo() {
-		return AdminPhoneNo;
+	public long getAdminPhoneNo() {
+		return adminPhoneNo;
 	}
-	public void setAdminPhoneNo(int adminPhoneNo) {
-		AdminPhoneNo = adminPhoneNo;
+	public void setAdminPhoneNo(long adminPhoneNo) {
+		this.adminPhoneNo = adminPhoneNo;
 	}
 	public String getAdminEmail() {
-		return AdminEmail;
+		return adminEmail;
 	}
 	public void setAdminEmail(String adminEmail) {
-		AdminEmail = adminEmail;
+		this.adminEmail = adminEmail;
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	
 }

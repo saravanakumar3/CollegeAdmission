@@ -1,7 +1,10 @@
 package com.chainsys.admissionforcollege.controller;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,9 +23,13 @@ public class CardDetailsController {
 		return "add-card-details";
 	}
 
-	@PostMapping("/entercarddetails")
-	public String addEmployeeDetails(@ModelAttribute("addcarddetails") CardDetails carddetails) {
+	@PostMapping("/add")
+	public String addEmployeeDetails(@Valid@ModelAttribute("addcarddetails") CardDetails carddetails,
+			BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "add-card-details";
+		}else {
 		cardService.save(carddetails);
-		return "paymentmentstatus";
-	}
+		return "paymentmentstatus-form";
+	}}
 }

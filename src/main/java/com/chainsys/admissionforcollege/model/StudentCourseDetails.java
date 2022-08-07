@@ -19,25 +19,34 @@ public class StudentCourseDetails {
 	@Column(name ="Courseid")
 	private int  courseId ;
 	@Id
-	@Column(name ="UserId")
+	@Column(name ="userId")
 	private int userid;
 	@Column(name ="Registrationnumber")
 	private int registrationNumber;
 	@Column(name ="paymentstatus")
      private String paymentstatus ;
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="Userid",nullable=false, insertable=false, updatable=false)
+	@JoinColumn(name="userid",nullable=false, insertable=false, updatable=false)
 	private Student student;
+	public Student getStudent() {
+		return student;
+	}
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="Courseid",nullable=false, insertable=false, updatable=false)
+	private Course course;
 	public int getCourseId() {
 		return courseId;
 	}
 	public void setCourseId(int courseId) {
 		this.courseId = courseId;
 	}
-	public int getuserid() {
+	public int getUserid() {
 		return userid;
 	}
-	public void setuserid(int userid) {
+	public void setUserid(int userid) {
 		this.userid = userid;
 	}
 	public int getRegistrationNumber() {
@@ -52,12 +61,13 @@ public class StudentCourseDetails {
 	public void setPaymentstatus(String paymentstatus) {
 		this.paymentstatus = paymentstatus;
 	}
-	public Student getStudent() {
-		return student;
+	public Course getCourse() {
+		return course;
 	}
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setCourse(Course course) {
+		this.course = course;
 	}
+	
 		
 	
 }

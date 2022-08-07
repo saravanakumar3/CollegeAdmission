@@ -12,7 +12,7 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="entercarddetails" method="post" modelAttribute="addcarddetails">
+			<form:form action="add" method="post" modelAttribute="addcarddetails">
 				<div>
 					<label for="registrationNumber">RegistrationNumber</label>
 					<div>
@@ -47,6 +47,7 @@
 					<label for="cardholderName">CardholderName</label>
 					<div>
 						<form:input path="cardholderName" />
+						<form:errors path="cardholderName" />
 					</div>
 				</div>
                 <div>

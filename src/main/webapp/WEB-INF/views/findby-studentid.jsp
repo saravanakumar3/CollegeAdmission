@@ -25,6 +25,11 @@
 						<form:input path="Username" />
 					</div>
 				</div>
+					<div>
+						<label for="dob">DOB</label>
+						<div>
+							<form:input path="dob" type="date" />
+						</div>
 				<div>
 					<label for="Qualification">Qualification</label>
 					<div>

@@ -26,15 +26,15 @@ public class StudentCourseDetailsController {
 	    		model.addAttribute("alladdstudentCourseDetails", list);
 	    		return "list-studentcoursedetails";
 	    	}
-	    	@GetMapping("/addformstudentcoursedetails")
+	    	@GetMapping("/addform")
 	    	public String showAddStudentCourseDetailse(Model model) {
 	    		StudentCourseDetails studentCourseDetails = new StudentCourseDetails();
-	    		model.addAttribute("addstudentCourseDetails", studentCourseDetails);
+	    		model.addAttribute("addstudentCourse", studentCourseDetails);
 	    		return "add-studentcourse-form";
 	    	}
 
 	    	@PostMapping("/addstudentcoursedetails")
-	    	public String addNewStudentCourseDetails(@ModelAttribute("addstudentCourseDetails") StudentCourseDetails studentCourseDetails) {
+	    	public String addNewStudentCourseDetails(@ModelAttribute("addstudentCourse") StudentCourseDetails studentCourseDetails) {
 	    		studentCourseDetailsService.save(studentCourseDetails);
 	    		return "redirect:/studentcourse/list";
 	    	}
@@ -59,8 +59,8 @@ public class StudentCourseDetailsController {
 	    		studentCourseDetailsService.deleteById(studentCompositeKey);
 	    		return "redirect:/studentcourse/list";
 	    	}
-	    	@GetMapping("/getbyidstudentcoursedetails")
-	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("cid")int cid, Model model) {
+	    	@GetMapping("/getbyidstudentcourse")
+	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("id")int cid, Model model) {
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
 	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsService.findById(studentCompositeKey);
 	    		model.addAttribute("findbyid", studentCourseDetails);

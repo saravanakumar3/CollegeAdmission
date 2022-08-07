@@ -1,45 +1,45 @@
 package com.chainsys.admissionforcollege.model;
-
-
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.Range;
 @Entity
 @Table(name = "course")
 public class Course {
 	@Id
 	@Column(name = "courseid")
 	private int courseId;
+	//@Size(min =3,max =50,message ="Coursename length must be at least 2 characters.")
+	//@NotBlank( message ="Coursename  can not be Empty")
 	@Column(name = "coursename")
 	private String courseName;
+	//@Range(min=1,max=10,message="Please enter a timescale between 1 and 10 ")
 	@Column(name = "timescale")
 	private int timeScale;
+	//@Size(min =2,max =50,message ="qualification Size not less than 2.")
+	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "qualification")
 	private String qualification;
+	//@Range(min=1000,message="1000 rupees is required for this field")
 	@Column(name = "admisssionfee")
 	private int admisssionFee;
+	//@Range(min=40000,message="40000 rupees is required for this field")
 	@Column(name = "tuitionfee")
 	private int tuitionFee;
+	//@Range(min=10,max =50,message="Please enter a number from 10 to 50. ")
 	@Column(name = "totalseats")
 	private int totalSeats;
-	
-//	 @JoinTable(
-//		        name = "studentcoursedetails",
-//		        joinColumns = {
-//		            @JoinColumn(name = "CourseId")
-//		        },
-//		        inverseJoinColumns = {
-//		            @JoinColumn(name = "UserId")
-//		        })
+	  @OneToMany(mappedBy="course",fetch=FetchType.LAZY)
+		private List<StudentCourseDetails> studentCourseDetails;
+		public List<StudentCourseDetails> getStudentCourseDetails() {
+		return studentCourseDetails;
+	}
 	public int getCourseId() {
 		return courseId;
 	}
@@ -83,6 +83,4 @@ public class Course {
 	public void setTotalSeats(int totalSeats) {
 		this.totalSeats = totalSeats;
 	}
-	
-	
 }

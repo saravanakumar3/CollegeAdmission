@@ -14,7 +14,7 @@
 				<tr>
 				<th>Id</th>
 					<th>UserName</th>
-					
+			        <th>Dob</th>
 					<th>Qualification</th>
 					<th>SslcMark</th>
 					<th>HscMark</th> 
@@ -32,7 +32,8 @@
 				<c:forEach var="Student" items="${allstudent}">
 					<tr>
 						<td>${Student.userid}</td>
-						<td>${Student.username}</td>			
+						<td>${Student.username}</td>
+							<td>${Student.dob}</td>			
 						<td>${Student.qualification}</td>
 						<td>${Student.sslcMark}</td>
 						<td>${Student.hscMark}</td>

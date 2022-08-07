@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Course</title>
+<title>Insert title here</title>
 </head>
 <body>
+<body style="background-color: powderblue;">
+
 	<div id="root">
-	
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addcoursedetail">
-				<div>
+		<form:form action="" method="post"  modelAttribute="getcourse">
+			
+					<div>
 					<label for="courseId">CourseId</label>
 					<div>
 						<form:input path="courseId" />
@@ -23,14 +23,12 @@
 					<label for="courseName">CourseName</label>
 					<div>
 						<form:input path="courseName" />
-						<form:errors path="courseName" />
 					</div>
 				</div>
 				<div>
-					<label for="timeScale">TimeScale</label>
+					<label for="timeScale">Timescale</label>
 					<div>
 						<form:input path="timeScale" />
-						
 					</div>
 				</div>
 				<div>
@@ -57,13 +55,37 @@
 						<form:input path="totalSeats" />
 					</div>
 				</div>
-				</div>
-				</div>
-				<div>
-					<form:button>Add Course</form:button>
-				</div>
 			</form:form>
 		</div>
+		<div id="table root">
+		<table border="2" width= "100%" cellpadding="2">
+			<thead>
+			<tr>
+				<th>CourseId</th>
+					<th>CourseName</th>
+					<th>TimeScale</th>
+					<th>Qualification</th>
+					<th>AdmisssionFee</th>
+					<th>TuitionFee</th> 
+					<th>TotalSeats</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="Course" items="${studentcourselist}">
+					<tr>
+						<td>${Course.courseId}</td>
+						<td>${Course.courseName}</td>
+						<td>${Course.timeScale}</td>
+						<td>${Course.qualification}</td>
+						<td>${Course.admisssionFee}</td>
+						<td>${Course.tuitionFee}</td>
+						<td>${Course.totalSeats}</td>
+						
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 	</div>
 </body>
 </html>

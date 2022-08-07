@@ -9,9 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body style="background-color: powderblue;">
-
 	<div id="root">
-	
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getstudent">
 				<div>
@@ -26,6 +24,11 @@
 						<form:input path="username" />
 					</div>
 				</div>
+					<div>
+						<label for="dob">DOB</label>
+						<div>
+							<form:input path="dob" />
+						</div>
 				<div>
 					<label for="qualification">Qualification</label>
 					<div>
@@ -89,7 +92,6 @@
 				
 				</div>
 			</form:form>
-			
 		</div>
 		<div id="table root">
 		<table border="2" width="100%" cellpadding="2">

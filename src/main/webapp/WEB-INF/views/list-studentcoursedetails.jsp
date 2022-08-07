@@ -23,7 +23,7 @@
 				<c:forEach var="StudentCourseDetails" items= "${alladdstudentCourseDetails}">
 					<tr>
 						<td>${StudentCourseDetails.courseId}</td>
-						<td>${StudentCourseDetails.userId}</td>
+						<td>${StudentCourseDetails.userid}</td>
 						<td>${StudentCourseDetails.registrationNumber}</td>
 						<td>${StudentCourseDetails.paymentstatus}</td>
 					</tr>

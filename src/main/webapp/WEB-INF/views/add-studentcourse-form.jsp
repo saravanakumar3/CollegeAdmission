@@ -13,7 +13,7 @@
 	<div id="root">
 	
 		<div id="form">
-			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourseDetails">
+			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">
 				<div>
 					<label for="courseId">CourseId</label>
 					<div>
@@ -21,9 +21,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="userId">userId</label>
+					<label for="userid">userId</label>
 					<div>
-						<form:input path="userId" />
+						<form:input path="userid" />
 					</div>
 				</div>
 				<div>

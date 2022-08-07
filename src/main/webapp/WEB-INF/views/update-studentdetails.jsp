@@ -15,9 +15,9 @@
 		<div id="form">
 			<form:form action="update" method="post" modelAttribute="updatedetails">	
 				<div>
-					<label for="id">Id</label>
+					<label for="userid">userid</label>
 					<div>
-						<form:input path="id" />
+						<form:input path="userid" />
 					</div>
 				</div>
 				<div>

@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="carddetails")
@@ -19,6 +21,8 @@ public class CardDetails {
 	private long cardNumber ;
 	@Column(name="cvvnumber")
 	private long cvvNumber;
+	@Size(min =3,max =50,message =" Username Size not less then 3")
+	@NotBlank( message ="cardholder name can not be Empty")
 	@Column(name="cardholdername")
 	private String cardholderName ;
 	public int getRegistrationNumber() {
