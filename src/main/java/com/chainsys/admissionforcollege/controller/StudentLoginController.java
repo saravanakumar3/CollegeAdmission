@@ -19,14 +19,13 @@ public class StudentLoginController {
         return "login-user-form";
     }
 
-//   @PostMapping("/checkstudentlogin")
-//   public String checkingAccess(@ModelAttribute("student") Student thestudent) {
-//        Student student = studentLoginService.getStudentDetailsByEmailAndPassword(thestudent.getEmail(),
-//        		thestudent.getUserPassword());
-//        if (student != null) {
-//
-//      return "index";
-//        } else
-//            return "invalid-adminlogin-error";
-//    }
+   @PostMapping("/checkstudentlogin")
+   public String checkingAccess(@ModelAttribute("student") Student thestudent) {
+        Student student = studentLoginService.getStudentDetailsByEmailAndPassword(thestudent.getEmail(),
+        		thestudent.getUserPassword());
+        if (student != null) {
+      return "index";
+        } else
+            return "invalid-adminlogin-error";
+    }
 }

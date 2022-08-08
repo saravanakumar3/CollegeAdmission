@@ -8,6 +8,10 @@ import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
 
 import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 
@@ -16,13 +20,18 @@ import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 @IdClass(StudentCompositeKey.class)
 public class StudentCourseDetails {
 	@Id
+	@Range(min=1,message="Value should be greater than 0")
 	@Column(name ="Courseid")
 	private int  courseId ;
 	@Id
+	@Range(min=1,message="Value should be greater than 0")
 	@Column(name ="userId")
 	private int userid;
+	@Range(min=1,message="Value should be greater than 0")
 	@Column(name ="Registrationnumber")
 	private int registrationNumber;
+	@Size(min =3,max =50,message =" Username Size not less then 2")
+	@NotBlank( message ="This field can not be Empty")
 	@Column(name ="paymentstatus")
      private String paymentstatus ;
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -37,6 +46,12 @@ public class StudentCourseDetails {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="Courseid",nullable=false, insertable=false, updatable=false)
 	private Course course;
+	public Course getCourse() {
+		return course;
+	}
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 	public int getCourseId() {
 		return courseId;
 	}
@@ -61,13 +76,5 @@ public class StudentCourseDetails {
 	public void setPaymentstatus(String paymentstatus) {
 		this.paymentstatus = paymentstatus;
 	}
-	public Course getCourse() {
-		return course;
-	}
-	public void setCourse(Course course) {
-		this.course = course;
-	}
-	
-		
-	
+
 }

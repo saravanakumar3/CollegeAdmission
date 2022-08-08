@@ -1,4 +1,6 @@
 package com.chainsys.admissionforcollege.controller;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,19 +12,27 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.chainsys.admissionforcollege.model.CardDetails;
+import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.service.CardDetailsService;
 @Controller
 @RequestMapping("/details")
 public class CardDetailsController {
 	@Autowired
 	private CardDetailsService cardService;
+	  @GetMapping("/list")
+	    public String getDetails(Model model) {
+	        List<CardDetails> cardDetails  = cardService.getCardDetails();
+	        model.addAttribute("allplayment", cardDetails );
+	        return "list-card";
+	    }
+	    
+	
 	@GetMapping("/carddetails")
 	public String showAddForm(Model model) {
 		CardDetails carddetails = new CardDetails();
 		model.addAttribute("addcarddetails", carddetails);
 		return "add-card-details";
 	}
-
 	@PostMapping("/add")
 	public String addEmployeeDetails(@Valid@ModelAttribute("addcarddetails") CardDetails carddetails,
 			BindingResult bindingResult) {

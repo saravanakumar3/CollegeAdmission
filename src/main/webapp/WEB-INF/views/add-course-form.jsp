@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -10,13 +11,15 @@
 </head>
 <body>
 	<div id="root">
-	
+
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addcoursedetail">
+			<form:form action="/course/add" method="post"
+				modelAttribute="addcoursedetail">
 				<div>
 					<label for="courseId">CourseId</label>
 					<div>
 						<form:input path="courseId" />
+
 					</div>
 				</div>
 				<div>
@@ -24,13 +27,14 @@
 					<div>
 						<form:input path="courseName" />
 						<form:errors path="courseName" />
+
 					</div>
 				</div>
 				<div>
 					<label for="timeScale">TimeScale</label>
 					<div>
 						<form:input path="timeScale" />
-						
+
 					</div>
 				</div>
 				<div>
@@ -55,15 +59,14 @@
 					<label for="totalSeats">TotalSeats </label>
 					<div>
 						<form:input path="totalSeats" />
+
 					</div>
 				</div>
-				</div>
-				</div>
-				<div>
-					<form:button>Add Course</form:button>
-				</div>
-			</form:form>
-		</div>
+	<div>
+		<form:button>Add Course</form:button>
+	</div>
+	</form:form>
+	</div>
 	</div>
 </body>
 </html>

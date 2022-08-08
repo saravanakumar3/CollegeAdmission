@@ -1,5 +1,4 @@
 package com.chainsys.admissionforcollege.service;
-import java.util.Iterator;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +33,7 @@ public class CourseService {
 	Course course= findByid(id);
 	CourseDto  dto =new CourseDto();
 	 dto.setCourse(course);
-	 List<StudentCourseDetails> studentCourseDetails =studentCourseDetailsRepository.findBycourseId(id);
-	 Iterator<StudentCourseDetails> itr =studentCourseDetails.iterator();
-	while(itr.hasNext()) {
-		dto.addCourseDetails((StudentCourseDetails)itr.next());
-	}
+	 List<StudentCourseDetails> studentCourseDetails =studentCourseDetailsRepository.findByCourseId(id);
+	dto.setStudentCourseDetails(studentCourseDetails);
 	 return dto;}
 }

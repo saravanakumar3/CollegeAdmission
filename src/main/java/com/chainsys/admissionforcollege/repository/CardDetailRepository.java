@@ -12,7 +12,7 @@ public interface CardDetailRepository extends CrudRepository<CardDetails, Intege
 		   CardDetails findById(int id);
 		   CardDetails save(CardDetails cardDetails); 
 		    void deleteById(int id);
-//		    List<CardDetails> findAll();
+            List<CardDetails> findAll();
 		    
 		}
 

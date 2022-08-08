@@ -44,7 +44,6 @@
    100% placement opportunities
   </div>
 </div>
-
 <div class="row">
   <div class="col-sm-6">
     <div class="card dark">
@@ -65,7 +64,7 @@
     </div>
   </div>
 </div>
-<a href="/students/list">List of student</a>
+<a href="/students/list">List of student</a><br>
 <a href="/students/addstudents">Add Student</a>	
 <br>
 <a href="/course/list">Course list</a>	
@@ -74,8 +73,11 @@
 <br>
 <a href="/students/getidbystudent?id=2" >get by id student course details</a>
 <br>
-<a href="/admin/login" >Admin login </a>
-<a href="/details/carddetails" >payment </a>
+<a href="/admin/login" >Admin login </a><br>
+<a href="/details/carddetails" >payment </a><br>
+<a href="/details/list" >payment list </a><br>
+<a href="/studentcourse/list">Student Course list </a>
+<a href="/studentcourse/addform">Student Course list </a>
 </body>
 </body>
 </html>

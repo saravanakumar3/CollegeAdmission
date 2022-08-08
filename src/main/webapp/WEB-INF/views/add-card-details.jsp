@@ -14,11 +14,34 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addcarddetails">
 				<div>
-					<label for="registrationNumber">RegistrationNumber</label>
+					<label for="paymentid">Paymentid</label>
 					<div>
-						<form:input path="registrationNumber" />
+						<form:input path="paymentid" />
 					</div>
-				</div>
+				<div>
+				
+				<div>
+					<label for="courseName">CourseName</label>
+					<form:select path="courseName">
+							<form:option value="Lawyer">Lawyer</form:option>
+							<form:option value="Hotel Magement">Hotel Magement</form:option>
+							<form:option value="journalit">Journalit</form:option>
+							<form:option value="Fashion Designer">Fashion Designer</form:option>
+							
+						</form:select>
+						 <form:errors path="courseName" />
+				<div>
+					<label for="name">UserName</label>
+					<div>
+						<form:input path="name" />
+						 <form:errors path="name" />
+					</div>	
+				<div>
+				<div>
+					<label for="phoneNumber">PhoneNumber</label>
+					<div>
+						<form:input path="phoneNumber" />
+					</div>	
 				<div>
 					<label for="amount">Amount</label>
 					<div>
@@ -26,28 +49,29 @@
 					</div>
 				</div>
 				<div>
-					<label for="paymentDate">Paymentdate</label>
+					<label for="paymentDate">PaymentDate</label>
 					<div>
-						<form:input path="paymentDate" />
+						<form:input path="paymentDate" type="date"  />
 					</div>
 				</div>
 				<div>
-					<label for="cardNumber">Cardnumber</label>
+					<label for="cardNumber">CardNumber</label>
 					<div>
 						<form:input path="cardNumber" />
 					</div>
 				</div>
 				<div>
-					<label for="cvvNumber">Cvvnumber</label>
+					<label for="cvvNumber">CvvNumber</label>
 					<div>
 						<form:input path="cvvNumber" />
+					  <form:errors path="cvvNumber" />
 					</div>
 				</div>
 				<div>
 					<label for="cardholderName">CardholderName</label>
 					<div>
 						<form:input path="cardholderName" />
-						<form:errors path="cardholderName" />
+					<form:errors path="cardholderName" />
 					</div>
 				</div>
                 <div>

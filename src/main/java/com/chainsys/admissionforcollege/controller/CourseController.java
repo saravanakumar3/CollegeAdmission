@@ -50,22 +50,23 @@ public class CourseController {
 	        return "add-course-form";
 	    }
 
+		/*
+		 * @PostMapping("/add") public String
+		 * addCourseDetails(@ModelAttribute("addcoursedetail") Course course) {
+		 * courseService.save(course); return "redirect:/course/list"; }
+		 */
+	    
 	    @PostMapping("/add")
-	    public String addCourseDetails(@ModelAttribute("addcoursedetail")  Course course) {
+	    public String addCourseDetails(@Valid@ModelAttribute("addcoursedetail")  Course course,
+	    		BindingResult bindingResult) {
+	    	
+	    	if (bindingResult.hasErrors()) {
+	    		return "add-course-form";
+	    		}
+	    	else {
 	    	courseService.save(course);
 	        return "redirect:/course/list";
-	    }
-	    
-//	    @PostMapping("/add")
-//	    public String addCourseDetails(@Valid@ModelAttribute("addcoursedetail")  Course course,
-//	    		BindingResult bindingResult) {
-//	    	if (bindingResult.hasErrors()) {
-//	    		return "add-course-form";
-//	    		}
-//	    	else {
-//	    	courseService.save(course);
-//	        return "redirect:/course/list";
-//	    }}
+	    }}
 	    @GetMapping("/updatedetails")
 		public String showUpdateForm(@RequestParam("id") int id, Model model) {
 			Course course = courseService.findByid(id);

@@ -6,10 +6,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student List</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color: #EAE7E8 ">
 	<div id="table root">
-		<table border="2" width= "100%" cellpadding="2">
+		<table  class="table table-info table-striped-columns table-hover">
 			<thead>
 				<tr>
 				<th>Id</th>
@@ -20,12 +24,11 @@
 					<th>HscMark</th> 
 					<th>Gender</th>
 					<th>Address</th>
-					<th>Userlocation</th>
+					<th>UserLocation</th>
 					<th>Nation</th>
 					<th>PhoneNumber</th>
 					<th>Email</th>
 					<th>UserPassword</th>
-
 				</tr>
 			</thead>
 			<tbody>
@@ -33,7 +36,7 @@
 					<tr>
 						<td>${Student.userid}</td>
 						<td>${Student.username}</td>
-							<td>${Student.dob}</td>			
+                       <td>${Student.dob}</td>			
 						<td>${Student.qualification}</td>
 						<td>${Student.sslcMark}</td>
 						<td>${Student.hscMark}</td>

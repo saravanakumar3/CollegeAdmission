@@ -10,35 +10,37 @@
 </head>
 <body style="background-color: powderblue;">
 
-	<div id="root">
-	
+	<div  align ="justify""root">
 		<div id="form">
 			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">
 				<div>
-					<label for="courseId">CourseId</label>
+					<label for="courseId" class="form-label">CourseId</label>
 					<div>
 						<form:input path="courseId" />
 					</div>
 				</div>
+				<form:errors path="courseId" />
 				<div>
-					<label for="userid">userId</label>
+					<label for="userid" class="form-label">userId</label>
 					<div>
 						<form:input path="userid" />
 					</div>
 				</div>
+					<form:errors path="userid" />
 				<div>
-					<label for="registrationNumber">RegistrationNumber</label>
+					<label for="registrationNumber ">RegistrationNumber</label>
 					<div>
 						<form:input path="registrationNumber" />
 					</div>
 				</div>
+				<form:errors path="registrationNumber" />
 				<div>
 					<label for="paymentstatus">Paymentstatus</label>
 					<div>
 						<form:input path="paymentstatus" />
 					</div>
 				</div>
-				</div>
+				<form:errors path="paymentstatus" />
 				<div>
 					<form:button>Registration</form:button>
 				</div>

@@ -13,26 +13,22 @@
 		<table border="2" width= "100%" cellpadding="2">
 			<thead>
 	
-				<th>RegistrationNumber</th>
-					<th>amount</th>
-					<th>paymentdate</th>
-					<th>cardNumber</th>
-					
-					<th>cvvNumber</th>
+				<th>PaymentId</th>
+				<th>courseName</th>
+				<th>phoneNumber</th>
+					<th>Amount</th>
+					<th>PaymentDate</th>
 					<th>cardholderName</th> 
-					
-					
-
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="CardDetails" items="${allCard}">
+				<c:forEach var="CardDetails" items="${allplayment}">
 					<tr>
-						<td>${CardDetails.registrationNumber}</td>
+						<td>${CardDetails.paymentid}</td>
+						<td>${CardDetails.name}</td>
+						<td>${CardDetails.phoneNumber}</td>
 						<td>${CardDetails.amount}</td>
-						<td>${CardDetails.paymentDate}</td>
-						<td>${CardDetails.cardNumber}</td>
-						<td>${CardDetails.cvvNumber}</td>
+						<td>${CardDetails.paymentdate}</td>
 						<td>${CardDetails.cardholderName}</td>
 						
 					</tr>

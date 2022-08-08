@@ -20,15 +20,16 @@
 			<form:form action="add" method="post" modelAttribute="addstudentdetail">
 				<div>
 					<label  for="userid">Id</label>
+					<form:errors path="userid" />
 					<div>
 						<form:input path="userid" />
 					</div>
 				</div>
 				<div>
-					<label for="username">username</label>
+					<label for="username">userName</label>
 					<div>
 						<form:input path="username" />
-					
+					       <form:errors path="username" />
 				</div>
 				<div>
 						<label for="dob">DOB</label>
@@ -101,6 +102,7 @@
 					<label for="email">Email</label>
 					<div>
 						<form:input path="email" />
+						<form:errors path="email" />
 					</div>
 				</div>
 				<div>

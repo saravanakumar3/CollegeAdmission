@@ -10,6 +10,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
 <h1>Madurai Government Arts College</h1>
@@ -38,6 +39,7 @@
 					<label for=adminEmail>Email</label>
 					<div>
 						<form:input path="adminEmail" />
+						 <div class="icon"><i class="fas fa-user"></i></div>
 							<form:errors path="adminEmail" />	
 					</div>
 				</div>

@@ -2,29 +2,28 @@ package com.chainsys.admissionforcollege.model;
 
 import java.sql.Date;
 import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
 import org.hibernate.validator.constraints.Range;
-
-import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
-
 @Entity
 @Table(name = "student")
 public class Student {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "userid_ref")
+    @SequenceGenerator(name = "userid_ref", sequenceName = "userid_ref",  allocationSize = 1)
 	@Column(name = "userid")
+	@Range(min=1,message="Value should be greater than 0")
 	private int userid;
 	@Size(min =3,max =50,message =" Username Size not less then 2")
 	@NotBlank( message ="Username can not be Empty")
@@ -44,9 +43,11 @@ public class Student {
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "gender")
 	private String gender;
+	@Size(min =5,max =250,message =" Address size not less then 5")
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "address")
 	private String address;
+	@Size(min =5,max =250,message =" User_location size not less then 5")
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "User_location")
 	private String userlocation;
@@ -61,14 +62,12 @@ public class Student {
 	@Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The password can contain only characters and digits")
 	@Column(name = "userpassword")
 	private String userPassword;
-   
    @OneToMany(mappedBy="student",fetch=FetchType.LAZY)
 	private List<StudentCourseDetails> studentCourseDetails;
    
 	public List<StudentCourseDetails> getStudentCourseDetails() {
 	return studentCourseDetails;
 }
-
 public void setStudentCourseDetails(List<StudentCourseDetails> studentCourseDetails) {
 	this.studentCourseDetails = studentCourseDetails;
 }

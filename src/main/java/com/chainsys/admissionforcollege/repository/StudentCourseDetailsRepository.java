@@ -10,7 +10,7 @@ public interface StudentCourseDetailsRepository extends CrudRepository<StudentCo
 		void deleteById(StudentCompositeKey id);
 	List<StudentCourseDetails> findAll();
 	List<StudentCourseDetails> findByUserid(int id);
-      List<StudentCourseDetails> findBycourseId(int id);
+      List<StudentCourseDetails> findByCourseId(int id);
 		
 	}
 

@@ -7,8 +7,15 @@ import com.chainsys.admissionforcollege.repository.StudentLoginRepository;
 public class StudentLoginService {
 	@Autowired
     private StudentLoginRepository studentLoginRepository;
-//	  public Student getStudentDetailsByEmailAndPassword(String email, String string) {
-//	 		return studentLoginRepository.findByStudentEmailAndPassword(email, string);}
+	  public Student getStudentDetailsByEmailAndPassword(String email, String password) {
+		  Student student =studentLoginRepository.findByEmail(email);
+		  if(!password.equals(student.getUserPassword())) {
+		student=null;	  
+		  }
+	 		return student;
+	 	}
+
+	
 
 	 	}
 
