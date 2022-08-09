@@ -3,8 +3,11 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -12,10 +15,11 @@ import javax.validation.constraints.Size;
 @Table(name = "course")
 public class Course {
 	@Id
+	
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "course_id")
+    @SequenceGenerator(name = "course_id", sequenceName = "course_id",  allocationSize = 1)
 	@Column(name = "courseid")
 	private int courseId;
-	@Size(min =3,max =50,message ="Coursename length must be at least 2 characters.")
-	@NotBlank( message ="Coursename  can not be Empty")
 	@Column(name = "coursename")
 	private String courseName;
 	

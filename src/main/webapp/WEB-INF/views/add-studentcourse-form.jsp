@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>PaymentDetals</title>
 </head>
-<body style="background-color: powderblue;">
+<body>
 
 	<div  align ="justify""root">
 		<div id="form">
@@ -27,13 +27,6 @@
 					</div>
 				</div>
 					<form:errors path="userid" />
-				<div>
-					<label for="registrationNumber ">RegistrationNumber</label>
-					<div>
-						<form:input path="registrationNumber" />
-					</div>
-				</div>
-				<form:errors path="registrationNumber" />
 				<div>
 					<label for="paymentstatus">Paymentstatus</label>
 					<div>

@@ -19,15 +19,13 @@
 						<form:input path="paymentid" />
 					</div>
 				<div>
-				
 				<div>
 					<label for="courseName">CourseName</label>
 					<form:select path="courseName">
 							<form:option value="Lawyer">Lawyer</form:option>
 							<form:option value="Hotel Magement">Hotel Magement</form:option>
 							<form:option value="journalit">Journalit</form:option>
-							<form:option value="Fashion Designer">Fashion Designer</form:option>
-							
+							<form:option value="Fashion Designer">Fashion Designer</form:option>	
 						</form:select>
 						 <form:errors path="courseName" />
 				<div>
@@ -82,5 +80,7 @@
 			</form:form>
 		</div>
 	</div>
+	
+	
 </body>
 </html>

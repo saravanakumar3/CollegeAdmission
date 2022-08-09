@@ -20,10 +20,9 @@ import org.hibernate.validator.constraints.Range;
 @Table(name = "student")
 public class Student {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "userid_ref")
-    @SequenceGenerator(name = "userid_ref", sequenceName = "userid_ref",  allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "student_id")
+    @SequenceGenerator(name = "student_id", sequenceName = "student_id",  allocationSize = 1)
 	@Column(name = "userid")
-	@Range(min=1,message="Value should be greater than 0")
 	private int userid;
 	@Size(min =3,max =50,message =" Username Size not less then 2")
 	@NotBlank( message ="Username can not be Empty")

@@ -76,8 +76,15 @@
 <a href="/admin/login" >Admin login </a><br>
 <a href="/details/carddetails" >payment </a><br>
 <a href="/details/list" >payment list </a><br>
-<a href="/studentcourse/list">Student Course list </a>
+<a href="/studentcourse/list">Student Course list </a><br>
+<br>
 <a href="/studentcourse/addform">Student Course list </a>
+<br>
+<br>
+<a href="/students/updatestudentdetails?id=10">Student Course list </a>
+<br>
+<br>
+
 </body>
 </body>
 </html>

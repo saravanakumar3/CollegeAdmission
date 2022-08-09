@@ -19,13 +19,6 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addstudentdetail">
 				<div>
-					<label  for="userid">Id</label>
-					<form:errors path="userid" />
-					<div>
-						<form:input path="userid" />
-					</div>
-				</div>
-				<div>
 					<label for="username">userName</label>
 					<div>
 						<form:input path="username" />

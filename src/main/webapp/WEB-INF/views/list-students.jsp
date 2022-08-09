@@ -29,6 +29,8 @@
 					<th>PhoneNumber</th>
 					<th>Email</th>
 					<th>UserPassword</th>
+						<th>Edit</th>
+							<th>Deleted</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -47,6 +49,12 @@
 						<td>${Student.phoneNumber}</td>
 						<td>${Student.email}</td>
 						<td>${Student.userPassword}</td>
+						<td><a href="/students/updatestudentdetails?id=${Student.userid}">Edit</a></td>
+                        <td><a href="/students/deletestudent?id=${Student.userid}">Delete</a>
+                        <td><a href="/students/getstudentbyid?id=${Student.userid}">Find</a>
+                                Id</a></td>
+						
+						
 					</tr>
 				</c:forEach>
 			</tbody>

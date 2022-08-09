@@ -12,46 +12,53 @@
 	crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
-<body>
+<bodys>
 <h1>Madurai Government Arts College</h1>
 <ul class="nav nav-tabs nav-dark bg-success">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="/">Home</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/students/addstudents">Sign up now</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/admincourse/addcourse">Add course</a>
-  </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/admincourse/list">Course Details</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link" href="/admin/login">Admin login</a>
-  </li>
 </ul>
 <br>
-	<div id="root">
+<br>
+	<div class="card mb-3 h=100" style="max-width: 10000px; ">
+  <div class="row g-0">
+    <div class="col-md-4 w-100 p-3 w-50 h=100">
+      <img src="https://icon-library.com/images/admin-login-icon/admin-login-icon-26.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8  w-100 p-3 w-50 h=35"">
+      <div class="card-body">
+        <h3 class="card-title"><p class="font-weight-bold">Welcome back</p> </h3>
+        <p class="card-text">
+        <div id="root">
 		<div id="form">
 			<form:form action="checkadminlogin" method="post" modelAttribute="admin">
 				<div>
-					<label for=adminEmail>Email</label>
+				<div class="icon"><i class="fas fa-user"></i></div>
+					<label for=adminEmail">Email</label>
+					
 					<div>
-						<form:input path="adminEmail" />
-						 <div class="icon"><i class="fas fa-user"></i></div>
+						<form:input path="adminEmail" class="form-control form-control-lg" />
+                     </div>						
 							<form:errors path="adminEmail" />	
 					</div>
 				</div>
 				<div>
 					<label for="password">Password</label>
 					<div>
-						<form:input path="password" type="password" />
+						<form:input path="password" type="password"  class="form-control form-control-lg"/>
 					</div>
+					<br>
 				</div>
-				<form:button>Login</form:button>
+				
+				<form:button class="form-control form-control-lg btn btn-info">Login</form:button>
 			</form:form>
 		</div>
 	</div>
+        <p class="card-text"><small class="text-muted"><a href="/" class="text-decoration-none">Go back to home page</a></small></p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

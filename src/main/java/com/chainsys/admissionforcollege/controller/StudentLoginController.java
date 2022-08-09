@@ -5,15 +5,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.service.StudentLoginService;
-
+@RequestMapping("/user")
 public class StudentLoginController {
 @Autowired
  private StudentLoginService studentLoginService;
-	@GetMapping("/login")
+	@GetMapping("/loginform")
+	
     public String studentAccessform(Model model) {
+		System.out.println("login");
 		Student thestudent = new Student();
         model.addAttribute("student", thestudent);
         return "login-user-form";
