@@ -77,7 +77,7 @@
 						<form:input path="totalSeats" class="form-control form-control" />
 					</div>
 				</div>
-				<br>
+				<br>  
 				<br>
 	<div>
        <form:button class="form-control form-control-sm btn btn-info">Add Course</form:button>
