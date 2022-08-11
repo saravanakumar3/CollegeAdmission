@@ -6,16 +6,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student List</title>
-<link rel="stylesheet"
+ <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+	crossorigin="anonymous"> 
 </head>
 <body style="background-color: #EAE7E8 ">
+ <h1><a href="/studentcourse/addstudents">Add Course</a></h1>
 	<div id="table root">
-		<table  class="table table-info table-striped-columns table-hover">
-			<thead>
-				<tr>
+		<table  class="table table-info table-striped-columns table-hover" >
+			<thead >
+				<tr >
 				<th>Id</th>
 					<th>UserName</th>
 			        <th>Dob</th>
@@ -29,8 +30,9 @@
 					<th>PhoneNumber</th>
 					<th>Email</th>
 					<th>UserPassword</th>
-						<th>Edit</th>
-							<th>Deleted</th>
+                     <th>Edit</th>
+                   <th>Deleted</th>
+                    <th>Views</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -51,10 +53,7 @@
 						<td>${Student.userPassword}</td>
 						<td><a href="/students/updatestudentdetails?id=${Student.userid}">Edit</a></td>
                         <td><a href="/students/deletestudent?id=${Student.userid}">Delete</a>
-                        <td><a href="/students/getstudentbyid?id=${Student.userid}">Find</a>
-                                Id</a></td>
-						
-						
+                        <td><a href="/students/getidbystudent?id=${Student.userid}">Views</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -32,7 +32,12 @@
     <a class="nav-link" href="/studentcourse/list">Student Course Detail list</a>
   </li>
     <li class="nav-item">
-    <a class="nav-link" href="/studentcourse/addform"> Add Student Course Details</a>
+    <a class="nav-link" href="/students/addform"> Add Student Course Details</a>
+  </li>
+  
+   </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/course/courselist"> Add Student Course Details</a>
   </li>
 </ul>
 <br>

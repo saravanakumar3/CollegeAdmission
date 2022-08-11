@@ -6,6 +6,8 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.chainsys.admissionforcollege.model.Course;
 import com.chainsys.admissionforcollege.model.StudentCourseDetails;
 import com.chainsys.admissionforcollege.repository.StudentCourseDetailsRepository;
 import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
@@ -29,6 +31,7 @@ public class StudentCourseDetailsService {
 		public void deleteById(StudentCompositeKey id) {
 			studentCourseDetailsRepository.deleteById(id);
 		}
+		
 	}
 
 		

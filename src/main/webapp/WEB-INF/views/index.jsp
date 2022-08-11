@@ -84,7 +84,21 @@
 <a href="/students/updatestudentdetails?id=10">Student Course list </a>
 <br>
 <br>
-
+	<a href="/students/updatestudentdetails?id=${Student.userid}">Edit</a>
+	<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
 </body>
 </body>
 </html>

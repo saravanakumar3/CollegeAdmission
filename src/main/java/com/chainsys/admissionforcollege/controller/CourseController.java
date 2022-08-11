@@ -30,18 +30,25 @@ public class CourseController {
 	        model.addAttribute("allCourse", course );
 	        return "list-course";
 	    }
-//	    @GetMapping("/getcoursebyid")
-//	    public String getIdDetails(@RequestParam("id") int id, Model model) {
-//	    	Course course = courseService.findByid(id);
-//	        model.addAttribute("getcourses", course );
-//	        return "findby-course";
-//	    }
-
+	    
+	    @GetMapping("/courselist")
+	    public String getDetailsByAdmin(Model model) {
+	        List<Course> course = courseService.getCourse1();
+	        model.addAttribute("allCourses", course );
+	        System.out.println("debug");
+	        return "list-course-by-admin";
+	    }
     @GetMapping("/deletecourse")
 	    public String deleteCourseDetails(@RequestParam("id") int id) {
 	    	courseService.deleteById(id);
 	        return "redirect:/course/list";
 	    }
+    
+    @GetMapping("/deletecoursebyadmin")
+    public String deleteCourseDetailsByadmin(@RequestParam("id") int id) {
+    	courseService.deleteById(id);
+        return "redirect:/course/course/list";
+    }
 
 	    @GetMapping("/addcourse")
 	    public String showAddForm(Model model) {
@@ -49,13 +56,6 @@ public class CourseController {
 	        model.addAttribute("addcoursedetail", course);
 	        return "add-course-form";
 	    }
-
-		/*
-		 * @PostMapping("/add") public String
-		 * addCourseDetails(@ModelAttribute("addcoursedetail") Course course) {
-		 * courseService.save(course); return "redirect:/course/list"; }
-		 */
-	    
 	    @PostMapping("/add")
 	    public String addCourseDetails(@Valid@ModelAttribute("addcoursedetail")  Course course,
 	    		BindingResult bindingResult) {
@@ -65,7 +65,7 @@ public class CourseController {
 	    		}
 	    	else {
 	    	courseService.save(course);
-	        return "redirect:/course/list";
+	        return "redirect:/course/courselist";
 	    }}
 	    @GetMapping("/updatedetails")
 		public String showUpdateForm(@RequestParam("id") int id, Model model) {
@@ -76,8 +76,9 @@ public class CourseController {
 		@PostMapping("/update")
 		public String updateCourse(@ModelAttribute("updatecourse") Course course) {
 			courseService.save(course);
-			return "redirect:/course/list";
+			return "redirect:/course/courselist";
 		}
+		
 		@GetMapping("/getidbycourse")
 		public String getStudent(@RequestParam("cid") int cid,Model model) {
 			CourseDto dto=courseService.getCourseDto(cid);

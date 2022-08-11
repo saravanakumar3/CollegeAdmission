@@ -32,8 +32,6 @@ public class StudentController {
         model.addAttribute("allstudent", student );
         return "list-students";
     }
-    
-
     @GetMapping("/getstudentbyid")
     public String getIdDetails(@RequestParam("id") int id, Model model) {
         Student student = studentService.findByid(id);
@@ -55,15 +53,23 @@ public class StudentController {
     }
 
     @PostMapping("/add")
-    public String addStudentDetails(@Valid@ModelAttribute("addstudentdetail") Student student,
+    public String addStudentDetails(@Valid@ModelAttribute("addstudentdetail") Student student,Model model,
     BindingResult bindingResult){
     	if (bindingResult.hasErrors()) {
     		return "add-student-form";}
     	else {
+    		try {
     		studentService.save(student);
-        return "redirect:/students/list";
-    }}
-
+        return "Registrationstatus-form";}
+        catch(Exception er)
+        {
+        	model.addAttribute("message", "this email is already exist");
+        }
+        return "add-student-form";
+        }
+    	}
+    
+   
     @GetMapping("/updatestudentdetails")
     public String showUpdateForm(@RequestParam("id") int id, Model model) {
     	 Student student = studentService.findByid(id);

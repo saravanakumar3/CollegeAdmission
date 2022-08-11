@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.model.StudentCourseDetails;
 import com.chainsys.admissionforcollege.service.StudentCourseDetailsService;
 import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
@@ -22,11 +24,11 @@ import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 @RequestMapping("/studentcourse")
 public class StudentCourseDetailsController {
 	 @Autowired
-	    private StudentCourseDetailsService studentCourseDetailsService;
+	    private StudentCourseDetailsService studentCourseDetailsRepository;
 
 	    @GetMapping("/list")
 	    	public String getFindAllStudentCourseDetails(Model model) {
-	    		List<StudentCourseDetails> list = studentCourseDetailsService.getStudententCourse();
+	    		List<StudentCourseDetails> list = studentCourseDetailsRepository.getStudententCourse();
 	    		model.addAttribute("alladdstudentCourseDetails", list);
 	    		return "list-studentcoursedetails";
 	    	}
@@ -36,41 +38,41 @@ public class StudentCourseDetailsController {
 	    		model.addAttribute("addstudentCourse", studentCourseDetails);
 	    		return "add-studentcourse-form";
 	    	}
-
 	    	@PostMapping("/addstudentcoursedetails")
 	    	public String addNewStudentCourseDetails(@Valid@ModelAttribute("addstudentCourse") StudentCourseDetails studentCourseDetails,
 	    		    BindingResult bindingResult){
 	        	if (bindingResult.hasErrors()) {
 	        		return "add-studentcourse-form";
 	        	}else
-	    		studentCourseDetailsService.save(studentCourseDetails);
+	        		studentCourseDetailsRepository.save(studentCourseDetails);
 	    		return "redirect:/studentcourse/list";
 	    	}
 	    	
 	    	@GetMapping("/updateform")
 	    	public String showUpdatestudentcoursedetails(@RequestParam("id") int id,@RequestParam("cid")int cid, Model model) {
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
-	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsService.findById(studentCompositeKey);
+	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsRepository.findById(studentCompositeKey);
 	    		model.addAttribute("updatestudentcoursedetails", studentCourseDetails);
 	    		return "update-studentcourse-form";
 	    	}
 
 	    	@PostMapping("/updatestudentCompositeKey")
 	    	public String UpdateStudentCompositeKey(@ModelAttribute("updatestudentcoursedetails") StudentCourseDetails studentCourseDetails) {
-	    		studentCourseDetailsService.save(studentCourseDetails);
+	    		studentCourseDetailsRepository.save(studentCourseDetails);
 	    		return "redirect:/studentcourse/list";
 	    	}
 
 	    	@GetMapping("/deletestudentcoursedetails")
 	    	public String deleteStudentCourseDetails(@RequestParam("id") int id,@RequestParam("cid")int cid) {
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
-	    		studentCourseDetailsService.deleteById(studentCompositeKey);
+	    		studentCourseDetailsRepository.deleteById(studentCompositeKey);
 	    		return "redirect:/studentcourse/list";
 	    	}
 	    	@GetMapping("/getbyidstudentcourse")
-	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("id")int cid, Model model) {
-	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
-	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsService.findById(studentCompositeKey);
+	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("id")int id1, Model model) {
+	    		System.out.println("debug");
+	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, id1);
+	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsRepository.findById(studentCompositeKey);
 	    		model.addAttribute("findbyid", studentCourseDetails);
 	    		return "findby-studentcourseid";
 	    	}

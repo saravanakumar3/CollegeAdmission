@@ -25,6 +25,11 @@ public class CourseService {
         System.out.println("Course");
         return listCourse;
     }
+    public List<Course> getCourse1() {
+        List<Course> listCourse= courseRepository.findAll();
+        System.out.println("Course");
+        return listCourse;
+    }
     @Transactional
     public void deleteById(int id) {
     	courseRepository.deleteById(id);

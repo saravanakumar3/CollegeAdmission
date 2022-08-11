@@ -21,20 +21,20 @@
 				<div>
 					<label for="username">userName</label>
 					<div>
-						<form:input path="username" />
+						<form:input path="username" required="true"/>
 					       <form:errors path="username" />
 				</div>
 				<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" type="date" />
+							<form:input path="dob" type="date"  required="true" />
 						
 						</div>
 					</div>
 				<div>
 					<label for="qualification">Qualification</label>
 					<div>
-						<form:input path="qualification" />
+						<form:input path="qualification"  required="true"/>
                        <form:errors path="qualification" />
 						
 					</div>
@@ -42,14 +42,14 @@
 				<div>
 					<label for="sslcMark">SslcMark</label>
 					<div>
-						<form:input path="sslcMark" />
+						<form:input path="sslcMark"  required="true"/>
 						<form:errors path="sslcMark" />
 					</div>
 				</div>
 				<div>
 					<label for="hscMark">HscMark</label>
 					<div>
-						<form:input path="hscMark" />
+						<form:input path="hscMark"  required="true"/>
 						<form:errors path="hscMark" />
 					</div>
 				</div>
@@ -66,14 +66,14 @@
 				<div>
 					<label for="address">Address </label>
 					<div>
-						<form:input path="address" />
+						<form:input path="address"  required="true" />
 						<form:errors path="address" />
 					</div>
 				</div>
 				<div>
-					<label for="userlocation">userlocation</label>
+					<label for="userlocation">User location</label>
 					<div>
-						<form:input path="userlocation" />
+						<form:input path="userlocation"  required="true"/>
 						<form:errors path="userlocation" />
 					</div>
 				</div>
@@ -87,7 +87,7 @@
 				</div>
 					<label for="phoneNumber">PhoneNumber</label>
 					<div>
-						<form:input path="phoneNumber" />
+						<form:input path="phoneNumber"  required="true"/>
 						
 					</div>
 				</div>
@@ -95,18 +95,19 @@
 					<label for="email">Email</label>
 					<div>
 						<form:input path="email" />
-						<form:errors path="email" />
+						<form:errors path="email"   required="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="userPassword">userPassword</label>
 					<div>
-						<form:input path="userPassword" />
-						<form:errors path="userPassword" />
+						<form:input path="userPassword" type="password" />
+						<form:errors path="userPassword" pattern="[a-zA-Z)-9]{5}" />
 					</div>
 				</div>
 				
 				</div>
+				<div> ${message}</div>
 				<br>
 				<div>
 					<form:button>Sign up</form:button>

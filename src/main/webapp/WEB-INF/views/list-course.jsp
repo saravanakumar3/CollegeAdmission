@@ -21,7 +21,7 @@
 					<th>AdmisssionFee</th>
 					<th>TuitionFee</th> 
 					<th>TotalSeats</th>
-					<th> Register now><th>
+					<th>Registration now</th>
 
 				</tr>
 			</thead>
@@ -36,6 +36,8 @@
 						<td>${Course.admisssionFee}</td>
 						<td>${Course.tuitionFee}</td>
 						<td>${Course.totalSeats}</td>
+						<td><a href="/ details/carddetails">Registraton</a></td>
+						
 					</tr>
 				</c:forEach>
 			</tbody>

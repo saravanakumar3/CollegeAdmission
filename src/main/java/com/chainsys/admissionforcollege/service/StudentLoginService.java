@@ -14,6 +14,10 @@ public class StudentLoginService {
 		  }
 	 		return student;
 	 	}
+	public Student save(Student thestudent) {
+		 return studentLoginRepository.save(thestudent);	
+	}
+	
 
 	
 

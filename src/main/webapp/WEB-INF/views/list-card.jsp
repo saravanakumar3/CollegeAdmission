@@ -28,7 +28,7 @@
 						<td>${CardDetails.name}</td>
 						<td>${CardDetails.phoneNumber}</td>
 						<td>${CardDetails.amount}</td>
-						<td>${CardDetails.paymentdate}</td>
+						<td>${CardDetails.paymentDate}</td>
 						<td>${CardDetails.cardholderName}</td>
 						
 					</tr>

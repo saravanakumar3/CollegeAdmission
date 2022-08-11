@@ -4,7 +4,10 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -13,6 +16,8 @@ import org.hibernate.validator.constraints.Range;
 @Table(name="carddetails")
 public class CardDetails {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "payment_id")
+    @SequenceGenerator(name = "payment_id", sequenceName = "payment_id",  allocationSize = 1)
 	@Column(name="paymentid")
 	private int paymentid;
 	@NotBlank( message ="This field can not be Empty")
@@ -21,11 +26,9 @@ public class CardDetails {
 	@Size(min =3,max =50,message =" Username Size not less then 2")
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name="name")
-	@NotBlank( message ="This field can not be Empty")
 	private String name;
 	@Column(name ="phone")
 	private long phoneNumber;
-	@Range(min=50000,message="Please pay only 50000 rupees only")
 	@Column(name="amount")
     private long amount;
 	@Column(name="paymentdate")
@@ -35,6 +38,7 @@ public class CardDetails {
 	@Range(min=100,max=999,message="Please enter a valid three-digit number")
 	@Column(name="cvvnumber")
 	private long cvvNumber;
+	@Size(min =3,max =50,message =" Username Size not less then 2")
 	@NotBlank( message ="cardholder name can not be Empty")
 	@Column(name="cardholdername")
 	private String cardholderName ;
