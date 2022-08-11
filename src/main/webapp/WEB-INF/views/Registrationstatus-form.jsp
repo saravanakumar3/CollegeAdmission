@@ -24,7 +24,7 @@
 <body>
 <h1>Your registration has been completed successfully.</h1>
 
-<iframe src="/course/list" height="450" width="1000" title="Iframe Example"></iframe>
+<iframe src="/details/list" height="450" width="1000" title="Iframe Example"></iframe>
 
 </body>
 </html>

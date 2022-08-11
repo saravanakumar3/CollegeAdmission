@@ -8,8 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>PaymentDetals</title>
 </head>
-<body>
-
+<body style="background-color: powderblue;> 
 	<div  align ="justify""root">
 		<div id="form">
 			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">

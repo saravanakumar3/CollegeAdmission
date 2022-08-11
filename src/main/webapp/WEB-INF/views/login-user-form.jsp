@@ -80,8 +80,11 @@ label {
 						<div>
 							<td><label for="email">Email</label></td>
 							<div>
-								<td><form:input path="email" class="form-control" /></td>
+								<td><form:input path="email" class="form-control"  required="true"/></td>
 							</div>
+			                  <div>						
+							<form:errors path="email"/>	
+					       </div>
 						</div>
 					</tr>
 					<tr>
@@ -102,8 +105,9 @@ label {
 					</tr>
 				</form:form>
 			</table>
-			<label>Don't have an Account?</label> <a href="registerpatient">
+			<label>Don't have an Account?</label> <a href="/students/addstudents">
 				<input onclick="change()" type="button" value="Sign Up"></input>
+		
 			</a>
 		</div>
 	</div>

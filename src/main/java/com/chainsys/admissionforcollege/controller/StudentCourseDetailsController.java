@@ -24,11 +24,11 @@ import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 @RequestMapping("/studentcourse")
 public class StudentCourseDetailsController {
 	 @Autowired
-	    private StudentCourseDetailsService studentCourseDetailsRepository;
+	    private StudentCourseDetailsService studentCourseDetailsService;
 
 	    @GetMapping("/list")
 	    	public String getFindAllStudentCourseDetails(Model model) {
-	    		List<StudentCourseDetails> list = studentCourseDetailsRepository.getStudententCourse();
+	    		List<StudentCourseDetails> list = studentCourseDetailsService.getStudententCourse();
 	    		model.addAttribute("alladdstudentCourseDetails", list);
 	    		return "list-studentcoursedetails";
 	    	}
@@ -40,39 +40,40 @@ public class StudentCourseDetailsController {
 	    	}
 	    	@PostMapping("/addstudentcoursedetails")
 	    	public String addNewStudentCourseDetails(@Valid@ModelAttribute("addstudentCourse") StudentCourseDetails studentCourseDetails,
-	    		    BindingResult bindingResult){
+	    		    BindingResult bindingResult,Model model){
 	        	if (bindingResult.hasErrors()) {
 	        		return "add-studentcourse-form";
 	        	}else
-	        		studentCourseDetailsRepository.save(studentCourseDetails);
+	        		
+	        		studentCourseDetailsService.save(studentCourseDetails);
 	    		return "redirect:/studentcourse/list";
 	    	}
 	    	
 	    	@GetMapping("/updateform")
 	    	public String showUpdatestudentcoursedetails(@RequestParam("id") int id,@RequestParam("cid")int cid, Model model) {
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
-	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsRepository.findById(studentCompositeKey);
+	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsService.findById(studentCompositeKey);
 	    		model.addAttribute("updatestudentcoursedetails", studentCourseDetails);
 	    		return "update-studentcourse-form";
 	    	}
 
 	    	@PostMapping("/updatestudentCompositeKey")
 	    	public String UpdateStudentCompositeKey(@ModelAttribute("updatestudentcoursedetails") StudentCourseDetails studentCourseDetails) {
-	    		studentCourseDetailsRepository.save(studentCourseDetails);
+	    		studentCourseDetailsService.save(studentCourseDetails);
 	    		return "redirect:/studentcourse/list";
 	    	}
 
 	    	@GetMapping("/deletestudentcoursedetails")
 	    	public String deleteStudentCourseDetails(@RequestParam("id") int id,@RequestParam("cid")int cid) {
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
-	    		studentCourseDetailsRepository.deleteById(studentCompositeKey);
+	    		studentCourseDetailsService.deleteById(studentCompositeKey);
 	    		return "redirect:/studentcourse/list";
 	    	}
 	    	@GetMapping("/getbyidstudentcourse")
 	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("id")int id1, Model model) {
 	    		System.out.println("debug");
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, id1);
-	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsRepository.findById(studentCompositeKey);
+	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsService.findById(studentCompositeKey);
 	    		model.addAttribute("findbyid", studentCourseDetails);
 	    		return "findby-studentcourseid";
 	    	}

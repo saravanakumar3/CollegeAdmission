@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.admissionforcollege.model.Course;
+import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.service.CourseService;
 import com.chainsys.admissionforcolllege.dto.CourseDto;
 import com.chainsys.admissionforcolllege.dto.StudentCourseDto;
@@ -35,8 +36,13 @@ public class CourseController {
 	    public String getDetailsByAdmin(Model model) {
 	        List<Course> course = courseService.getCourse1();
 	        model.addAttribute("allCourses", course );
-	        System.out.println("debug");
 	        return "list-course-by-admin";
+	    }
+	    @GetMapping("/getcoursebyid")
+	    public String getIdDetails(@RequestParam("id") int id, Model model) {
+	        Course course = courseService.findByid(id);
+	        model.addAttribute("getCourseById", course );
+	        return "findby-course";
 	    }
     @GetMapping("/deletecourse")
 	    public String deleteCourseDetails(@RequestParam("id") int id) {
@@ -75,6 +81,7 @@ public class CourseController {
 		}
 		@PostMapping("/update")
 		public String updateCourse(@ModelAttribute("updatecourse") Course course) {
+	
 			courseService.save(course);
 			return "redirect:/course/courselist";
 		}

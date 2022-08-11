@@ -25,16 +25,16 @@ public class StudentLoginController {
 		Student thestudent = new Student();
         model.addAttribute("student", thestudent);
         return "login-user-form";
-    }
-
+    }	
    @PostMapping("/checkstudentlogin")
-   public String checkingAccess(@ModelAttribute("student") Student thestudent,  BindingResult bindingResult){
-	   Student student = studentLoginService.getStudentDetailsByEmailAndPassword(thestudent.getEmail(),
-        		thestudent.getUserPassword());
-        if (student != null) {
-      return "studentpage";
-      
-        } else
-            return "invalid-adminlogin-error";
-    }
-}
+	   public String checkingAccess(@ModelAttribute("student") Student thestudent){
+		   Student student = studentLoginService.getStudentDetailsByEmailAndPassword(thestudent.getEmail(),
+	        		thestudent.getUserPassword());
+	        if (student != null) {
+	        	 System.out.println("debug: sign in "+student.getUserid());
+	        	 return "redirect:/students/getstudentbyid?id="+ student.getUserid();
+	        } else
+	            return "invalid-adminlogin-error";
+	    }}
+  
+

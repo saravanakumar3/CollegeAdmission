@@ -12,52 +12,36 @@
 
 	<div id="root">
 		<div id="form">
-		<form:form action="" method="post"  modelAttribute="getcourses">
+		<form:form action="" method="post"  modelAttribute="getCourseById">
 			
 					<div>
 					<label for="courseId">CourseId</label>
 					<div>
-						<form:input path="courseId" />
+						<form:input path="courseId" readonly="true" />
 					</div>
 				</div>
 				<div>
 					<label for="courseName">CourseName</label>
 					<div>
-						<form:input path="courseName" />
+						<form:input path="courseName" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="timeScale">Timescale</label>
 					<div>
-						<form:input path="timeScale" />
-					</div>
-				</div>
-				<div>
-					<label for="qualification">Qualification</label>
-					<div>
-						<form:input path="qualification" />
-					</div>
-				</div>
-				<div>
-					<label for="admisssionFee">AdmisssionFee</label>
-					<div>
-						<form:input path="admisssionFee" />
+						<form:input path="timeScale"  readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="tuitionFee">TuitionFee</label>
 					<div>
-						<form:input path="tuitionFee" />
+						<form:input path="tuitionFee" readonly="true"/>
 					</div>
 				</div>
-				<div>
-					<label for="totalSeats">TotalSeats </label>
-					<div>
-						<form:input path="totalSeats" />
-					</div>
-				</div>
+				
 			</form:form>
 		</div>
 	</div>
+	
 </body>
 </html>

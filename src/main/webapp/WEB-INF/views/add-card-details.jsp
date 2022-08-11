@@ -8,15 +8,6 @@
 <meta charset="ISO-8859-1">
 <title>Payment</title>
 </head>
-<style>
-body {
-	background-image:
-url("https://wallpaperaccess.com/full/1153664.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-</style>
 <body style="background-color: powderblue;">
 	<div id="root" class="center">
 		<div id="form">

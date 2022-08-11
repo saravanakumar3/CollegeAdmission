@@ -13,77 +13,86 @@
 	<div id="root">
 	
 		<div id="form">
-			<form:form action="update" method="post" modelAttribute="updatedetails">	
+			<form:form action="/students/update" method="post" modelAttribute="updatedetails">	
+		
 				<div>
-					<label for="userid">userid</label>
-					<div>
-						<form:input path="userid" />
-					</div>
-				</div>
-				<div>
-					<label for="username">Username</label>
+					<label for="username">UserName</label>
 					<div>
 						<form:input path="username" />
+						<form:errors path="username" />
 					</div>
 				</div>
 				<div>
 					<label for="qualification">Qualification</label>
 					<div>
 						<form:input path="qualification" />
+						<form:errors path="qualification" />
 					</div>
 				</div>
 				<div>
 					<label for="sslcMark">SslcMark</label>
 					<div>
 						<form:input path="sslcMark" />
+						<form:errors path="sslcMark" />
 					</div>
 				</div>
 				<div>
 					<label for="hscMark">HscMark</label>
 					<div>
 						<form:input path="hscMark" />
+						<form:errors path="hscMark" />
 					</div>
 				</div>
 				<div>
 					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" />
+					    Male:
+						<form:radiobutton path="gender" value="Male" />
+						Female:
+						<form:radiobutton path="gender" value="Female" />
+						<form:errors path="gender" />
 					</div>
 				</div>
 				<div>
 					<label for="address">address </label>
 					<div>
 						<form:input path="address" />
+						<form:errors path="address" />
 					</div>
 				</div>
 				<div>
 					<label for="userlocation">userlocation</label>
 					<div>
 						<form:input path="userlocation" />
+						<form:errors path="userlocation" />
 					</div>
 				</div>
 				<div>
 					<label for="nation">Nationally</label>
 					<div>
 						<form:input path="nation" />
+						<form:errors path="nation" />
 					</div>
 				</div>
 				<div>
 					<label for="phoneNumber">PhoneNumber</label>
 					<div>
 						<form:input path="phoneNumber" />
+						<form:errors path="phoneNumber" />
 					</div>
 				</div>
 				<div>
 					<label for="email">Email</label>
 					<div>
 						<form:input path="email" />
+						<form:errors path="email" />
 					</div>
 				</div>
 				<div>
-					<label for="userPassword">Address fees</label>
+					<label for="userPassword">userPassword</label>
 					<div>
 						<form:input path="userPassword" />
+						<form:errors path="userPassword" />
 					</div>
 				</div>
 				

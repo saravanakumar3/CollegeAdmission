@@ -73,7 +73,6 @@ public void setStudentCourseDetails(List<StudentCourseDetails> studentCourseDeta
 	public int getUserid() {
 	return userid;
 }
-
 public void setUserid(int userid) {
 	this.userid = userid;
 }

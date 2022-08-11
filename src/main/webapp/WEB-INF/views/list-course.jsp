@@ -36,7 +36,7 @@
 						<td>${Course.admisssionFee}</td>
 						<td>${Course.tuitionFee}</td>
 						<td>${Course.totalSeats}</td>
-						<td><a href="/ details/carddetails">Registraton</a></td>
+						<td><a href="/details/carddetails">Registration</a></td>
 						
 					</tr>
 				</c:forEach>

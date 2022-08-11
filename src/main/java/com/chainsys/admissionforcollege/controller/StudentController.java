@@ -60,7 +60,7 @@ public class StudentController {
     	else {
     		try {
     		studentService.save(student);
-        return "Registrationstatus-form";}
+        return "redirect:/studentcourse/addform";}
         catch(Exception er)
         {
         	model.addAttribute("message", "this email is already exist");
@@ -68,8 +68,6 @@ public class StudentController {
         return "add-student-form";
         }
     	}
-    
-   
     @GetMapping("/updatestudentdetails")
     public String showUpdateForm(@RequestParam("id") int id, Model model) {
     	 Student student = studentService.findByid(id);
@@ -78,16 +76,16 @@ public class StudentController {
     }
 
     @PostMapping("/update")
-    public String updateDetails(@ModelAttribute("updatedetails")  Student student) {
-    	studentService.save(student);
-        return "redirect:/students/list";
+    public String updateDetails(@Valid@ModelAttribute("updatedetails")  Student student,BindingResult bindingResult){
+    	if (bindingResult.hasErrors()) {
+        return "update-studentdetails";}
+    	else {
+    		 System.out.println("ddd");
+    		studentService.save(student);	
+    		return "redirect:/students/list";
+    		}
     }
-//    @GetMapping("/getstudent")
-//	public String getStudent(@RequestParam("id") int id, Model model) {
-//    	Student student = studentService.findByid(id);
-//		model.addAttribute("findStudentbyid", student);
-//		return "find-student-by-id";
-//	}
+		
 	@GetMapping("/getidbystudent")
 	public String getStudent(@RequestParam("id") int id,Model model) {
 		StudentCourseDto dto=studentService.getStudentCourseDto(id);
