@@ -22,12 +22,10 @@ public class CourseService {
     }
     public List<Course> getCourse() {
         List<Course> listCourse= courseRepository.findAll();
-        System.out.println("Course");
         return listCourse;
     }
     public List<Course> getCourse1() {
         List<Course> listCourse= courseRepository.findAll();
-        System.out.println("Course");
         return listCourse;
     }
     @Transactional

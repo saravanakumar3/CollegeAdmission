@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
 <meta charset="ISO-8859-1">
 <title>Find by Student CourseID</title>

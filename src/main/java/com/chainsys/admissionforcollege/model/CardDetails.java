@@ -1,12 +1,14 @@
 package com.chainsys.admissionforcollege.model;
 
 import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
@@ -42,6 +44,15 @@ public class CardDetails {
 	@NotBlank( message ="cardholder name can not be Empty")
 	@Column(name="cardholdername")
 	private String cardholderName ;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="paymentid",nullable=false, insertable=false, updatable=false)
+	private CardDetails cardDetails;
+	public CardDetails getCardDetails() {
+		return cardDetails;
+	}
+	public void setCardDetails(CardDetails cardDetails) {
+		this.cardDetails = cardDetails;
+	}
 	public String getCourseName() {
 		return courseName;
 	}

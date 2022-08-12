@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
 <meta charset="ISO-8859-1">
 <title>Student List</title>
@@ -52,7 +52,7 @@
 						<td>${Student.email}</td>
 						<td>${Student.userPassword}</td>
 						<td><a href="/students/updatestudentdetails?id=${Student.userid}">Edit</a></td>
-                        <td><a href="/students/deletestudent?id=${Student.userid}">Delete</a>
+                        <td><a href="/studentcourse/list">Delete</a>
                         <td><a href="/students/getidbystudent?id=${Student.userid}">Views</a></td>
 					</tr>
 				</c:forEach>

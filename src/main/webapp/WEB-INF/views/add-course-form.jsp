@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Course</title>
@@ -42,7 +42,7 @@
 					<label for="courseName">CourseName</label>
 					<div>
 						<form:input path="courseName"  class="form-control form-control-sm"/>
-						<form:errors path="courseName" />
+						<form:errors path="courseName" cssClass="text-success" />
 
 					</div>
 				</div>
@@ -50,31 +50,35 @@
 					<label for="timeScale">TimeScale</label>
 					<div>
 						<form:input path="timeScale" class="form-control form-control-sm" />
-
+                    	<form:errors path="timeScale" cssClass="text-success" />
 					</div>
 				</div>
 				<div>
 					<label for="qualification">Qualification</label>
 					<div>
 						<form:input path="qualification" class="form-control form-control-sm" />
+					 <form:errors path="qualification" cssClass="text-success" />
 					</div>
 				</div>
 				<div>
 					<label for="admisssionFee">AdmisssionFee</label>
 					<div>
 						<form:input path="admisssionFee" class="form-control form-control-sm"/>
+							<form:errors path="admisssionFee" cssClass="text-success" />
 					</div>
 				</div>
 				<div>
 					<label for="tuitionFee">TuitionFee</label>
 					<div>
 						<form:input path="tuitionFee" class="form-control form-control"/>
+							<form:errors path="tuitionFee" cssClass="text-success" />
 					</div>
 				</div>
 				<div>
 					<label for="totalSeats">TotalSeats </label>
 					<div>
 						<form:input path="totalSeats" class="form-control form-control" />
+							<form:errors path="totalSeats" cssClass="text-success" />
 					</div>
 				</div>
 				<br>    

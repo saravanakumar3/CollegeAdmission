@@ -3,7 +3,7 @@
 	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -17,6 +17,7 @@
 					<th>UserId</th>
 					<th>RegistrationNumber</th>
 					<th>Paymentstatus</th>
+					<th>Deleted</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,7 +27,9 @@
 						<td>${StudentCourseDetails.userid}</td>
 						<td>${StudentCourseDetails.registrationNumber}</td>
 						<td>${StudentCourseDetails.paymentstatus}</td>
+						 <td><a href="/studentcourse/deletestudentcoursedetails?id=${StudentCourseDetails.courseId}&&cid=${StudentCourseDetails.userid}"}>Delete</a></td>
 					</tr>
+
 				</c:forEach>
 			</tbody>
 		</table>

@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
 <meta charset="ISO-8859-1">
 <title>Home</title>
@@ -64,6 +64,10 @@
     </div>
   </div>
 </div>
+<iframe src="/course/list" height="450" width="1000" title="Iframe Example"></iframe>
+
+
+
 <a href="/students/list">List of student</a><br>
 <a href="/students/addstudents">Add Student</a>	
 <br>

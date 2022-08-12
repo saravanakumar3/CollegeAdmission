@@ -63,20 +63,26 @@ public class Student {
 	private String userPassword;
    @OneToMany(mappedBy="student",fetch=FetchType.LAZY)
 	private List<StudentCourseDetails> studentCourseDetails;
-   
 	public List<StudentCourseDetails> getStudentCourseDetails() {
 	return studentCourseDetails;
 }
 public void setStudentCourseDetails(List<StudentCourseDetails> studentCourseDetails) {
 	this.studentCourseDetails = studentCourseDetails;
 }
-	public int getUserid() {
+@OneToMany(mappedBy="cardDetails",fetch=FetchType.LAZY)
+private List<CardDetails> cardDetails;
+public List<CardDetails> getCardDetails() {
+	return cardDetails;
+}
+public void setCardDetails(List<CardDetails> cardDetails) {
+	this.cardDetails = cardDetails;
+}
+public int getUserid() {
 	return userid;
 }
 public void setUserid(int userid) {
 	this.userid = userid;
 }
-
 	public String getUsername() {
 		return username;
 	}

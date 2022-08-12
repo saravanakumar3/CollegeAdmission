@@ -11,32 +11,34 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
 @Entity
 @Table(name = "course")
 public class Course {
 	@Id
-	
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "course_id")
     @SequenceGenerator(name = "course_id", sequenceName = "course_id",  allocationSize = 1)
 	@Column(name = "courseid")
 	private int courseId;
+	@Size(min =3,max =50,message =" Username Size not less then 2")
+	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "coursename")
 	private String courseName;
-	
-	//@Range(min=1,max=10,message="Please enter a timescale between 1 and 10 ")
+	@Range(min=1,max=10,message="Please enter a timescale between 1 and 10 ")
 	@Column(name = "timescale")
 	private int timeScale;
-	//@Size(min =2,max =50,message ="qualification Size not less than 2.")
-	//@NotBlank( message ="Username can not be Empty")
+	@Size(min =2,max =50,message ="qualification Size not less than 2.")
+	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "qualification")
 	private String qualification;
-	//@Range(min=1000,message="1000 rupees is required for this field")
+	@Range(min=1000,message="1000 rupees is required for this field")
 	@Column(name = "admisssionfee")
 	private int admisssionFee;
-	//@Range(min=40000,message="40000 rupees is required for this field")
+	@Range(min=40000,message="40000 rupees is required for this field")
 	@Column(name = "tuitionfee")
 	private int tuitionFee;
-	//@Range(min=10,max =50,message="Please enter a number from 10 to 50. ")
+	@Range(min=10,max =50,message="Please enter a number from 10 to 50. ")
 	@Column(name = "totalseats")
 	private int totalSeats;
 	  @OneToMany(mappedBy="course",fetch=FetchType.LAZY)

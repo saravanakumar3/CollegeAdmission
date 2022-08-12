@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="En">
 <head>
 <meta charset="ISO-8859-1">
 <title>Payment</title>
@@ -32,8 +32,11 @@
 				<div>
 					<label for="phoneNumber">PhoneNumber</label>
 					<div>
-						<form:input path="phoneNumber"  required="true" />
+						<form:input path="phoneNumber" pattern="[1-9]{1}[0-9]{9}"
+                            title="Phone number should have atleast 10 digits"
+                            required="true" />
 					</div>	
+					</div>
 				<div>
 					<label for="amount">Amount</label>
 					
@@ -67,7 +70,7 @@
 					<form:errors path="cardholderName" />
 					</div>
 				</div>
-                <div>
+               
 				</div>
 				<div>
 					<form:button>Pay</form:button>
@@ -75,7 +78,5 @@
 			</form:form>
 		</div>
 	</div>
-	
-	
 </body>
 </html>
