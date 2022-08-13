@@ -62,16 +62,21 @@ public class CourseController {
 	        return "add-course-form";
 	    }
 	    @PostMapping("/add")
-	    public String addCourseDetails(@Valid@ModelAttribute("addcoursedetail")  Course course,
+	    public String addCourseDetails(@Valid@ModelAttribute("addcoursedetail")  Course course,Model model,
 	    		BindingResult bindingResult) {
 	    	
 	    	if (bindingResult.hasErrors()) {
 	    		return "add-course-form";
 	    		}
 	    	else {
-	    	courseService.save(course);
-	        return "redirect:/course/courselist";
-	    }}
+	    	    try{courseService.save(course);
+		        return "redirect:/course/courselist"; }
+		        	catch(Exception er)
+		    		{model.addAttribute("message", "this Course is already exist");
+		    		return "add-course-form";	
+	    	    }
+	    	}
+	    }
 	    @GetMapping("/updatedetails")
 		public String showUpdateForm(@RequestParam("id") int id, Model model) {
 			Course course = courseService.findByid(id);

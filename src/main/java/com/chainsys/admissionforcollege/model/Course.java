@@ -19,27 +19,27 @@ public class Course {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "course_id")
     @SequenceGenerator(name = "course_id", sequenceName = "course_id",  allocationSize = 1)
-	@Column(name = "courseid")
+	@Column(name = "course_id")
 	private int courseId;
 	@Size(min =3,max =50,message =" Username Size not less then 2")
 	@NotBlank( message ="Username can not be Empty")
-	@Column(name = "coursename")
+	@Column(name = "course_name")
 	private String courseName;
-	@Range(min=1,max=10,message="Please enter a timescale between 1 and 10 ")
-	@Column(name = "timescale")
+	@Range(min=1,max=9,message="Please enter a timescale between 1 and 9 ")
+	@Column(name = "time_scale")
 	private int timeScale;
 	@Size(min =2,max =50,message ="qualification Size not less than 2.")
 	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "qualification")
 	private String qualification;
-	@Range(min=1000,message="1000 rupees is required for this field")
-	@Column(name = "admisssionfee")
+	@Range(min=10000,message="10000 rupees is required for this field")
+	@Column(name = "admisssion_fee")
 	private int admisssionFee;
 	@Range(min=40000,message="40000 rupees is required for this field")
-	@Column(name = "tuitionfee")
+	@Column(name = "tuition_fee")
 	private int tuitionFee;
 	@Range(min=10,max =50,message="Please enter a number from 10 to 50. ")
-	@Column(name = "totalseats")
+	@Column(name = "total_seats")
 	private int totalSeats;
 	  @OneToMany(mappedBy="course",fetch=FetchType.LAZY)
 		private List<StudentCourseDetails> studentCourseDetails;

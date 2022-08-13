@@ -28,11 +28,11 @@ public class StudentCourseDetails {
 	private int  courseId ;
 	@Id
 	@Range(min=1,message="Value should be greater than 0")
-	@Column(name ="userId")
+	@Column(name ="userid")
 	private int userid;
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "studentcourse_id")
     @SequenceGenerator(name = "studentcourse_id", sequenceName = "studentcourse_id",  allocationSize = 1)
-	@Column(name ="Registrationnumber")
+	@Column(name ="registrationnumber")
 	private int registrationNumber;
 	@Size(min =3,max =50,message =" Username Size not less then 2")
 	@NotBlank( message ="This field can not be Empty")

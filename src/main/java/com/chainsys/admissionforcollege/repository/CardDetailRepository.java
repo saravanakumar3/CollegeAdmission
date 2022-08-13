@@ -10,6 +10,6 @@ public interface CardDetailRepository extends CrudRepository<CardDetails, Intege
 		   CardDetails save(CardDetails cardDetails); 
 		    void deleteById(int id);
             List<CardDetails> findAll();
-            List<CardDetails> findByPaymentid(int id);
+            List<CardDetails> findByPaymentId(int id);
 		}
 

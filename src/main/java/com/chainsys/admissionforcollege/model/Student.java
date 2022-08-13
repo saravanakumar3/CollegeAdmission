@@ -22,9 +22,9 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "student_id")
     @SequenceGenerator(name = "student_id", sequenceName = "student_id",  allocationSize = 1)
-	@Column(name = "userid")
+	@Column(name = "user_id")
 	private int userid;
-	@Size(min =3,max =50,message =" Username Size not less then 2")
+	@Size(min =3,max =100,message =" Username Size not less then 3")
 	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "name")
 	private String username;
@@ -33,14 +33,14 @@ public class Student {
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name = "qualification")
 	private String qualification;
-	@Range(min=350,max=500,message="To register, you must have an SSCmark of at least 350")
-	@Column(name = "sslcmark")
+	@Range(min=300,max=500,message="To register, you must have an SSCmark of at least 350")
+	@Column(name = "sslc_mark")
 	private float sslcMark;
-	@Range(min=750,max=1200,message="To register, you must have an HSCmark of at least 750")
-	@Column(name = "hscmark")
+	@Range(min=700,max=1200,message="To register, you must have an HSCmark of at least 750")
+	@Column(name = "hsc_mark")
 	private float hscMark;
 	@NotBlank( message ="This field can not be Empty")
-	@Column(name = "gender")
+     @Column(name = "gender")
 	private String gender;
 	@Size(min =5,max =250,message =" Address size not less then 5")
 	@NotBlank( message ="This field can not be Empty")
@@ -48,18 +48,18 @@ public class Student {
 	private String address;
 	@Size(min =5,max =250,message =" User_location size not less then 5")
 	@NotBlank( message ="This field can not be Empty")
-	@Column(name = "User_location")
+	@Column(name = "user_location")
 	private String userlocation;
 	@NotBlank( message ="This field can not be Empty")
-	@Column(name = "Nationally")
+ 	@Column(name = "nationally")
 	private String nation;
-	@Column(name = "phonenumber")
+	@Column(name = "phone_number")
 	private long phoneNumber;
 	@Email(message="Please enter a volid email !!")
 	@Column(name = "email")
 	private String email;
 	@Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The password can contain only characters and digits")
-	@Column(name = "userpassword")
+	@Column(name = "user_password")
 	private String userPassword;
    @OneToMany(mappedBy="student",fetch=FetchType.LAZY)
 	private List<StudentCourseDetails> studentCourseDetails;

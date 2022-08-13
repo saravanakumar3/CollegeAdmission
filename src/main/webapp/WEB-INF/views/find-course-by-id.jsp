@@ -10,7 +10,6 @@
 </head>
 <body>
 <body style="background-color: powderblue;">
-
 <div id="root">
 		<div id="form">
 		<form:form action="" method="post"  modelAttribute="getcourse">

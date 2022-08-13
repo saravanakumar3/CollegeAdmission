@@ -51,7 +51,7 @@ public class StudentService {
     	 Student student= findByid(id);
     	 StudentPaymentDto  dto =new StudentPaymentDto();
     	 dto.setStudent(student);
-    	 List<CardDetails> CardDetails =cardDetailsRepository.findByPaymentid(id);
+    	 List<CardDetails> CardDetails =cardDetailsRepository.findByPaymentId(id);
     	 Iterator<CardDetails> itr =CardDetails.iterator();
     	while(itr.hasNext()) {
     		dto.addCardDetails((CardDetails)itr.next());

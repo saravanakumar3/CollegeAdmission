@@ -14,6 +14,13 @@
 			<form:form action="/details/adddetails" method="post" modelAttribute="addcarddetails">
 				<div>
 				<div>
+					<label for="paymentid">payment Id</label>
+					<div>
+						<form:input path="paymentid"/>
+						 <form:errors path="paymentid" placeholder="payment Id" required="true"/>
+					</div>	
+				<div>
+				<div>
 					<label for="courseName">CourseName</label>
 					<form:select path="courseName"  required="true">
 							<form:option value="Lawyer">Lawyer</form:option>
@@ -21,7 +28,7 @@
 							<form:option value="journalit">Journalit</form:option>
 							<form:option value="Fashion Designer">Fashion Designer</form:option>	
 						</form:select>
-						 <form:errors path="courseName" />
+						 <form:errors path="courseName" /></div>
 				<div>
 					<label for="name">UserName</label>
 					<div>
@@ -32,7 +39,7 @@
 				<div>
 					<label for="phoneNumber">PhoneNumber</label>
 					<div>
-						<form:input path="phoneNumber" pattern="[1-9]{1}[0-9]{9}"
+						<form:input path="phoneNumber"  placeholder ="PhoneNumber" pattern="[1-9]{1}[0-9]{9}"
                             title="Phone number should have atleast 10 digits"
                             required="true" />
 					</div>	
@@ -59,14 +66,17 @@
 				<div>
 					<label for="cvvNumber">CvvNumber</label>
 					<div>
-						<form:input path="cvvNumber"  required="true" />
+						<form:input path="cvvNumber" placeholder ="CvvNumber" pattern="[0-9]{3}"
+                            title="Please enter a valid three-digit number="true" />
 					  <form:errors path="cvvNumber" />
 					</div>
 				</div>
 				<div>
 					<label for="cardholderName">CardholderName</label>
 					<div>
-						<form:input path="cardholderName"  required="true"/>
+						<form:input path="cardholderName" placeholder="CardholderName"
+						title="This field can't be empty or must contain only alphabets" 
+						pattern="^[A-Za-z\s]*$" required="true""/>
 					<form:errors path="cardholderName" />
 					</div>
 				</div>

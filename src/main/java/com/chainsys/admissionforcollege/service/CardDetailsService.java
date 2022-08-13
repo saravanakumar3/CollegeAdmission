@@ -1,5 +1,7 @@
 package com.chainsys.admissionforcollege.service;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.chainsys.admissionforcollege.model.CardDetails;
@@ -12,15 +14,16 @@ public class CardDetailsService {
 	    public CardDetails findByid(int id) {
 	        return cardRepositor.findById(id);
 	    }
+		public List<CardDetails> getCardDetails() {
+	        List<CardDetails> Cardlist = cardRepositor.findAll();
+	        return Cardlist;
+	    }
 	    public CardDetails save(CardDetails cardDetails) {
 	        return cardRepositor.save(cardDetails);
 	    }
 	    public void deleteById(int id) {
 	    	cardRepositor.deleteById(id);
-	    }
-		public List<CardDetails> getCardDetails() {
-		        List<CardDetails> Cardlist = cardRepositor.findAll();
-		        return Cardlist;
-		    }
-}
+	    }}
+	
+
 

@@ -15,14 +15,16 @@
 				<div>
 					<label for="courseId" class="form-label">CourseId</label>
 					<div>
-						<form:input path="courseId" />
+						<form:input path="courseId"  placeholder="CourseId"
+							title="CourseId can't be empty" required="true" />
 						<form:errors path="courseId" cssClass="text-success"/>
 					</div>
 				</div>
 				<div>
-					<label for="userid" class="form-label">userId</label>
+					<label for="userid" class="form-label">UserId</label>
 					<div>
-						<form:input path="userid" />
+						<form:input path="userid" placeholder="CourseId"
+							title="userid can't be empty" required="true"/>
 					</div>
 				</div>
 					<form:errors path="userid" cssClass="text-success" />
@@ -30,15 +32,18 @@
 				 <div>
 					<label for="registrationNumber" class="form-label">RegistrationNumber</label>
 					<div>
-						<form:input path="registrationNumber" cssClass="text-success" />
+						<form:input path="RegistrationNumber" placeholder="CourseId"
+							title="CourseId can't be empty" required="true"/>
+					<form:errors path="registrationNumber" cssClass="text-success" />
 					</div>
 				</div> 
 					<label for="paymentstatus">Payment Status</label>
 					<div>
-						<form:input path="paymentstatus" />
+						<form:input path="paymentstatus" placeholder="CourseId"
+							title="Paymentstatus can't be empty" required="true"  />
 					</div>
 				</div>
-				<form:errors path="paymentstatus" />
+				<form:errors path="paymentstatus" cssClass="text-success" />
 				<div>
 				<form:button>Registration</form:button></a>
 				</div>

@@ -1,9 +1,6 @@
 package com.chainsys.admissionforcollege.controller;
-
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.service.StudentService;
 import com.chainsys.admissionforcolllege.dto.StudentCourseDto;
 import com.chainsys.admissionforcolllege.dto.StudentPaymentDto;
-
 @Controller
 @RequestMapping("/students")
 public class StudentController {
@@ -52,18 +47,23 @@ public class StudentController {
 		return "add-students-form";
 	}
 
-	@PostMapping("/addform")
+	@PostMapping("/enterdetails")
 	public String addStudentDetails(@Valid @ModelAttribute("addstudentdetail") Student student, Model model,
 			BindingResult bindingResult) {
     	if (bindingResult.hasErrors()){
+    		System.out.println("Debug");
     		return "add-students-form";
     		}
     	else {
+    		try {
     		studentService.save(student);
-        return "redirect:/details/carddetails";
+        return "redirect:/details/carddetails";}
+    		catch(Exception er)
+    		{model.addAttribute("message", "this email is already exist");
+    		return "add-students-form";
     }
 	}
-
+}
 	@GetMapping("/updatestudentdetails")
 	public String showUpdateForm(@RequestParam("id") int id, Model model) {
 		Student student = studentService.findByid(id);
@@ -80,7 +80,6 @@ public class StudentController {
 			return "redirect:/students/list";
 		}
 	}
-
 	@GetMapping("/getidbystudent")
 	public String getStudent(@RequestParam("id") int id, Model model) {
 		StudentCourseDto dto = studentService.getStudentCourseDto(id);
@@ -88,13 +87,11 @@ public class StudentController {
 		model.addAttribute("studentcourselist", dto.getStudentCourseDetails());
 		return "find-student-by-id";
 	}
-	
 	@GetMapping("/getidbypayment")
-	public String getStudentPayment(@RequestParam("Id") int id, Model model) {
+	public String getStudentPayment(@RequestParam("id") int id, Model model) {
 		StudentPaymentDto studentPaymentDto = studentService.getStudentpaymentDto(id);
 		model.addAttribute("getstudentdata", studentPaymentDto.getStudent());
 		model.addAttribute("studentpaymentlist", studentPaymentDto.getCardDetails());
 		return "find-studentpaymet-list";
 	}
-
 }
