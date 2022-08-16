@@ -8,14 +8,56 @@
 <meta charset="ISO-8859-1">
 <title>PaymentDetals</title>
 </head>
-<body style="background-color: powderblue;> 
-	<div  id=root">
-		<div id="form">
+<style>
+
+.form-control {
+	width:750px;
+	height: 25px;
+	height: 240px
+	border: none;
+	border-radius: 5px;
+	padding-left: 8px;
+}
+.click-button{
+	width:750px;
+	height: 25px;
+	height: 240px
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+	background-color: #9E9B45 ;
+}
+.root{
+	width:850px;
+	height:450px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	background-color: #B1BECD ;
+}
+body{
+background-color:#EBF1F9;
+}
+h1{
+text-align: center;
+color:#C47B66 ;
+}
+</style>
+<body> 
+<h1>Madurai Government Arts College</h1>
+ <iframe class="iframe" src="/details/list" height="250px" width="100%" title="Iframe Example" ></iframe>  
+	<div  class="root">
+	<br>
+		<div id="form" align="center">
 			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">
+				<h2  style ="color:green"> Student Status update  form</h2>
 				<div>
 					<label for="courseId" class="form-label">CourseId</label>
 					<div>
-						<form:input path="courseId"  placeholder="CourseId"
+						<form:input path="courseId" class="form-control"  placeholder="CourseId"
 							title="CourseId can't be empty" required="true" />
 						<form:errors path="courseId" cssClass="text-success"/>
 					</div>
@@ -23,31 +65,33 @@
 				<div>
 					<label for="userid" class="form-label">UserId</label>
 					<div>
-						<form:input path="userid" placeholder="CourseId"
+						<form:input path="userid" class="form-control" placeholder="CourseId"
 							title="userid can't be empty" required="true"/>
 					</div>
 				</div>
 					<form:errors path="userid" cssClass="text-success" />
 				<div>
 				 <div>
-					<label for="registrationNumber" class="form-label">RegistrationNumber</label>
+					<label for="registrationNumber" >RegistrationNumber</label>
 					<div>
-						<form:input path="RegistrationNumber" placeholder="CourseId"
-							title="CourseId can't be empty" required="true"/>
+						<form:input path="registrationNumber" class="form-control"
+							title="RegistrationNumber can't be empty" required="true"/>
 					<form:errors path="registrationNumber" cssClass="text-success" />
 					</div>
 				</div> 
 					<label for="paymentstatus">Payment Status</label>
 					<div>
-						<form:input path="paymentstatus" placeholder="CourseId"
+						<form:input path="paymentstatus" class="form-control" placeholder="Payment Status"
 							title="Paymentstatus can't be empty" required="true"  />
 					</div>
 				</div>
 				<form:errors path="paymentstatus" cssClass="text-success" />
 				<div>
-				<form:button>Registration</form:button></a>
+				<br>
+				<form:button class="click-button">Update</form:button></a>
 				</div>
 			</form:form>
+			<h5 ><a href ="/admin/adminpage" style ="color:green">Go to home page</a></h5>
 		</div>
 	</div> 
 </body>

@@ -19,7 +19,6 @@ url("https://www.firststudent.com/wp-content/themes/first_student/images/home-vi
 h1 {
 	color: #ff1493;
 }
-
 label {
 	color: #000080;
 	font-size: 1.3em;
@@ -107,9 +106,9 @@ label {
 			</table>
 			<label>Don't have an Account?</label> <a href="/students/addstudents">
 				<input onclick="change()" type="button" value="Sign Up"></input>
-		
 			</a>
 		</div>
 	</div>
+	
 </body>
 </html>

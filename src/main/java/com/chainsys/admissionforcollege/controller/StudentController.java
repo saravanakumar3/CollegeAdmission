@@ -57,7 +57,7 @@ public class StudentController {
     	else {
     		try {
     		studentService.save(student);
-        return "redirect:/details/carddetails";}
+        return "redirect:/user/addform";}
     		catch(Exception er)
     		{model.addAttribute("message", "this email is already exist");
     		return "add-students-form";

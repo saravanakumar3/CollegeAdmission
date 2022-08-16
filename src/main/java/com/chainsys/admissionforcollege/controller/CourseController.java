@@ -49,12 +49,6 @@ public class CourseController {
 	    	courseService.deleteById(id);
 	        return "redirect:/course/list";
 	    }
-    
-    @GetMapping("/deletecoursebyadmin")
-    public String deleteCourseDetailsByadmin(@RequestParam("id") int id) {
-    	courseService.deleteById(id);
-        return "redirect:/course/course/list";
-    }
 	    @GetMapping("/addcourse")
 	    public String showAddForm(Model model) {
 	    	Course course = new  Course();

@@ -7,21 +7,46 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registration for college admission </title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+<style>
+body {
+	background-image:
+url("https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3R1ZGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.form-control {
+	width:550px;
+	height: 25px;
+	height: 240px
+	border: none;
+	border-radius: 5px;
+	padding-left: 8px;
+}
+.click-button{
+	width:550px;
+	height: 25px;
+	height: 240px
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+	background-color: #9E9B45 ;
+}
+h4{
+color:blue;
+}
+</style>
 </head>
-<body >
-
-	<div id="root">
-	
-		<div id="form">
+<body > 
+<h1>Registration form for college admission</h1>
+	<div id="root" class="center">
+		<div id="form" align="left">
 			<form:form action="enterdetails" method="post" modelAttribute="addstudentdetail">
 				<div>
-					<label for="username">userName</label>
+					<label for="username">UserName</label>
 					<div>
-						<form:input path="username" placeholder="User Name"
+						<form:input path="username" class="form-control" placeholder="User Name"
 						title="This field can't be empty or must contain only alphabets" 
 						pattern="^[A-Za-z\s]*$" required="true"/>
 					       <form:errors path="username" />
@@ -29,14 +54,13 @@
 				<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" type="date" required="true"/>
-						
+							<form:input path="dob" class="form-control" type="date" required="true"/>
 						</div>
 					</div>
 				<div>
 					<label for="qualification">Qualification</label>
 					<div>
-						<form:input path="qualification"  placeholder="Qualification"
+						<form:input path="qualification" class="form-control" placeholder="Qualification"
 						title="This field can't be empty or must contain only alphabets" 
 						pattern="^[A-Za-z\s]*$" required="true"/>
                        <form:errors path="qualification" />
@@ -46,7 +70,7 @@
 				<div>
 					<label for="sslcMark">SslcMark</label>
 					<div>
-						<form:input path="sslcMark"  placeholder="SslcMark"
+						<form:input path="sslcMark" class="form-control" placeholder="SslcMark"
 						title="To register, you must have an SSCmark of at least 300" pattern ="[34][0-9]{2}|500"/>
 						<form:errors path="sslcMark" />
 					</div>
@@ -54,32 +78,32 @@
 				<div>
 					<label for="hscMark">HscMark</label>
 					<div>
-						<form:input path="hscMark" placeholder="HscMark"
+						<form:input path="hscMark"  class="form-control" placeholder="HscMark"
 						title="To register, you must have an HscMark of at least 700"  pattern ="[7-9][0-9]{2}|[1][01][0-9]{2}|1200"/>
 						<form:errors path="hscMark" />
 					</div>
 				</div>
 				<div>
 					<label for="gender">Gender</label>
-					<div>
+					<div class="form-control" >
 					    Male:
-						<form:radiobutton path="gender" value="Male" />
+						<form:radiobutton path="gender"  value="Male" />
 						Female:
-						<form:radiobutton path="gender" value="Female" />
+						<form:radiobutton path="gender"  value="Female" />
 						<form:errors path="gender" />
 					</div>
 				</div>
 				<div>
 					<label for="address">Address </label>
 					<div>
-						<form:input path="address"  required="true" />
+						<form:input path="address" class="form-control"  required="true" />
 						<form:errors path="address"/>
 					</div>
 				</div>
 				<div>
 					<label for="userlocation">User location</label>
 					<div>
-						<form:input path="userlocation" />
+						<form:input path="userlocation" class="form-control" />
 						<form:errors path="userlocation" />
 					</div>
 				</div>
@@ -87,23 +111,22 @@
 				<div>
 					<label for="nation">Nationally</label>
 					<div>
-						<form:input path="nation" />
+						<form:input path="nation" class="form-control" />
 						<form:errors path="nation" />
 					</div>
 				</div>
 					<label for="phoneNumber">PhoneNumber</label>
 					<div>
-						<form:input path="phoneNumber"  placeholder="Mobile Number"
+						<form:input path="phoneNumber" class="form-control"  placeholder="Mobile Number"
                             pattern="[1-9]{1}[0-9]{9}"
                             title="Phone number should have atleast 10 digits"
                             required="true"/>
-						
 					</div>
 				</div>
 				<div>
 					<label for="email">Email</label>
 					<div>
-						<form:input path="email"  placeholder="Email"
+						<form:input path="email" class="form-control"   placeholder="Email"
 							pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
 							title="Enter valid email ex: example@gmail.com" required="true" />
 						<form:errors path="email"/>
@@ -112,7 +135,7 @@
 				<div>
 					<label for="userPassword">User Password</label>
 					<div>
-						<form:input path="userPassword"  placeholder="User Password" title ="password has only four characters and one digits" pattern="[a-zA-Z)-9]{5}" type="password" />
+						<form:input path="userPassword" class="form-control"  placeholder="User Password" title ="password has only four characters and one digits" pattern="[a-zA-Z)-9]{5}" type="password" />
 						<form:errors path="userPassword" />
 					</div>
 				</div>
@@ -120,8 +143,9 @@
 				<div> ${message}</div>
 				<br>
 				<div>
-				<form:button>Sign up</form:button>
+				<form:button class="click-button">Sign up</form:button>
 				</div>
+				<h4><a href="/">Go to home page</a></h4>
 			</form:form>
 		</div>
 	</div>

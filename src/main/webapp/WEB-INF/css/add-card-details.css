@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+.center {
+	width: 60%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	background-color: #B1BECD ;
+}
+.form-control {
+	width:350px;
+	height: 25px;
+	height: 240px
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+.click-button{
+	width:350px;
+	height: 25px;
+	height: 240px
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+	background-color: #9E9B45 ;
+}

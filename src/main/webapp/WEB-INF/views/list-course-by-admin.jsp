@@ -8,6 +8,19 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title> 
 </head>
+<style>
+table, th, td {
+	border: 1px solid black;
+	padding: 15px;
+	text-align: left;
+}
+th, td {
+	border-color: #96D4D4;
+}
+tr:hover {
+	background-color: #D6EEEE;
+}
+</style>
 <body>
 <h1><a href="/course/addcourse">Add Course</a></h1>
 

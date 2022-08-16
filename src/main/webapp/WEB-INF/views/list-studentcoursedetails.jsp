@@ -6,9 +6,33 @@
 <html lang="En">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>StudentCourseDetails list</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous"> 
+<style>
+table, th, td {
+	border: 1px solid black;
+	padding: 15px;
+	text-align: left;
+}
+th, td {
+	border-color: #96D4D4;
+}
+tr:hover {
+	background-color: #D6EEEE;
+}
+</style>
 </head>
 <body>
+<h1>Madurai Government Arts College</h1>
+<ul class="nav nav-tabs nav-dark bg">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/admin/adminpage">Home</a>
+  </li>
+</ul>
+<br>
 	<div id="table root">
 		<table border="2" width="100%" cellpadding="2">
 			<thead>

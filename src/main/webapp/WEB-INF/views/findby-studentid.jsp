@@ -10,13 +10,32 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+<style>
+body {
+	background-image:
+url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOFtSRiT43CvdRvPXtnHtTbN4ERwht9DOCA&usqp=CAU");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+</style>
 </head>
-<body style="background-color: powderblue;">
+<body>
+<ul class="nav nav-tabs nav-dark bg" style="background-color:#F5EEEC" align="center" >
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+  </li>
+</ul>
 <div class="container">
-  <h2>personal information</h2>
+  <h1>Student admission page</h1>
+   <h2 Style="color:#96535D"><p>Quality Policy.</p> </h2>
+  <p Style="color:#1F2322">Committed to impart Quality Technical Education imbibed with proficiency, human values and continual improvement.</p>      
+       
+  <div class="row">
+    <div class="col-sm-3" id =box">
+      <h2>personal information</h2>
   <p>To view personal information, click the button..</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click Here</button>
   <div id="demo" class="collapse">
     <div id="root">
 		<div id="form">
@@ -91,6 +110,7 @@
 					<div>
 						<form:input path="Email" readonly="true" />
 					</div>
+					
 				</div>
 				</div>
 				<div>
@@ -99,6 +119,12 @@
 	</div>
   </div>
 </div>
-<iframe src="/course/list" height="450" width="1000" title="Iframe Example"></iframe>
+    </div>
+    <div class="col-sm-8" style="background-color:#B2B2B2 ;">
+      <iframe src="/details/carddetails" height="800" width="100%" title="Iframe Example" ></iframe>  
+    </div>
+  </div>
+</div>
+<div class="container">
 </body>
 </html>

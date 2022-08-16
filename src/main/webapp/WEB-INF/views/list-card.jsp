@@ -7,14 +7,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Course List</title>
+<style>
+table, th, td {
+	border: 1px solid black;
+	padding: 15px;
+	text-align: left;
+}
+th, td {
+	border-color: #96D4D4;
+}
+tr:hover {
+	background-color: #D6EEEE;
+}
+</style>
 </head>
 <body>
 	<div id="table root">
 		<table border="2" width= "100%" cellpadding="2">
 			<thead>
 	
-				<th>PaymentId</th>
+				<th>UserId</th>
 				<th>courseName</th>
+				<th>UserName</th>
 				<th>phoneNumber</th>
 					<th>Amount</th>
 					<th>PaymentDate</th>
@@ -24,7 +38,8 @@
 			<tbody>
 				<c:forEach var="CardDetails" items="${allplayment}">
 					<tr>
-						<td>${CardDetails.paymentid}</td>
+						<td>${CardDetails.paymentId}</td>
+						<td>${CardDetails.courseName}</td>
 						<td>${CardDetails.name}</td>
 						<td>${CardDetails.phoneNumber}</td>
 						<td>${CardDetails.amount}</td>

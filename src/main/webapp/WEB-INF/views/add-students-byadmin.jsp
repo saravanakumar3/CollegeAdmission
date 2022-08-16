@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="En">
 <head>
 <meta charset="ISO-8859-1">
-<title>UpdateStudent</title>
-</head>
+<title>Registration for college admission </title>
 <style>
 body {
 	background-image:
-url("https://www.betterup.com/hubfs/Imported_Blog_Media/behavior%20change%20blog%20image.png");
+url("https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3R1ZGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -34,33 +33,17 @@ url("https://www.betterup.com/hubfs/Imported_Blog_Media/behavior%20change%20blog
 	padding-left: 8px;
 	background-color: #9E9B45 ;
 }
-h4,a{
-color:#91EEE4;
-}
-.form-control {
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-	color:#91EEE4;
-}
-label{
-color:#ECC4F3;
+h4{
+color:blue;
 }
 </style>
-<body>
-	<div class="root">
-	
-		<div id="form">
-			<form:form action="/students/update" method="post" modelAttribute="updatedetails">
-			<div>
-					<div>
-						<form:input path="userid" 
-						type="hidden" />
-				</div>	
-			<div>
+</head>
+<body > 
+<h1>Registration form for college admission</h1>
+	<div id="root" class="center">
+		<div id="form" align="left">
+			<form:form action="enterdetails" method="post" modelAttribute="addstudentdetail">
+				<div>
 					<label for="username">UserName</label>
 					<div>
 						<form:input path="username" class="form-control" placeholder="User Name"
@@ -160,10 +143,9 @@ color:#ECC4F3;
 				<div> ${message}</div>
 				<br>
 				<div>
-				<form:button class="click-button">Click Update</form:button>
+				<form:button class="click-button">Sign up</form:button>
 				</div>
 				<h4><a href="/admin/adminpage">Go to home page</a></h4>
-             </div>
 			</form:form>
 		</div>
 	</div>

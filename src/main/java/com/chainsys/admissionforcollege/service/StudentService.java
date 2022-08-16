@@ -4,7 +4,6 @@ import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.chainsys.admissionforcollege.model.CardDetails;
 import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.model.StudentCourseDetails;
@@ -46,12 +45,11 @@ public class StudentService {
 		dto.addStudentCourseDetails((StudentCourseDetails)itr.next());
 	}
 	 return dto;}
-     
      public  StudentPaymentDto getStudentpaymentDto(int id) {
     	 Student student= findByid(id);
     	 StudentPaymentDto  dto =new StudentPaymentDto();
     	 dto.setStudent(student);
-    	 List<CardDetails> CardDetails =cardDetailsRepository.findByPaymentId(id);
+    	 List<CardDetails> CardDetails =cardDetailsRepository.findByUserId(id);
     	 Iterator<CardDetails> itr =CardDetails.iterator();
     	while(itr.hasNext()) {
     		dto.addCardDetails((CardDetails)itr.next());

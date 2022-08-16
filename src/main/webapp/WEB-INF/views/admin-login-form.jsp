@@ -11,14 +11,73 @@
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<style>
+
+nav {
+	background:black;
+	width: 100%;
+	padding: 10px 0;
+	z-index: 12;
+}
+
+nav .menu {
+	max-width: 1250px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.menu .logo a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.menu ul {
+	display: inline-flex;
+}
+
+.menu ul li {
+	list-style: none;
+	margin-left: 7px;
+}
+
+.menu ul li:first-child {
+	margin-left: 0px;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 15px;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+	background: #ADCF9A;
+	color: blue;
+}
+</style>
+
 </head>
 <bodys>
-<h1>Madurai Government Arts College</h1>
-<ul class="nav nav-tabs nav-dark bg-success">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/">Home</a>
-  </li>
-</ul>
+<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/admin/login">Refresh</a></li>
+				<li><a href="/">Login out</a></li>
+			</ul>
+		</div>
+	</nav>
 <br>
 <br>
 	<div class="card mb-3 h=100" style="max-width: 10000px; ">
