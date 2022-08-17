@@ -1,10 +1,7 @@
 package com.chainsys.admissionforcollege.controller;
-
 import java.util.List;
 import java.util.Optional;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.chainsys.admissionforcollege.model.Student;
 import com.chainsys.admissionforcollege.model.StudentCourseDetails;
 import com.chainsys.admissionforcollege.service.StudentCourseDetailsService;
 import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
@@ -71,7 +66,6 @@ public class StudentCourseDetailsController {
 	    	}
 	    	@GetMapping("/getbyidstudentcourse")
 	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("id")int id1, Model model) {
-	    		System.out.println("debug");
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, id1);
 	    		Optional<StudentCourseDetails> studentCourseDetails = studentCourseDetailsService.findById(studentCompositeKey);
 	    		model.addAttribute("findbyid", studentCourseDetails);

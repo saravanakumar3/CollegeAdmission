@@ -17,7 +17,6 @@ public class StudentLoginController {
 	@GetMapping("/addform")
 	
     public String studentAccessform(Model model) {
-		System.out.println("login");
 		Student thestudent = new Student();
         model.addAttribute("student", thestudent);
         return "login-user-form";
@@ -27,7 +26,6 @@ public class StudentLoginController {
 		   Student student = studentLoginService.getStudentDetailsByEmailAndPassword(thestudent.getEmail(),
 	        		thestudent.getUserPassword());
 	        if (student != null) {
-	        	 System.out.println("debug: sign in "+student.getUserid());
 	        	 return "redirect:/students/getstudentbyid?id="+ student.getUserid();
 	        } else
 	            return "invalid-studentlogin-error";
