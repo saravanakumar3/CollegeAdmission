@@ -17,10 +17,8 @@
   padding: 10px;
   height:170px;
   width: 25%;
-	height: 170px;
 	box-shadow: 5px 20px 50px #000;
 	margin: auto;
-	padding: 10px;
 	text-align: center;
 	background-color: #B1BECD ;
 }
@@ -128,5 +126,9 @@ nav .menu {
 	   margin-left:30%;
 	    width: 35%;
 	    border-radius: 9px;
-	   color: green;
+	 
+}
+h1,h2{
+	
+	text-align: center;
 }

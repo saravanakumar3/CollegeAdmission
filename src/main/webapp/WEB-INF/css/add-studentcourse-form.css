@@ -79,3 +79,12 @@ nav .menu {
 	background: #ADCF9A;
 	color: blue;
 }
+.form-textarea{
+	width:550px;
+	height: 75px;
+	border: none;
+	border-radius: 8px;
+	padding-left: 8px;
+	color:#D30EF1;
+	
+}

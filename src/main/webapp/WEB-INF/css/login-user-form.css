@@ -36,12 +36,13 @@ label {
 }
 
 #log {
-	width: 250px;
+	width: 259px;
 	height: 30px;
 	border: none;
 	border-radius: 12px;
 	padding-left: 7px;
 	color: green;
+	margin-left:28%;
 }
 
 .box {

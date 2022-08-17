@@ -17,7 +17,7 @@
    <a href="/studentcourse/addform">Payment Update</a>
   <div class="dropdown">
     <button class="dropbtn">List  
-      <i class="fa fa-caret-down"></i>
+      <i class="fa fa-caret-down"></i> <!-- Compliant icon fonts usage -->
     </button>
     <div class="dropdown-content">
       <a href="/students/list">Students list</a>
@@ -27,7 +27,7 @@
   </div> 
   <div class="dropdown">
     <button class="dropbtn">Admin Feature  
-      <i class="fa fa-caret-down"></i>
+      <i class="fa fa-caret-down"></i> <!-- Compliant icon fonts usage -->
     </button>
     <div class="dropdown-content">
      <a href="/admin/addstudents">Add Student</a>

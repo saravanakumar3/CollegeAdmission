@@ -1,21 +1,30 @@
 @charset "ISO-8859-1";
 body {
 	background-image:
-url("https://www.betterup.com/hubfs/Imported_Blog_Media/behavior%20change%20blog%20image.png");
+url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOFtSRiT43CvdRvPXtnHtTbN4ERwht9DOCA&usqp=CAU");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
- font-family: Arial, Helvetica, sans-serif;
 }
 .form-control {
-	width:550px;
+	width:450px;
 	height: 25px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 8px;
 	padding-left: 8px;
+	color:#D30EF1;
+}
+.form-textarea{
+	width:450px;
+	height: 75px;
+	border: none;
+	border-radius: 8px;
+	padding-left: 8px;
+	color:#D30EF1;
+	
 }
 .click-button{
-	width:550px;
+	width:450px;
 	height: 25px;
 	border: none;
 	border-radius: 3px;
@@ -25,16 +34,14 @@ url("https://www.betterup.com/hubfs/Imported_Blog_Media/behavior%20change%20blog
 h4,a{
 color:#91EEE4;
 }
-.form-control {
-	width:550px;
-	height: 25px;
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-	color:#91EEE4;
-}
+
 label{
-color:#ECC4F3;
+color:black;
+	margin:auto;
+}
+#form.form-gender{
+	color:black;
+	margin-left:auto;
 }
 nav {
 	background:black;
@@ -42,7 +49,6 @@ nav {
 	padding: 10px 0;
 	z-index: 12;
 }
-
 nav .menu {
 	max-width: 1250px;
 	margin: auto;
@@ -86,9 +92,9 @@ nav .menu {
 	background: #ADCF9A;
 	color: blue;
 }
-.center{
-	width:360px;
-	height:450px;
+.root{
+	width: 40%;
+	height: 100%;
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;

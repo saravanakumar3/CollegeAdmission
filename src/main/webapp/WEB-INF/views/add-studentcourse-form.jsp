@@ -11,6 +11,7 @@
 <style type="text/css">
 <%@include file="/WEB-INF/css/add-studentcourse-form.css"%>
 </style>
+
 <body> 
 	<nav>
 		<div class="menu">
@@ -51,7 +52,7 @@
 					<label for="registrationNumber" >RegistrationNumber</label>
 					<div>
 						<form:input path="registrationNumber" class="form-control"
-							title="RegistrationNumber can't be empty" required="true"/>
+							title="RegistrationNumber can't be empty" required="true" id="registrationNumber"/>
 					<form:errors path="registrationNumber" cssClass="text-success" />
 					</div>
 				</div> 
@@ -70,5 +71,9 @@
 			<h5 ><a href ="/admin/adminpage" style ="color:green">Go to home page</a></h5>
 		</div>
 	</div> 
+	<script type="text/javascript">
+    document.getElementById('registrationNumber').value = Math.floor(Math.random() * 1000);
+    
+</script>
 </body>
 </html>

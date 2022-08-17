@@ -11,14 +11,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Range;
 @Entity
 @Table(name="carddetails")
 public class CardDetails {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "payment_id")
-    @SequenceGenerator(name = "payment_id", sequenceName = "payment_id",  allocationSize = 1)
 	@Column(name="payment_id")
 	private int paymentId;
 	@Column(name="user_id")
@@ -28,6 +27,7 @@ public class CardDetails {
 	private String courseName;
 	@Column(name="amount")
     private long amount;
+	@Past( message ="Don't input a future date")
 	@Column(name="payment_date")
 	private Date paymentDate; 
 	@Column(name="card_number")

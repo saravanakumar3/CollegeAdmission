@@ -43,7 +43,7 @@
 				<br><br>
 				<div>
 					<label for="courseName">CourseName</label>
-					<form:select path="courseName"  class="form-control" required="true">
+					<form:select path="courseName"  class="form-option" required="true">
 							<form:option value="Lawyer">Lawyer</form:option>
 							<form:option value="Hotel Magement">Hotel Magement</form:option>
 							<form:option value="journalit">Journalit</form:option>
@@ -58,6 +58,7 @@
 					<div>
 							<form:input path="amount" class="form-control" value="50000" readonly="true"/>
 					</div>
+					<span> This price includes tuition and admissions fees.</span>
 				</div>
 				<br>
 				<br>
@@ -65,6 +66,7 @@
 					<label for="paymentDate">PaymentDate</label>
 					<div>
 						<form:input path="paymentDate" class="form-control" type="date"  required="true"  />
+					   <form:errors path="paymentDate" cssClass="text-success"/>
 					</div>
 				</div>
 				<br>
@@ -72,7 +74,8 @@
 				<div>
 					<label for="cardNumber">CardNumber</label>
 					<div>
-						<form:input path="cardNumber"  class="form-control" required="true" />
+						<form:input path="cardNumber"  class="form-control"  pattern="[0-9]{16}"
+                            title="Please enter a valid 16 digit credit card number" required="true" />
 					</div>
 				</div>
 				<br>
@@ -105,5 +108,9 @@
 			</form:form>
 		</div>
 	</div>
+	<script type="text/javascript">
+    document.getElementById('registrationNumber').value = Math.floor(Math.random() * 200);
+    
+</script>
 </body>
 </html>

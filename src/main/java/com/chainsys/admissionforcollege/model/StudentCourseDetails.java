@@ -30,8 +30,6 @@ public class StudentCourseDetails {
 	@Range(min=1,message="Value should be greater than 0")
 	@Column(name ="userid")
 	private int userid;
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "student_id")
-    @SequenceGenerator(name = "student_id", sequenceName = "student_id",  allocationSize = 1)
 	@Column(name ="registrationnumber")
 	private int registrationNumber;
 	@Size(min =3,max =50,message =" Username Size not less then 2")

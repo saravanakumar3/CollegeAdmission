@@ -13,6 +13,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Range;
@@ -28,6 +29,7 @@ public class Student {
 	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "name")
 	private String username;
+	@Past(message ="Don't input a future date")
 	@Column(name = "dob")
 	private Date dob;
 	@NotBlank( message ="This field can not be Empty")

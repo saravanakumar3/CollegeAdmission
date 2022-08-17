@@ -53,9 +53,6 @@ public class StudentController {
     		studentService.save(student);
     		int id = student.getUserid();
     		 return "redirect:/details/card?id=" + id;
-
-
-          //return "redirect:/user/addform";
         }
     		catch(Exception er)
     		{model.addAttribute("message", "this email is already exist");

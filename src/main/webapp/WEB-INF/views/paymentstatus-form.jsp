@@ -17,7 +17,8 @@
       </div>
         <h1>Payment Successfully</h1> 
         <p>We have received your payment!<br>Thank you for being a valued Student of Madurai Government Arts College;<br/> we'll be in touch shortly!</p>
+        <a href="/"> Go to home page</a>
       </div>
-              <a href="/"> Go to home page</a>
+             
     </body>
 </html>	

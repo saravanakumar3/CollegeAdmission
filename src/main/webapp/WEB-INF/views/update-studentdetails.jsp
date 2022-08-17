@@ -22,6 +22,8 @@
 			</ul>
 		</div>
 	</nav>
+	<br>
+	<br>
 	<div class="root">
 	
 		<div id="form">
@@ -32,7 +34,7 @@
 						type="hidden" />
 				</div>	
 			<div>
-					<label for="username">UserName</label>
+					<label for="username">FullName</label>
 					<div>
 						<form:input path="username" class="form-control" placeholder="User Name"
 						title="This field can't be empty or must contain only alphabets" 
@@ -56,7 +58,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="sslcMark">SslcMark</label>
+					<label for="sslcMark">Sslc Mark</label>
 					<div>
 						<form:input path="sslcMark" class="form-control" placeholder="SslcMark"
 						title="To register, you must have an SSCmark of at least 300" pattern ="[34][0-9]{2}|500"/>
@@ -64,16 +66,16 @@
 					</div>
 				</div>
 				<div>
-					<label for="hscMark">HscMark</label>
+					<label for="hscMark">Hsc Mark</label>
 					<div>
 						<form:input path="hscMark"  class="form-control" placeholder="HscMark"
 						title="To register, you must have an HscMark of at least 700"  pattern ="[7-9][0-9]{2}|[1][01][0-9]{2}|1200"/>
 						<form:errors path="hscMark" />
 					</div>
 				</div>
-				<div>
+				<div class="form-gender">
 					<label for="gender">Gender</label>
-					<div class="form-control" >
+					<div>
 					    Male:
 						<form:radiobutton path="gender"  value="Male" />
 						Female:
@@ -81,15 +83,17 @@
 						<form:errors path="gender" />
 					</div>
 				</div>
+				<br>
 				<div>
 					<label for="address">Address </label>
 					<div>
-						<form:input path="address" class="form-control"  required="true" />
+						<form:textarea path="address"  class="form-textarea"  cols="35" rows="4" required="true" />
 						<form:errors path="address"/>
 					</div>
+					
 				</div>
 				<div>
-					<label for="userlocation">User location</label>
+					<label for="userlocation">location</label>
 					<div>
 						<form:input path="userlocation" class="form-control" />
 						<form:errors path="userlocation" />
@@ -112,11 +116,10 @@
 					</div>
 				</div>
 				<div>
-					<label for="email">Email</label>
 					<div>
 						<form:input path="email" class="form-control"   placeholder="Email"
 							pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
-							title="Enter valid email ex: example@gmail.com" required="true" />
+							title="Enter valid email ex: example@gmail.com" type="hidden" />
 						<form:errors path="email"/>
 					</div>
 				</div>

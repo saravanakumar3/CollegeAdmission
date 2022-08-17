@@ -28,9 +28,9 @@
 		<div id="form">
 			<form:form action="enterdetails" method="post" modelAttribute="addstudentdetail">
 				<div>
-					<label for="username">UserName</label>
+					<label for="username">FullName</label>
 					<div>
-						<form:input path="username" class="form-control" placeholder="User Name"
+						<form:input path="username" class="form-control" placeholder="Full Name"
 						title="This field can't be empty or must contain only alphabets" 
 						pattern="^[A-Za-z\s]*$" required="true"/>
 					       <form:errors path="username" />
@@ -40,6 +40,7 @@
 						<div>
 							<form:input path="dob" class="form-control" type="date" required="true"/>
 						</div>
+						   <form:errors path="dob" />
 					</div>
 				<div>
 					<label for="qualification">Qualification</label>
@@ -52,17 +53,17 @@
 					</div>
 				</div>
 				<div>
-					<label for="sslcMark">SslcMark</label>
+					<label for="sslcMark">Sslc Mark</label>
 					<div>
-						<form:input path="sslcMark" class="form-control" placeholder="SslcMark"
+						<form:input path="sslcMark" class="form-control" placeholder="Sslc Mark"
 						title="To register, you must have an SSCmark of at least 300" pattern ="[34][0-9]{2}|500"/>
 						<form:errors path="sslcMark" />
 					</div>
 				</div>
 				<div>
-					<label for="hscMark">HscMark</label>
+					<label for="hscMark">Hsc Mark</label>
 					<div>
-						<form:input path="hscMark"  class="form-control" placeholder="HscMark"
+						<form:input path="hscMark"  class="form-control" placeholder="Hsc Mark"
 						title="To register, you must have an HscMark of at least 700"  pattern ="[7-9][0-9]{2}|[1][01][0-9]{2}|1200"/>
 						<form:errors path="hscMark" />
 					</div>
@@ -77,15 +78,14 @@
 						<form:errors path="gender" />
 					</div>
 				</div>
-				<div>
-					<label for="address">Address </label>
-					<div>
-						<form:input path="address" class="form-control"  required="true" />
+				<div><label for="address">Address</label></div>
+				<div>   
+						<form:textarea path="address"  class="form-textarea"  cols="35" rows="4" required="true" />
 						<form:errors path="address"/>
 					</div>
-				</div>
 				<div>
-					<label for="userlocation">User location</label>
+				<div>
+					<label for="userlocation"> Userlocation</label>
 					<div>
 						<form:input path="userlocation" class="form-control" />
 						<form:errors path="userlocation" />
