@@ -10,121 +10,89 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-body {
-	background-image:
-url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOFtSRiT43CvdRvPXtnHtTbN4ERwht9DOCA&usqp=CAU");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/fintby-studentid.css"%>
 </style>
 </head>
 <body>
-<ul class="nav nav-tabs nav-dark bg" style="background-color:#F5EEEC" align="center" >
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/">Home</a>
-  </li>
-</ul>
-<div class="container">
-  <h1>Student admission page</h1>
-   <h2 Style="color:#96535D"><p>Quality Policy.</p> </h2>
-  <p Style="color:#1F2322">Committed to impart Quality Technical Education imbibed with proficiency, human values and continual improvement.</p>      
-       
-  <div class="row">
-    <div class="col-sm-3" id =box">
-      <h2>personal information</h2>
-  <p>To view personal information, click the button..</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click Here</button>
-  <div id="demo" class="collapse">
-    <div id="root">
-		<div id="form">
-			<form:form action="" method="post" modelAttribute="getstudent">
-					<div>
-					<label for="userid">Id</label>
-					<div>
-						<form:input path="userid" readonly="true" />
-					</div>
-				</div>
-				<div>
-					<label for="Username">Username</label>
-					<div>
-						<form:input path="Username" readonly="true" />
-					</div>
-				</div>
-					<div>
-						<label for="dob">DOB</label>
-						<div>
-							<form:input path="dob" type="date" readonly="true"/>
-						</div>
-				<div>
-					<label for="Qualification">Qualification</label>
-					<div>
-						<form:input path="Qualification" readonly="true"/>
-					</div>
-				</div>
-				<div>
-					<label for="SslcMark">SslcMark</label>
-					<div>
-						<form:input path="SslcMark" readonly="true"/>
-					</div>
-				</div>
-				<div>
-					<label for="HscMark">HscMark</label>
-					<div>
-						<form:input path="HscMark" readonly="true" />
-					</div>
-				</div>
-				<div>
-					<label for="Gender">Gender</label>
-					<div>
-						<form:input path="Gender" readonly="true" />
-					</div>
-				</div>
-				<div>
-					<label for="Address">Address </label>
-					<div>
-						<form:input path="Address" readonly="true" />
-					</div>
-				</div>
-				<div>
-					<label for="Userlocation">User location</label>
-					<div>
-						<form:input path="Userlocation" readonly="true"/>
-					</div>
-				</div>
-				<div>
-					<label for="nation">Nationally</label>
-					<div>
-						<form:input path="nation" readonly="true" />
-					</div>
-				</div>
-				<div>
-					<label for="PhoneNumber">PhoneNumber</label>
-					<div>
-						<form:input path="PhoneNumber" readonly="true" />
-					</div>
-				</div>
-				<div>
-					<label for="Email">Email</label>
-					<div>
-						<form:input path="Email" readonly="true" />
-					</div>
-					
-				</div>
-				</div>
-				<div>
-			</form:form>
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/">Log out</a></li>
+			</ul>
 		</div>
-	</div>
-  </div>
-</div>
-    </div>
-    <div class="col-sm-8" style="background-color:#B2B2B2 ;">
-      <iframe src="/details/carddetails" height="800" width="100%" title="Iframe Example" ></iframe>  
-    </div>
-  </div>
-</div>
+	</nav>
 <div class="container">
+<h1 >Student Profile</h1> 
+<br>
+    <div class="root">
+           <div id="form">
+			<form:form action="" method="post" modelAttribute="getstudent">
+            <div>
+            <table>
+            <tbody>
+            <tr>
+                    <td><label for="userid">userId</label></td>
+                        <td><form:input path="userid" class="form-control" readonly="true"/></td>
+                        <br>
+                </tr>
+                <tr>
+                    <td><label for="Username">FullName</label></td>
+                        <td><form:input path="Username" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="Qualification">Qualification</label></td>
+                        <td><form:input path="Qualification" class="form-control" readonly="true"/></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="SslcMark">SslcMark</label></td>
+                        <td><form:input path="SslcMark" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="HscMark">HscMark</label></td>
+                        <td><form:input path="HscMark" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="Gender">Gender</label></td>
+                        <td><form:input path="Gender" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="Address">Address</label></td>
+                        <td><form:input path="Address" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="Userlocation">UserLocation</label></td>
+                        <td><form:input path="Userlocation" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="nation">Nation</label></td>
+                        <td><form:input path="nation" class="form-control" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td><label for="PhoneNumber">PhoneNumber</label></td>
+                        <td><form:input path="PhoneNumber" class="form-control" readonly="true"/></td>
+                </tr>
+         
+                 <tr>
+                    <td><label for="Email">Email</label></td>
+                        <td><form:input path="Email" class="form-control" readonly="true"/></td>
+                </tr>
+            </tbody>
+            </table>
+            </form:form>
+         </div>
+         </div>
+         </div>
+         <br>
+         <div class="root">
+         <a href="/students/updatestudentdetails?id=${getstudent.userid}"><button>update</button></a>
+            <a href="/students/getidbystudent?id=${getstudent.userid}"><button>Status</button></a>
+             <a href="/user/addform"><button>Back to</button></a>
+            </div>
+</body>
 </body>
 </html>

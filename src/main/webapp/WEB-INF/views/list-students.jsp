@@ -10,73 +10,8 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous"> 
-<style >table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-th, td {
-	border-color: #96D4D4;
-}
-tr:hover {
-	background-color: #D6EEEE;
-}
-baby{
-background-color:#EBF1F9;
-}
-a{
-background-color:#AFE7E8;
-}
-nav {
-	background:black;
-	width: 100%;
-	padding: 10px 0;
-	z-index: 12;
-}
-
-nav .menu {
-	max-width: 1250px;
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 20px;
-}
-
-.menu .logo a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 30px;
-	font-weight: 500;
-}
-
-.menu ul {
-	display: inline-flex;
-}
-
-.menu ul li {
-	list-style: none;
-	margin-left: 7px;
-}
-
-.menu ul li:first-child {
-	margin-left: 0px;
-}
-
-.menu ul li a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 500;
-	padding: 8px 15px;
-	border-radius: 5px;
-	transition: all 0.3s ease;
-}
-
-.menu ul li a:hover {
-	background: #ADCF9A;
-	color: blue;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/list-students.css"%>
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

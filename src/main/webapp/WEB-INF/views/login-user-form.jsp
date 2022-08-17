@@ -8,64 +8,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Login</title>
-<style>
-body {
-	background-image:
-url("https://www.firststudent.com/wp-content/themes/first_student/images/home-visual.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-h1 {
-	color: #ff1493;
-}
-label {
-	color: #000080;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-
-.form-control {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-.password {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#log {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 12px;
-	padding-left: 7px;
-	color: green;
-}
-
-.box {
-    
-	width: 400px;
-	height: 240px;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	background-color: #B1BECD ;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/login-user-form.css"%>
 </style>
 </head>
 <body>

@@ -6,20 +6,10 @@
 <html lang="En">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title> 
+<title>List Course</title> 
 </head>
-<style>
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-th, td {
-	border-color: #96D4D4;
-}
-tr:hover {
-	background-color: #D6EEEE;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/list-course-byadmin.css"%>
 </style>
 <body>
 <h1><a href="/course/addcourse">Add Course</a></h1>

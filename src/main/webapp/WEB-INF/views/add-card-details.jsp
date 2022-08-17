@@ -8,42 +8,27 @@
 <meta charset="ISO-8859-1">
 <title>Payment</title>
 </head>
-<style>
-.center {
-	width: 60%;
-	height: 100%;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	background-color: #B1BECD ;
-}
-.form-control {
-	width:350px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-.click-button{
-	width:350px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	background-color: #9E9B45 ;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/add-card-details.css"%>
+</style>
 </style>
 <body>
-<br>
+<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/students/addstudents">Back</a></li>
+				<li><a href="/">log out</a></li>
+			</ul>
+		</div>
+	</nav>
 <br>
 <br>
 	<div id="root" class="center">
-		<div id="form" align="center">
+		<div id="form" >
 			<form:form action="/details/adddetails" method="post" modelAttribute="addcarddetails">
 				
 				<div>
@@ -65,26 +50,6 @@
 							<form:option value="Fashion Designer">Fashion Designer</form:option>	
 						</form:select>
 						 <form:errors path="courseName" /></div>
-						 <br><br>
-				<div>
-					<label for="name">UserName</label>
-					<div>
-						<form:input path="name" class="form-control" placeholder="User Name"
-						title="This field can't be empty or must contain only alphabets" 
-						pattern="^[A-Za-z\s]*$" required="true"/>
-						 <form:errors path="name" />
-					</div>	
-					<br>
-					<br>
-
-				<div>
-					<label for="phoneNumber">PhoneNumber</label>
-					<div>
-						<form:input path="phoneNumber" class="form-control"  placeholder ="PhoneNumber" pattern="[1-9]{1}[0-9]{9}"
-                            title="Phone number should have atleast 10 digits and start with 9 or 1"
-                            required="true" />
-					</div>	
-					</div>
 					<br>
 					<br>
 				<div>

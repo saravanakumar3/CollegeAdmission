@@ -13,8 +13,18 @@
 </style>
 </head>
 <body>
-<br>
-<br>
+<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/admin/checkadminlogin">Home</a></li>
+				<li><a href="/course/addcourse">Refresh</a></li>
+				<li><a href="/">log out</a></li>
+			</ul>
+		</div>
+	</nav>
 <br>
 <h1>Add course</h1>
 	<div id="root">

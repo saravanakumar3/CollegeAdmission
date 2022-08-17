@@ -26,12 +26,6 @@ public class CardDetails {
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name="course")
 	private String courseName;
-	@Size(min =3,max =50,message =" Username Size not less then 2")
-	@NotBlank( message ="This field can not be Empty")
-	@Column(name="name")
-	private String name;
-	@Column(name ="phone")
-	private long phoneNumber;
 	@Column(name="amount")
     private long amount;
 	@Column(name="payment_date")
@@ -65,18 +59,6 @@ public class CardDetails {
 	}
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public long getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(long phoneNumber) {
-		this.phoneNumber = phoneNumber;
 	}
 	public long getAmount() {
 		return amount;

@@ -8,46 +8,22 @@
 <meta charset="ISO-8859-1">
 <title>PaymentDetals</title>
 </head>
-<style>
-
-.form-control {
-	width:750px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-}
-.click-button{
-	width:750px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	background-color: #9E9B45 ;
-}
-.root{
-	width:850px;
-	height:450px;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	background-color: #B1BECD ;
-}
-body{
-background-color:#EBF1F9;
-}
-h1{
-text-align: center;
-color:#C47B66 ;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/add-studentcourse-form.css"%>
 </style>
 <body> 
-<h1>Madurai Government Arts College</h1>
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/admin/adminpage">Home</a></li>
+				<li><a href="/studentcourse/addform">Refresh</a></li>
+				<li><a href="/">log out</a></li>
+			</ul>
+		</div>
+	</nav>
  <iframe class="iframe" src="/details/list" height="250px" width="100%" title="Iframe Example" ></iframe>  
 	<div  class="root">
 	<br>

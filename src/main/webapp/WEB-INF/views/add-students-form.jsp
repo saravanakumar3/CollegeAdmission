@@ -7,41 +7,25 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registration for college admission </title>
-<style>
-body {
-	background-image:
-url("https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3R1ZGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
- font-family: Arial, Helvetica, sans-serif;
-}
-.form-control {
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-}
-.click-button{
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	background-color: #9E9B45 ;
-}
-h4{
-color:blue;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/add-students-by-admin.css"%>
 </style>
 </head>
 <body > 
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/students/addstudents">Refresh</a></li>
+			</ul>
+		</div>
+	</nav> <br>
 <h1>Registration form for college admission</h1>
 	<div id="root" class="center">
-		<div id="form" align="left">
+		<div id="form">
 			<form:form action="enterdetails" method="post" modelAttribute="addstudentdetail">
 				<div>
 					<label for="username">UserName</label>

@@ -5,55 +5,8 @@
 <!DOCTYPE html>
 <html lang="En">
 <head>
-<meta charset="ISO-8859-1">
-<title>UpdateCourseDetails</title>
-<style>
-body {
-	background-image:
-url("https://www.betterup.com/hubfs/Imported_Blog_Media/behavior%20change%20blog%20image.png");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
- font-family: Arial, Helvetica, sans-serif;
-}
-.form-control {
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-}
-.click-button{
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	background-color: #9E9B45 ;
-}
-h4,a{
-color:#91EEE4;
-}
-.form-control {
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-	color:#91EEE4;
-}
-label{
-color:#ECC4F3;
-font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/update-coursedetails.css"%>
 </style>
 </head>
 <body>

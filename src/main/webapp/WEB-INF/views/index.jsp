@@ -11,7 +11,6 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 <style type="text/css">
 <%@include file="/WEB-INF/css/index.css"%>
 </style>
@@ -73,20 +72,11 @@ Our College is ideally located on the home land of Karmaveerar "Bharat Ratna" K.
     <b><h2 ">Hotel Magement</h2></b>
   <i><p>Hotel management is an area of the hospitality industry that involves overseeing the operations of a hotel location. When working as a hotel manager
 </p></i>  
- <a href='/students/addstudents'>
-        <button class="GFG">
-            Click Here
-        </button>
-    </a>
   </div>
   <div class="column1" style="background-color:#D4DAE2 ">
-    <b><h1>Journalit</h1></b>
+    <b><h1>Journalism</h1></b>
    <i><p >A journalist is an individual that collects/gathers information in form of text, audio or pictures, processes them to a news-worthy form and disseminates it to the public"</p> 
   </i>
-   <a href='/students/addstudents'>
-        <button class="GFG">
-            Click Here
-        </button>
     </a>
   </div>
   <div class="column1" style="background-color:#D4DAE2 ">
@@ -95,23 +85,18 @@ Our College is ideally located on the home land of Karmaveerar "Bharat Ratna" K.
   <br>
 <i>Creates clothing and accessory designs for high-street fashion, ready-to- wear outlets and specialist markets such as haute couture. </p> 
  </i>
-  <a href='/students/addstudents'>
-        <button class="GFG">
-            Click Here
-        </button>
-    </a>
   </div>
   <div class="column1" style="background-color:#D4DAE2 ">
     <h2>Lawyer</h2>
     <br>
 	<i><p>A lawyer is a professional who is qualified to offer advice about the law or represent someone in legal matters</p>				
  </i>
+  </div></div> <br>
    <a href='/students/addstudents'>
-        <button class="GFG">
-            Click Here
+        <button align="center" class="button">
+            Register now
         </button>
     </a>
-  </div></div>
   <br>
   <hr>
 </div>

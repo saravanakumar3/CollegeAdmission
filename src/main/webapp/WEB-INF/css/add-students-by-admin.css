@@ -1,42 +1,34 @@
 @charset "ISO-8859-1";
+body {
+	background-image:
+url("https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3R1ZGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+ font-family: Arial, Helvetica, sans-serif;
+}
 .form-control {
-	width:750px;
+	width:550px;
 	height: 25px;
 	border: none;
 	border-radius: 5px;
 	padding-left: 8px;
 }
-.click-button {
-	width:750px;
+.click-button{
+	width:550px;
 	height: 25px;
 	border: none;
 	border-radius: 3px;
-	padding-left: 8px ;
-	background-color:#9E9B45;	
+	padding-left: 8px;
+	background-color: #9E9B45 ;
 }
-.root{
-	
-	width:850px;
-	height:450px;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	background-color: #B1BECD ;
-}
-body{
-background-color:#EBF1F9;
-}
-h1{
-text-align: center;
-color:#C47B66 ;
+h4{
+color:blue;
 }
 nav {
 	background:black;
 	width: 100%;
-	padding: 10px 0;
+	padding: 5px 0;
 	z-index: 12;
 }
 
@@ -55,16 +47,20 @@ nav .menu {
 	font-size: 30px;
 	font-weight: 500;
 }
+
 .menu ul {
 	display: inline-flex;
 }
+
 .menu ul li {
 	list-style: none;
 	margin-left: 7px;
 }
+
 .menu ul li:first-child {
 	margin-left: 0px;
 }
+
 .menu ul li a {
 	text-decoration: none;
 	color: #fff;
@@ -74,8 +70,6 @@ nav .menu {
 	border-radius: 5px;
 	transition: all 0.3s ease;
 }
-
-.menu ul li a:hover {
-	background: #ADCF9A;
-	color: blue;
+#form{
+	align:left
 }

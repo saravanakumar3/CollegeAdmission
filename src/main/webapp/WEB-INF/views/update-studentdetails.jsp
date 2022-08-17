@@ -8,49 +8,20 @@
 <meta charset="ISO-8859-1">
 <title>UpdateStudent</title>
 </head>
-<style>
-body {
-	background-image:
-url("https://www.betterup.com/hubfs/Imported_Blog_Media/behavior%20change%20blog%20image.png");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
- font-family: Arial, Helvetica, sans-serif;
-}
-.form-control {
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-}
-.click-button{
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	background-color: #9E9B45 ;
-}
-h4,a{
-color:#91EEE4;
-}
-.form-control {
-	width:550px;
-	height: 25px;
-	height: 240px
-	border: none;
-	border-radius: 5px;
-	padding-left: 8px;
-	color:#91EEE4;
-}
-label{
-color:#ECC4F3;
-}
+<style type="text/css">
+<%@include file="/WEB-INF/css/update-studentdetails.css"%>
 </style>
 <body>
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="root">
 	
 		<div id="form">

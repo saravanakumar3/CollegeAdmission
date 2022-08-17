@@ -6,114 +6,9 @@
 <html lang="En">
 <head>
 <meta charset="ISO-8859-1">
-<title>Student course</title>
-<style>
-body {
-	background-color:#52540E;
-}
-input{
-    display: block;
-    height: 50px;
-    width: 45%;
-    background-color:#F0F3F4 ;
-    border-radius: 4px;
-    padding:  0.5px;
-    margin-top: 8px;
-    font-size: 15px;
-    font-weight: 300;
-    border: 2px solid #ADC29D;
-}
-label{
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
-   color:#91EEE4;
-}
-.box {
-	width: 90%;
-	height: 90%;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	 background-color:white;
-}
-.form-control {
-	width: 85%;
-	height: 30px;
-	border: none;
-	border-radius: 9px;
-	padding-left: 8px;
-	 color:#ECC4F3;
-}
-h4,a{
-color:#91EEE4;
-}
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-th, td {
-	border-color: #96D4D4;
-}
-tr:hover {
-	background-color: #D6EEEE;
-}
-nav {
-	background:black;
-	width: 100%;
-	padding: 10px 0;
-	z-index: 12;
-}
-
-nav .menu {
-	max-width: 1250px;
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 20px;
-}
-
-.menu .logo a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 30px;
-	font-weight: 500;
-}
-
-.menu ul {
-	display: inline-flex;
-}
-
-.menu ul li {
-	list-style: none;
-	margin-left: 7px;
-}
-
-.menu ul li:first-child {
-	margin-left: 0px;
-}
-
-.menu ul li a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 500;
-	padding: 8px 15px;
-	border-radius: 5px;
-	transition: all 0.3s ease;
-}
-
-.menu ul li a:hover {
-	background: #ADCF9A;
-	color: blue;
-}
-
+<title>Find student by Id</title>
+<style type="text/css">
+<%@include file="/WEB-INF/css/find-student-by-id.css"%>
 </style>
 </head>
 <body>
@@ -132,47 +27,47 @@ nav .menu {
 	<br>
 	<div id="root">
 	<div class="box">
-		<div class="form" align="center">
+		<div class="form">
 			<form:form action="" method="post" modelAttribute="getstudent">
 				<div>
 					<label for="userid">UserId</label>
 					<div  >
-						<form:input path="userid" class ="form-control"/>
+						<form:input path="userid" class ="form-control"  readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="username">username</label>
+					<label for="username">FullName</label>
 					<div>
-						<form:input path="username" class ="form-control"/>
+						<form:input path="username" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 					<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" class ="form-control" />
+							<form:input path="dob" class ="form-control" readonly="true"/>
 						</div>
 				<div>
 					<label for="qualification">Qualification</label>
 					<div>
-						<form:input path="qualification" class ="form-control"/>
+						<form:input path="qualification" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="sslcMark">SslcMark</label>
 					<div>
-						<form:input path="sslcMark" class ="form-control"/>
+						<form:input path="sslcMark" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="hscMark">HscMark</label>
 					<div>
-						<form:input path="hscMark" class ="form-control"/>
+						<form:input path="hscMark" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" class ="form-control"/>
+						<form:input path="gender" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
@@ -182,27 +77,27 @@ nav .menu {
 					</div>
 				</div>
 				<div>
-					<label for="userlocation">userlocation</label>
+					<label for="userlocation">UserLocation</label>
 					<div>
-						<form:input path="userlocation" class ="form-control"/>
+						<form:input path="userlocation" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
 				<div>
 					<label for="nation">Nationally</label>
 					<div>
-						<form:input path="nation" class ="form-control"/>
+						<form:input path="nation" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 					<label for="phoneNumber">PhoneNumber</label>
 					<div>
-						<form:input path="phoneNumber" class ="form-control"/>
+						<form:input path="phoneNumber" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="email">Email</label>
 					<div>
-						<form:input path="email" class ="form-control"/>
+						<form:input path="email" class ="form-control" readonly="true"/>
 					</div>
 				</div>
 				<div>
@@ -215,7 +110,7 @@ nav .menu {
 			</form:form>
 		</div>
 		<br>
-		<div class="table root">
+		<div class ="table">
 		<table border="2" width="100%" cellpadding="2">
 			<thead>
 				<tr>
@@ -236,8 +131,14 @@ nav .menu {
 				</c:forEach>
 			</tbody>
 		</table>
-		<h4 align="center"><a href="/admin/adminpage">Go to home page</a></h4>
 	</div>
 	</div>
 	</div>
+	<br>
+	<hr>
+	 <div class="root">
+         <a href="/students/updatestudentdetails?id=${getstudent.userid}"><button>update</button></a>
+            <a href="/students/getidbystudent?id=${getstudent.userid}"><button>Status</button></a>
+             <a href="/user/addform"><button>Back to</button></a>
+            </div>
 </html>
