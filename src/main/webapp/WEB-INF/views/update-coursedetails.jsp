@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="En">
 <head>
+<title>Update CourseDetails</title>
 <style type="text/css">
 <%@include file="/WEB-INF/css/update-studentdetails.css"%>
 </style>

@@ -1,4 +1,7 @@
 @charset "ISO-8859-1";
+baby {
+background-color:#EBF1F9;
+}
 table, th, td {
 	border: 1px solid black;
 	padding: 15px;
@@ -9,9 +12,6 @@ th, td {
 }
 tr:hover {
 	background-color: #D6EEEE;
-}
-baby{
-background-color:#EBF1F9;
 }
 a{
 background-color:#AFE7E8;

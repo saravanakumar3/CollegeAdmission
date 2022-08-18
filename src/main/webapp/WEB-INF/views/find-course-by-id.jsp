@@ -78,6 +78,7 @@
 		<br>
 			<div class ="table">
 		<table>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>CourseId</th>

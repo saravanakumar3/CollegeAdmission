@@ -36,16 +36,16 @@
 		<table  class="table table-info table-striped-columns table-hover" >
 			<thead >
 				<tr >
-					<th>UserName</th>
-			        <th>Dob</th>
+					<th>FullName</th>
+			        <th>DOb</th>
 					<th>Qualification</th>
-					<th>SslcMark</th>
-					<th>HscMark</th> 
+					<th>Sslc Mark</th>
+					<th>Hsc Mark</th> 
 					<th>Gender</th>
 					<th>Address</th>
-					<th>UserLocation</th>
+					<th>User Location</th>
 					<th>Nation</th>
-					<th>PhoneNumber</th>
+					<th>Phone Number</th>
 					<th>Email</th>
                      <th>Edit</th>
                    <th>Deleted</th>

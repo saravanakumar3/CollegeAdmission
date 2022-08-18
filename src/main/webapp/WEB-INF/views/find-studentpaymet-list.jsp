@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="username">username</label>
+					<label for="username">Fullname</label>
 					<div>
 						<form:input path="username" />
 					</div>
@@ -36,13 +36,13 @@
 					</div>
 				</div>
 				<div>
-					<label for="sslcMark">SslcMark</label>
+					<label for="sslcMark">Sslc Mark</label>
 					<div>
 						<form:input path="sslcMark" />
 					</div>
 				</div>
 				<div>
-					<label for="hscMark">HscMark</label>
+					<label for="hscMark">Hsc Mark</label>
 					<div>
 						<form:input path="hscMark" />
 					</div>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="userlocation">userlocation</label>
+					<label for="userlocation">user location</label>
 					<div>
 						<form:input path="userlocation" />
 					</div>
@@ -93,7 +93,8 @@
 			</form:form>
 		</div>
 		<div id="table root">
-		<table border="2" width= "100%" cellpadding="2">
+		<table>
+		<caption></caption>
 			<thead>
 	
 				<th>PaymentId</th>

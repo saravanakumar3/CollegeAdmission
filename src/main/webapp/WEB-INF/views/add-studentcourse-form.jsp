@@ -25,8 +25,11 @@
 			</ul>
 		</div>
 	</nav>
+	<br>
+	<br>
  <iframe class="iframe" src="/details/list" height="250px" width="100%" title="Iframe Example" ></iframe>  
 	<div  class="root">
+	<br>
 	<br>
 		<div id="form" align="center">
 			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">

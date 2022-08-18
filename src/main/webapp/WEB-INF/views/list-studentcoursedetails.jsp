@@ -30,13 +30,14 @@
 	</nav>
 <br>
 	<div id="table root">
-		<table border="2" width="100%" cellpadding="2">
+		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>CourseId</th>
 					<th>UserId</th>
 					<th>RegistrationNumber</th>
-					<th>Paymentstatus</th>
+					<th>PaymentStatus</th>
 					<th>Deleted</th>
 				</tr>
 			</thead>

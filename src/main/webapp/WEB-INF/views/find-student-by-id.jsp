@@ -111,7 +111,8 @@
 		</div>
 		<br>
 		<div class ="table">
-		<table >
+		<table>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>CourseId</th>

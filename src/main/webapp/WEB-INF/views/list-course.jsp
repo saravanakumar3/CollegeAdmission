@@ -30,7 +30,8 @@
 <br>
  <h1><a href="/course/addcourse">Add Course</a></h1>
 	<div id="table root">
-		<table border="2" width= "100%" cellpadding="2">
+		<table>
+		<caption></caption>
 			<thead>
 	<tr>
 				<th>CourseId</th>
