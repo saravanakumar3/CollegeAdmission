@@ -6,14 +6,23 @@
 <html lang="En">
 <head>
 <style type="text/css">
-<%@include file="/WEB-INF/css/update-coursedetails.css"%>
+<%@include file="/WEB-INF/css/update-studentdetails.css"%>
 </style>
 </head>
 <body>
-<br>
-<br>
-<br>
-	<div id="root">
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+			</ul>
+		</div>
+	</nav>
+		<br>
+	<br>
+	<div class="root">
 		<div id="form">
 			<form:form action="update" method="post" modelAttribute="updatecourse">
 					<div>

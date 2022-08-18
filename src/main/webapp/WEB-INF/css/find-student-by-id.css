@@ -124,3 +124,9 @@ width: 900px;
 	padding: 10px;
 	text-align: center;
 	background-color: #B1BECD;}
+	
+table{
+	 border:2%; 
+	 width:100%;
+	  cellpadding:2%
+}	

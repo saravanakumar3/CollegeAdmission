@@ -17,6 +17,8 @@
 	<div class="box">
 		<div>
 			<table>
+			<caption></caption>
+			<tr><th></th></tr>
 				<form:form action="checkstudentlogin" method="post"
 					modelAttribute="student">
 					<tr>

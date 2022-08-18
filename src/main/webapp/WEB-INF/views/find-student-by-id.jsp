@@ -111,7 +111,7 @@
 		</div>
 		<br>
 		<div class ="table">
-		<table border="2" width="100%" cellpadding="2">
+		<table >
 			<thead>
 				<tr>
 					<th>CourseId</th>

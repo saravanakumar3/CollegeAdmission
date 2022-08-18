@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="En">
   <head>
+  <title>Payment</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet"> 
   </head>
 <style type="text/css">

@@ -25,6 +25,7 @@ url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbOFtSRiT43CvdRvPXtnH
 }
 .click-button{
 	width:450px;
+	
 	height: 25px;
 	border: none;
 	border-radius: 3px;
@@ -48,6 +49,7 @@ nav {
 	width: 100%;
 	padding: 10px 0;
 	z-index: 12;
+	border-radius: 25px;
 }
 nav .menu {
 	max-width: 1250px;
