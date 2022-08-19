@@ -1,13 +1,9 @@
 package com.chainsys.admissionforcollege.service;
 import java.util.List;
 import java.util.Optional;
-
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.chainsys.admissionforcollege.model.Course;
 import com.chainsys.admissionforcollege.model.StudentCourseDetails;
 import com.chainsys.admissionforcollege.repository.StudentCourseDetailsRepository;
 import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;

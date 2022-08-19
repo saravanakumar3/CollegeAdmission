@@ -20,7 +20,7 @@ import com.chainsys.admissionforcolllege.compositekey.StudentCompositeKey;
 public class StudentCourseDetailsController {
 	 @Autowired
 	    private StudentCourseDetailsService studentCourseDetailsService;
-
+	 private static final String STUDENTCOURSE="redirect:/studentcourse/list";
 	    @GetMapping("/list")
 	    	public String getFindAllStudentCourseDetails(Model model) {
 	    		List<StudentCourseDetails> list = studentCourseDetailsService.getStudententCourse();
@@ -41,7 +41,7 @@ public class StudentCourseDetailsController {
 	        	}else
 	        		
 	        		studentCourseDetailsService.save(studentCourseDetails);
-	    		return "redirect:/studentcourse/list";
+	    		return STUDENTCOURSE;
 	    	}
 	    	
 	    	@GetMapping("/updateform")
@@ -53,16 +53,16 @@ public class StudentCourseDetailsController {
 	    	}
 
 	    	@PostMapping("/updatestudentCompositeKey")
-	    	public String UpdateStudentCompositeKey(@ModelAttribute("updatestudentcoursedetails") StudentCourseDetails studentCourseDetails) {
+	    	public String updateStudentCompositeKey(@ModelAttribute("updatestudentcoursedetails") StudentCourseDetails studentCourseDetails) {
 	    		studentCourseDetailsService.save(studentCourseDetails);
-	    		return "redirect:/studentcourse/list";
+	    		return STUDENTCOURSE;
 	    	}
 
 	    	@GetMapping("/deletestudentcoursedetails")
 	    	public String deleteStudentCourseDetails(@RequestParam("id") int id,@RequestParam("cid")int cid) {
 	    		StudentCompositeKey studentCompositeKey=new StudentCompositeKey(id, cid);
 	    		studentCourseDetailsService.deleteById(studentCompositeKey);
-	    		return "redirect:/studentcourse/list";
+	    		return STUDENTCOURSE;
 	    	}
 	    	@GetMapping("/getbyidstudentcourse")
 	    	public String getStudentCourseDetails(@RequestParam("id") int id,@RequestParam("id")int id1, Model model) {

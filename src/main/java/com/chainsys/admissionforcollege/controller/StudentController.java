@@ -19,6 +19,7 @@ import com.chainsys.admissionforcolllege.dto.StudentPaymentDto;
 public class StudentController {
 	@Autowired
 	private StudentService studentService;
+	private static final String ADDFORM="add-students-form";
 	@GetMapping("/list")
 	public String getDetails(Model model) {
 		List<Student> student = studentService.getStudent();
@@ -40,13 +41,13 @@ public class StudentController {
 	public String showAddForm(Model model) {
 		Student student = new Student();
 		model.addAttribute("addstudentdetail", student);
-		return "add-students-form";
+		return ADDFORM;
 	}
 	@PostMapping("/enterdetails")
 	public String addStudentDetails(@Valid @ModelAttribute("addstudentdetail") Student student, Model model,
 			BindingResult bindingResult) {
     	if (bindingResult.hasErrors()){
-    		return "add-students-form";
+    		return ADDFORM;
     		}
     	else {
     		try {
@@ -56,7 +57,7 @@ public class StudentController {
         }
     		catch(Exception er)
     		{model.addAttribute("message", "this email is already exist");
-    		return "add-students-form";
+    		return ADDFORM;
     }
 	}
 }
@@ -77,7 +78,7 @@ public class StudentController {
 			return "redirect:/students/list";}
 			catch(Exception er)
     		{model.addAttribute("message", "this email is already exist");
-    		return "add-students-form";
+    		return ADDFORM;
     }
 		}
 	}

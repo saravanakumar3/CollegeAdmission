@@ -38,7 +38,7 @@
 				<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" class="form-control" type="date" required="true"/>
+							<form:input path="dob" id="dob" class="form-control" type="date" required="true" onblur="checkDate();"/>
 						</div>
 						   <form:errors path="dob" />
 					</div>
@@ -85,7 +85,7 @@
 					</div>
 				<div>
 				<div>
-					<label for="userlocation"> Userlocation</label>
+					<label for="userlocation"> User location</label>
 					<div>
 						<form:input path="userlocation" class="form-control" />
 						<form:errors path="userlocation" />
@@ -133,5 +133,17 @@
 			</form:form>
 		</div>
 	</div>
+	<script type="text/javascript">
+	function checkDate() {
+	    let dob = document.getElementById('dob').value;
+	    let now = new Date();
+	    let dt1 = Date.parse(now),
+	        dt2 = Date.parse(dob);
+	    
+	    if (dt2 > dt1) {
+	        alert("Date must be in the past or present");
+	    }
+	}
+	</script>
 </body>
 </html>

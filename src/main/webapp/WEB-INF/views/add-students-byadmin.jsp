@@ -39,7 +39,7 @@
 				<div>
 						<label for="dob">DOB</label>
 						<div>
-							<form:input path="dob" class="form-control" type="date" required="true"/>
+							<form:input path="dob" id="dob" class="form-control" type="date" required="true" onblur="checkDate();"/>
 						</div>
 					 <form:errors path="dob" />
 					</div>
@@ -54,7 +54,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="sslcMark">SslcMark</label>
+					<label for="sslcMark">Sslc Mark</label>
 					<div>
 						<form:input path="sslcMark" class="form-control" placeholder="Sslc Mark"
 						title="To register, you must have an SSCmark of at least 300" pattern ="[34][0-9]{2}|500"/>
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="hscMark">HscMark</label>
+					<label for="hscMark">Hsc Mark</label>
 					<div>
 						<form:input path="hscMark"  class="form-control" placeholder="Hsc Mark"
 						title="To register, you must have an HscMark of at least 700"  pattern ="[7-9][0-9]{2}|[1][01][0-9]{2}|1200"/>
@@ -133,5 +133,17 @@
 			</form:form>
 		</div>
 	</div>
+	<script type="text/javascript">
+	function checkDate() {
+	    let dob = document.getElementById('dob').value;
+	    let now = new Date();
+	    let dt1 = Date.parse(now),
+	        dt2 = Date.parse(dob);
+	    
+	    if (dt2 > dt1) {
+	        alert("Date must be in the past or present");
+	    }
+	}
+	</script>
 </body>
 </html>

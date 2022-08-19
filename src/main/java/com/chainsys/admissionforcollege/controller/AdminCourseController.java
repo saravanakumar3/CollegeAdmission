@@ -16,6 +16,7 @@ package com.chainsys.admissionforcollege.controller;
 	public class AdminCourseController {
 		    @Autowired
 		    private CourseService courseService;
+		    private static final String COURSELIST="redirect:/course/list";
 		    @GetMapping("/list")
 		    public String getDetails(Model model) {
 		        List<Course> course = courseService.getCourse();
@@ -31,7 +32,7 @@ package com.chainsys.admissionforcollege.controller;
 	    @GetMapping("/deletecourse")
 		    public String deleteCourseDetails(@RequestParam("id") int id) {
 		    	courseService.deleteById(id);
-		        return "redirect:/course/list";
+		        return COURSELIST;
 		    }
 		    @GetMapping("/addcourse")
 		    public String showAddForm(Model model) {
@@ -42,7 +43,7 @@ package com.chainsys.admissionforcollege.controller;
 		    @PostMapping("/add")
 		    public String addCourseDetails(@ModelAttribute("addcoursedetail")  Course course) {
 		    	courseService.save(course);
-		        return "redirect:/course/list";
+		        return COURSELIST;
 		    }
 		    @GetMapping("/updatedetails")
 			public String showUpdateForm(@RequestParam("id") int id, Model model) {
@@ -53,7 +54,7 @@ package com.chainsys.admissionforcollege.controller;
 			@PostMapping("/update")
 			public String updateCourse(@ModelAttribute("updatecourse") Course course) {
 				courseService.save(course);
-				return "redirect:/course/list";
+				return COURSELIST;
 			}
 			@GetMapping("/getidbycourse")
 			public String getStudent(@RequestParam("id") int id,Model model) {

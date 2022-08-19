@@ -22,6 +22,7 @@ public class AdminController {
 	private AdminService adminService;
 	@Autowired
 	private StudentService studentService;
+	private static final String ADDFORM="add-students-byadmin";
 		@GetMapping("/login")
 		public String loginAccessform(Model model) {
 			Admin theAdm = new Admin();
@@ -49,14 +50,14 @@ public class AdminController {
 		public String showAddForm(Model model) {
 			Student student = new Student();
 			model.addAttribute("addstudentdetail", student);
-			return "add-students-byadmin";
+			return ADDFORM;
 		}
 
 		@PostMapping("/enterdetails")
 		public String addStudentDetails(@Valid @ModelAttribute("addstudentdetail") Student student, Model model,
 				BindingResult bindingResult) {
 	    	if (bindingResult.hasErrors()){
-	    		return "add-students-byadmin";
+	    		return ADDFORM;
 	    		}
 	    	else {
 	    		try {
@@ -64,7 +65,7 @@ public class AdminController {
 	        return "redirect:/details/carddetails";}
 	    		catch(Exception er)
 	    		{model.addAttribute("message", "this email is already exist");
-	    		return "add-students-byadmin";
+	    		return ADDFORM;
 	    }
 		}
 	}

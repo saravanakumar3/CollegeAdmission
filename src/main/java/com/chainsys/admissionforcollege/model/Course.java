@@ -25,7 +25,7 @@ public class Course {
 	@NotBlank( message ="Username can not be Empty")
 	@Column(name = "course_name")
 	private String courseName;
-	@Range(min=1,max=9,message="Please enter a timescale between 1 and 9 ")
+	@Range(min=1,max=9,message="Please enter a timescale between 1 and 9")
 	@Column(name = "time_scale")
 	private int timeScale;
 	@Size(min =2,max =50,message ="qualification Size not less than 2.")

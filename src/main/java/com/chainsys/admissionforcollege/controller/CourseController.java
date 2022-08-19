@@ -28,7 +28,7 @@ public class CourseController {
 	    
 	    @GetMapping("/courselist")
 	    public String getDetailsByAdmin(Model model) {
-	        List<Course> course = courseService.getCourse1();
+	        List<Course> course = courseService.getCourseByAdmin();
 	        model.addAttribute("allCourses", course );
 	        return "list-course-by-admin";
 	    }
