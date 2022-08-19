@@ -19,13 +19,6 @@ public class CourseController {
 	    @Autowired
 	    private CourseService courseService;
 	    private static final String ADDFORM="add-course-form";
-	    @GetMapping("/list")
-	    public String getDetails(Model model) {
-	        List<Course> course = courseService.getCourse();
-	        model.addAttribute("allCourse", course );
-	        return "list-course";
-	    }
-	    
 	    @GetMapping("/courselist")
 	    public String getDetailsByAdmin(Model model) {
 	        List<Course> course = courseService.getCourseByAdmin();

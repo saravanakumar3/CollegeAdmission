@@ -20,16 +20,12 @@ public class CourseService {
     public Course save(Course course) {
         return courseRepository.save(course);
     }
-    public List<Course> getCourse() {
-        List<Course> listCourse= courseRepository.findAll();
-        return listCourse;
-    }
-
+	/*
+	 * public List<Course> getCourse() { return courseRepository.findAll(); }
+	 */
 
 	 public List<Course> getCourseByAdmin() {
-List<Course> listCourse= courseRepository.findAll();
-	 
-	 return listCourse; }
+return courseRepository.findAll(); }
 	
     @Transactional
     public void deleteById(int id) {

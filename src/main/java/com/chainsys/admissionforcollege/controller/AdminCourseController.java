@@ -19,7 +19,7 @@ package com.chainsys.admissionforcollege.controller;
 		    private static final String COURSELIST="redirect:/course/list";
 		    @GetMapping("/list")
 		    public String getDetails(Model model) {
-		        List<Course> course = courseService.getCourse();
+		        List<Course> course = courseService.getCourseByAdmin();
 		        model.addAttribute("allCourse", course );
 		        return "list-course";
 		    }
