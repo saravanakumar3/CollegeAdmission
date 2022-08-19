@@ -28,8 +28,7 @@ public class StudentService {
     }
      public List<Student> getStudent() {
     	
-        List<Student> listStudent = studentRepository.findAll();
-        return listStudent;
+        return studentRepository.findAll();
     }
     @Transactional
     public void deleteById(int id) {
@@ -42,7 +41,7 @@ public class StudentService {
 	 List<StudentCourseDetails> studentCourseDetails =studentCourseDetailsRepository.findByUserid(id);
 	 Iterator<StudentCourseDetails> itr =studentCourseDetails.iterator();
 	while(itr.hasNext()) {
-		dto.addStudentCourseDetails((StudentCourseDetails)itr.next());
+		dto.addStudentCourseDetails(itr.next());
 	}
 	 return dto;}
      public  StudentPaymentDto getStudentpaymentDto(int id) {
@@ -52,7 +51,7 @@ public class StudentService {
     	 List<CardDetails> cardDetails =cardDetailsRepository.findByUserId(id);
     	 Iterator<CardDetails> itr =cardDetails.iterator();
     	while(itr.hasNext()) {
-    		dto.addCardDetails((CardDetails)itr.next());
+    		dto.addCardDetails(itr.next());
     	}
     	 return dto;}
 }

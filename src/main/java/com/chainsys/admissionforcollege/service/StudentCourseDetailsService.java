@@ -12,8 +12,7 @@ public class StudentCourseDetailsService {
 		@Autowired
 		private StudentCourseDetailsRepository studentCourseDetailsRepository;
 		public List<StudentCourseDetails> getStudententCourse(){
-			List<StudentCourseDetails> liststudentcourse =studentCourseDetailsRepository.findAll();
-			return liststudentcourse;
+			return studentCourseDetailsRepository.findAll();
 		}
 		public StudentCourseDetails save(StudentCourseDetails studentCourseDetails) {
 			return studentCourseDetailsRepository.save(studentCourseDetails);
