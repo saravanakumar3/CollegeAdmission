@@ -28,10 +28,12 @@
 	<br>
 	<br>
  <iframe class="iframe" src="/details/list" height="250px" width="100%" title="Iframe Example" ></iframe>  
+	<br>
+	<br>
 	<div  class="root">
 	<br>
 	<br>
-		<div id="form" align="center">
+		<div id="form">
 			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">
 				<h2  style ="color:green"> Student Status update  form</h2>
 				<div>

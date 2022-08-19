@@ -71,7 +71,7 @@ public class Student {
 public void setStudentCourseDetails(List<StudentCourseDetails> studentCourseDetails) {
 	this.studentCourseDetails = studentCourseDetails;
 }
-@OneToMany(mappedBy="cardDetails",fetch=FetchType.LAZY)
+@OneToMany(mappedBy="details",fetch=FetchType.LAZY)
 private List<CardDetails> cardDetails;
 public List<CardDetails> getCardDetails() {
 	return cardDetails;

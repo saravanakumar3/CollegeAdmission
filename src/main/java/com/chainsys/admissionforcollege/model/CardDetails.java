@@ -38,19 +38,20 @@ public class CardDetails {
 	private String cardholderName ;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="user_id",nullable=false, insertable=false, updatable=false)
-	private CardDetails cardDetails;
+	private CardDetails details;
+	public CardDetails getDetails() {
+		return details;
+	}
+	public void setDetails(CardDetails details) {
+		this.details = details;
+	}
 	public int getUserId() {
 		return userId;
 	}
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public CardDetails getCardDetails() {
-		return cardDetails;
-	}
-	public void setCardDetails(CardDetails cardDetails) {
-		this.cardDetails = cardDetails;
-	}
+	
 	public String getCourseName() {
 		return courseName;
 	}

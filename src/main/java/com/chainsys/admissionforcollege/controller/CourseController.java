@@ -18,7 +18,7 @@ import com.chainsys.admissionforcolllege.dto.CourseDto;
 public class CourseController {
 	    @Autowired
 	    private CourseService courseService;
-
+	    private static final String ADDFORM="add-course-form";
 	    @GetMapping("/list")
 	    public String getDetails(Model model) {
 	        List<Course> course = courseService.getCourse();
@@ -47,21 +47,21 @@ public class CourseController {
 	    public String showAddForm(Model model) {
 	    	Course course = new  Course();
 	        model.addAttribute("addcoursedetail", course);
-	        return "add-course-form";
+	        return ADDFORM;
 	    }
 	    @PostMapping("/add")
 	    public String addCourseDetails(@Valid@ModelAttribute("addcoursedetail")  Course course,Model model,
 	    		BindingResult bindingResult) {
 	    	
 	    	if (bindingResult.hasErrors()) {
-	    		return "add-course-form";
+	    		return ADDFORM;
 	    		}
 	    	else {
 	    	    try{courseService.save(course);
 		        return "redirect:/course/courselist"; }
 		        	catch(Exception er)
 		    		{model.addAttribute("message", "this Course is already exist");
-		    		return "add-course-form";	
+		    		return ADDFORM;	
 	    	    }
 	    	}
 	    }

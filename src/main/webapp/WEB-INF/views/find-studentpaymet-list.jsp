@@ -13,6 +13,13 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getstudentdata">
 				<div>
+					<label for="paymentId">Payment Id</label>
+					<div>
+						<form:input path="paymentId" />
+					</div>
+				</div>
+				
+				<div>
 					<label for="userid">UserId</label>
 					<div>
 						<form:input path="userid" />

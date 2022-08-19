@@ -13,7 +13,9 @@
 </style>
 </head>
 <body>
-	<h1 align="center">Student login Page</h1>
+<button class="button1"
+        onclick="history.back()">Go Back</button>
+	<h1 >Student login Page</h1>
 	<div class="box">
 		<div>
 			<table>
@@ -44,7 +46,7 @@
 					</tr>
 					<tr>
 						<div>
-							<td colspan="5" align="center"><br> <form:button
+							<td colspan="5"><br> <form:button
 									id="log">Login</form:button></td>
 						</div>
 					</tr>

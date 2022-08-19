@@ -101,7 +101,7 @@ Our College is ideally located on the home land of Karmaveerar "Bharat Ratna" K.
 <br>
 <br>
 <section id="lab_social_icon_footer">
-<h1 align="center"> Get touch with us </h1>
+<h1> Get touch with us </h1>
 <div class="container">
         <div class="text-center center-block">
                 <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
