@@ -62,7 +62,7 @@ public class AdminController {
 	    	else {
 	    		try {
 	    		studentService.save(student);
-	        return "redirect:/details/carddetails";}
+	        return "redirect:/students/list";}
 	    		catch(Exception er)
 	    		{model.addAttribute("message", "this email is already exist");
 	    		return ADDFORM;

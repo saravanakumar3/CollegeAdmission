@@ -39,19 +39,24 @@
 				<div>
 					<label for="courseId" class="form-label">CourseId</label>
 					<div>
-						<form:input path="courseId" class="form-control"  placeholder="CourseId"
-							title="CourseId can't be empty" required="true" />
-						<form:errors path="courseId" cssClass="text-success"/>
+						<form:select path="courseId" class="form-control" required="true">
+							<form:option value="1">1</form:option>
+							<form:option value=" 2">2</form:option>
+							<form:option value="3">3</form:option>
+							<form:option value="4">4</form:option>	
+						</form:select>
 					</div>
 				</div>
+				<br>
 				<div>
-					<label for="userid" class="form-label">UserId</label>
+					<label for="userid" class="form-label">UserId</label></div>
 					<div>
 						<form:input path="userid" class="form-control" placeholder="CourseId"
 							title="userid can't be empty" required="true"/>
 					</div>
-				</div>
+				
 					<form:errors path="userid" cssClass="text-success" />
+					<br>
 				<div>
 				 <div>
 					<label for="registrationNumber" >RegistrationNumber</label>
@@ -61,6 +66,7 @@
 					<form:errors path="registrationNumber" cssClass="text-success" />
 					</div>
 				</div> 
+				<br><div>
 					<label for="paymentstatus">Payment Status</label>
 					<div>
 						<form:input path="paymentstatus" class="form-control" placeholder="Payment Status"
@@ -68,6 +74,7 @@
 					</div>
 				</div>
 				<form:errors path="paymentstatus" cssClass="text-success" />
+				<br>
 				<div>
 				<br>
 				<form:button class="click-button">Update</form:button></a>
@@ -78,7 +85,6 @@
 	</div> 
 	<script type="text/javascript">
     document.getElementById('registrationNumber').value = Math.floor(Math.random() * 1000);
-    
 </script>
 </body>
 </html>

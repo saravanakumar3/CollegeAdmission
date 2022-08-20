@@ -38,8 +38,7 @@ public class Course {
 	@Range(min=40000,message="40000 rupees is required for this field")
 	@Column(name = "tuition_fee")
 	private int tuitionFee;
-	@Range(min=10,max =50,message="Please enter a number from 10 to 50. ")
-	@Column(name = "total_seats")
+   	@Column(name = "total_seats")
 	private int totalSeats;
 	  @OneToMany(mappedBy="course",fetch=FetchType.LAZY)
 		private List<StudentCourseDetails> studentCourseDetails;

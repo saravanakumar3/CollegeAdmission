@@ -18,8 +18,8 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/students/addstudents">Refresh</a></li>
+				<li><button class="button1"
+        onclick="history.back()">Go Back</button></li>
 			</ul>
 		</div>
 	</nav> <br>
@@ -129,7 +129,6 @@
 				<div>
 				<form:button class="click-button">Sign up</form:button>
 				</div>
-				<h4><a href="/">Go to home page</a></h4>
 			</form:form>
 		</div>
 	</div>

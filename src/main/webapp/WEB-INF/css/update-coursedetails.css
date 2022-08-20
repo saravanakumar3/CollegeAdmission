@@ -35,3 +35,15 @@ font-size: 1.3em;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
+.button1 {
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    margin: auto;
+    width: 100px;
+    display: block;
+    border-radius: 20px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3%}

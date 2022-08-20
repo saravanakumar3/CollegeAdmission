@@ -13,7 +13,7 @@
 <body>
 <h1>Madurai Government Arts College</h1>
 <div class="navbar">
- <a href="/">Home</a>
+ <a href="/">Log Out</a>
    <a href="/studentcourse/addform">Payment Update</a>
   <div class="dropdown">
     <button class="dropbtn">List  

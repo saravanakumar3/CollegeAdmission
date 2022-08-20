@@ -19,9 +19,6 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/students/addstudents">Back</a></li>
-				<li><a href="/">log out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -31,14 +28,18 @@
 		<div id="form" >
 			<form:form action="/details/adddetails" method="post" modelAttribute="addcarddetails">
 				
-				<div>
-				<div>
+				
+					<div>
+						<form:input path="paymentId" class="form-control" type="hidden" id="paymentId"/>
+						 <form:errors path="paymentId" />
+					</div>	
+					<div>
 					<label for="userId">User Id</label>
 					<div>
 						<form:input path="userId" class="form-control" required="true"/>
 						 <form:errors path="userId" />
 					</div>	
-				<div>
+				</div>
 				<div>
 				<br><br>
 				<div>
@@ -109,7 +110,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-    document.getElementById('registrationNumber').value = Math.floor(Math.random() * 200);
+    document.getElementById('paymentId').value = Math.floor(Math.random() * 1000);
     
 </script>
 </body>

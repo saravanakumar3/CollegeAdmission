@@ -32,13 +32,10 @@
            <div id="form">
 			<form:form action="" method="post" modelAttribute="getstudent">
             <div>
-            <table>
-          <caption></caption>
-          <tr><th></th></tr>
+            <table> <caption></caption> <tr><th></th></tr>
             <tbody>
             <tr>
-                    <td><label for="userid">userId</label></td>
-                        <td><form:input path="userid" class="form-control" readonly="true"/></td>
+                        <td><form:input path="userid" class="form-control" type ="hidden"/></td>
                         <br>
                 </tr>
                 <tr>
@@ -91,7 +88,7 @@
          </div>
          <br>
          <div class="root">
-         <a href="/students/updatestudentdetails?id=${getstudent.userid}"><button>update</button></a>
+             <a href="/students/getidbystudent?id=${getstudent.userid}"><button>Status</button></a>
              <a href="/user/addform"><button>Back to</button></a>
             </div>
 </body>

@@ -18,10 +18,9 @@
 			<div class="logo">
 				<a>Madurai Government Arts College</a>
 			</div>
-			<ul>
-				<li><a href="/admin/checkadminlogin">Home</a></li>
-				<li><a href="/course/addcourse">Refresh</a></li>
-				<li><a href="/">log out</a></li>
+				<ul>
+				<li><button class="button1"
+        onclick="history.back()">Go Back</button></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -77,7 +76,7 @@
 						<form:input path="tuitionFee" class="form-control"
 						placeholder="TuitionFee"
 							title="TuitionFee can't be empty or 40000 rupees is required for this field" 
-						pattern="50000" required="true" />
+						pattern="40000" required="true" />
 							<form:errors path="tuitionFee" cssClass="text-success" />
 					</div>
 				</div>
@@ -85,9 +84,8 @@
 					<label for="totalSeats">TotalSeats </label>
 					<div>
 						<form:input path="totalSeats" class="form-control" 
-						placeholder="TotalSeats"
-							title="TotalSeats can't be empty"/>
-							<form:errors path="totalSeats" cssClass="text-success" />
+						placeholder="TotalSeats" 
+							title="TotalSeats can't be empty" required="true" />
 					</div>
 				</div>
 				<div class="alret">${message}</div>

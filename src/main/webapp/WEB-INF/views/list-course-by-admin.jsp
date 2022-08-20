@@ -9,9 +9,21 @@
 <title>List Course</title> 
 </head>
 <style type="text/css">
-<%@include file="/WEB-INF/css/list-course-byadmin.css"%>
+<%@include file="/WEB-INF/css/list-course.css"%>
 </style>
 <body>
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/admin/adminpage">Home</a></li>
+				
+				<li><a href="/">Log Out</a></li>
+			</ul>
+		</div>
+	</nav>
 <h1><a href="/course/addcourse">Add Course</a></h1>
 
 	<div id="table root">

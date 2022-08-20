@@ -105,7 +105,7 @@
 	<hr>
 	 <div class="root">
          <a href="/course/updatedetails?id=${getcourse.courseId}"><button>update</button></a>
-             <a href="/course/list"><button>Back to</button></a>
+             <a href="/admincourse/list"><button>Back to</button></a>
             </div>
 </body>
 </html>

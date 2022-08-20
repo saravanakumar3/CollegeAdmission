@@ -105,3 +105,15 @@ nav .menu {
 	text-align: center;
 	background-color: #B1BECD ;
 }
+.button1 {
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    margin: auto;
+    width: 100px;
+    display: block;
+    border-radius: 20px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3%}

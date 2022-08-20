@@ -55,15 +55,45 @@
    </strong></div></em>
 </div>
 <br>
+<hr>
  <strong><h1> About us</h1> </strong>
 <br>
+<div class ="style">
 <em> <strong><p> Our College was established in the year 1998. It is promoted and supported by Virudhunagar Hindu Nadars' Devasthanam, various Hindu Nadars' Mahamai Tharappus in Virudhunagar and other places and educational institutions of Virudhunagar.
 <br> The management of the institution consists of the elected members of various Mahamai Tharappus and ex-officio members of various educational institutions of Virudhunagar. The office bearers, the president, the vice-president, the secretary, the joint secretary and the treasurer - are elected by the managing board members.
 Our College is ideally located on the home land of Karmaveerar "Bharat Ratna" K. Kamaraj and our institution is one of the Virudhunagar's most recognisable landmark. Our Institution is growing with sustained progress due to the generous contributions from Virudhunagar Devasthanam, Various Mahamai Tharappus and Educational Institutions. Presently, Our College spans to 47.92 acres of land.</p>
- </strong></em>
-<h2 >CAMPUS TOUR</h2>
-<iframe width="100%" height="350" src="https://youtu.be/-eJc_LMw9H0">
-</iframe>
+ </strong></em></div>
+ <hr>
+<div class ="body">
+<div class="wrapper">
+  <h1>TESTIMONIAL</h1>
+  <div class="team">
+    <div class="team_member">
+      <div class="team_img">
+        <img  class = "imag1" src="https://s24193.pcdn.co/wp-content/uploads/2017/06/Entity-Katherine-Langford.png" alt="">
+      </div>
+      <h3>Nancy</h3>
+      <p class="role">Alumni</p>
+      <p>After graduating from college, I started my career as an associate in a software company. The technical trainings and support provided during my college days encouraged me to progress in an IT environment. Even after my college days, the placement cell of our college continued to help me for the transitions from companies for the further growth of my career. Currently, I am working as a software engineer at Digitalsoft Pvt. Ltd.</p>
+    </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img  class = "imag1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0vzabWjRBIVXCSWk7Vin5swwdrbOA-Oxu2g&usqp=CAU" alt="">
+      </div>
+      <h3>Jonas</h3>
+      <p class="role">alumni</p>
+      <p>I had a really great experience studying here. All the facilities available in our college are perfect for a student to grab knowledge, which is essential to improving oneself. I feel happy that I decided to join KCET. Also, I have learnt to be disciplined towards my studies and career. I might have had a map but my teachers were my compass</p></div>
+    <div class="team_member">
+      <div class="team_img">
+        <img class = "imag1" src="https://www.law.uchicago.edu/files/styles/extra_large/public/2018-03/theisen_tarra.jpg?itok=5iSSWAci" alt="Team_image">
+      </div>
+      <h3>Lydia</h3>
+      <p class="role">Alumni</p>
+      <p> The opportunities I had there, the things I got to do and the time I spent with my friends were the best. I am thankful to the Training, Development and Placement cell for providing a platform to enhance my skills and opportunity to showcase them.Also, I have learnt to be disciplined towards my studies and career. I might have had a map but my teachers were my compass</p>
+    </div>
+  </div>
+</div>	
+</div>
 <br>
 <hr>
 <h2>Admission Open Now</h2>

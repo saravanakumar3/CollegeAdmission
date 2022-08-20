@@ -1,5 +1,5 @@
 @charset "ISO-8859-1";
-baby {
+body {
 background-color:#EBF1F9;
 }
 table, th, td {
@@ -21,6 +21,7 @@ nav {
 	width: 100%;
 	padding: 10px 0;
 	z-index: 12;
+	border-radius: 15px;
 }
 nav .menu {
 	max-width: 1250px;
@@ -59,3 +60,15 @@ nav .menu {
 	background: #ADCF9A;
 	color: blue;
 }
+.button1 {
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    margin: auto;
+    width: 100px;
+    display: block;
+    border-radius: 20px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3%}

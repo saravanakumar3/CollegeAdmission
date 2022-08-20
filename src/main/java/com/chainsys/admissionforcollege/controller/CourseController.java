@@ -34,7 +34,7 @@ public class CourseController {
     @GetMapping("/deletecourse")
 	    public String deleteCourseDetails(@RequestParam("id") int id) {
 	    	courseService.deleteById(id);
-	        return "redirect:/course/list";
+	        return "redirect:/admincourse/list";
 	    }
 	    @GetMapping("/addcourse")
 	    public String showAddForm(Model model) {

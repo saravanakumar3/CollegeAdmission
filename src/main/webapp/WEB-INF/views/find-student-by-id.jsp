@@ -138,8 +138,6 @@
 	<br>
 	<hr>
 	 <div class="root">
-         <a href="/students/updatestudentdetails?id=${getstudent.userid}"><button>update</button></a>
-            <a href="/students/getidbystudent?id=${getstudent.userid}"><button>Status</button></a>
              <a href="/students/getstudentbyid?id=${getstudent.userid}"><button>Back to</button></a>
             </div>
 </html>

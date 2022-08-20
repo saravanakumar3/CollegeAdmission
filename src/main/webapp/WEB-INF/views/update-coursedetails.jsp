@@ -17,7 +17,8 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
-				<li><a href="/">Home</a></li>
+				<li><button class="button1"
+        onclick="history.back()">Go Back</button></a></li>
 			</ul>
 		</div>
 	</nav>

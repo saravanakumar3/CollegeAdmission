@@ -26,7 +26,7 @@
 			<ul>
 				<li><a href="/admin/adminpage">Home</a></li>
 				<li><a href="/students/list">Refresh</a></li>
-				<li><a href="/">log out</a></li>
+				<li><a href="/">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -34,6 +34,7 @@
  <h1><a href="/admin/addstudents">Add Student</a></h1>
 	<div id="table root">
 		<table  class="table table-info table-striped-columns table-hover" >
+		<caption></caption>
 			<thead >
 				<tr >
 					<th>FullName</th>
@@ -49,7 +50,6 @@
 					<th>Email</th>
                      <th>Edit</th>
                    <th>Deleted</th>
-                    <th>Views</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -68,7 +68,6 @@
 						<td>${Student.email}</td>
 						<td><a href="/students/updatestudentdetails?id=${Student.userid}">Edit</a></td>
                         <td><a href="/students/deletestudent?id=${Student.userid}">Delete</a>
-                        <td><a href="/students/getidbystudent?id=${Student.userid}">Views</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

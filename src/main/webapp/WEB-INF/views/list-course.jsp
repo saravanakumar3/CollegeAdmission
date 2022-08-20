@@ -22,8 +22,8 @@
 			</div>
 			<ul>
 				<li><a href="/admin/adminpage">Home</a></li>
-				<li><a href="/course/list">Refresh</a></li>
-				<li><a href="/">log out</a></li>
+				
+				<li><a href="/">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
