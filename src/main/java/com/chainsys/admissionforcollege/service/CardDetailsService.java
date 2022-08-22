@@ -13,8 +13,7 @@ public class CardDetailsService {
 	        return cardRepositor.findById(id);
 	    }
 		public List<CardDetails> getCardDetails() {
-	        List<CardDetails> cardlist = cardRepositor.findAll();
-	        return cardlist;
+	        return cardRepositor.findAll();
 	    }
 	    public CardDetails save(CardDetails cardDetails) {
 	        return cardRepositor.save(cardDetails);

@@ -1,4 +1,4 @@
-# Title : WAREHOUSE MANAGEMENT SYSTEM
+# Title : COLLEGE ADMISSION SYSTEM
 
 
 # Description
@@ -31,7 +31,7 @@ The College Admission System ensures that every detail related to the college ad
 2. DataBase Relational data Handling. many to many relation.
 3. Exception Handling with try and catch.
 4. Form validation in frontend level.
-5. Form validation in JavaScript level.
+5. Form validation in POJO level.
 6. Form null validation in Oracle database level. 
 
 # Frontend 

@@ -20,10 +20,6 @@ public class CourseService {
     public Course save(Course course) {
         return courseRepository.save(course);
     }
-	/*
-	 * public List<Course> getCourse() { return courseRepository.findAll(); }
-	 */
-
 	 public List<Course> getCourseByAdmin() {
 return courseRepository.findAll(); }
 	
