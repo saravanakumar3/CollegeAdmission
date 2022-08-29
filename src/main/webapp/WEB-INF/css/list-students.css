@@ -7,9 +7,11 @@ table, th, td {
 	padding: 15px;
 	text-align: left;
 }
-th, td {
+ td {
 	border-color: #96D4D4;
 }
+th{background-color: #F3E807;}
+
 tr:hover {
 	background-color: #D6EEEE;
 }

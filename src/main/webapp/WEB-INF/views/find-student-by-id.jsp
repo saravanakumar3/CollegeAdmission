@@ -18,8 +18,7 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
-				<li><a href="/admin/adminpage">Home</a></li>
-				<li><a href="/">Login out</a></li>
+				<li><a href="/">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -116,7 +115,7 @@
 			<thead>
 				<tr>
 					<th>CourseId</th>
-					<th>UserId</th>
+					
 					<th>RegistrationNumber</th>
 					<th>Payment Status</th>
 				</tr>
@@ -125,7 +124,6 @@
 				<c:forEach var="StudentCourseDetails" items="${studentcourselist}">
 					<tr>
 						<td>${StudentCourseDetails.courseId}</td>
-						<td>${StudentCourseDetails.userid}</td>
 						<td>${StudentCourseDetails.registrationNumber}</td>
 						<td>${StudentCourseDetails.paymentstatus}</td>
 					</tr>

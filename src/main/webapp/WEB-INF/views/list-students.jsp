@@ -24,8 +24,7 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
-				<li><a href="/admin/adminpage">Home</a></li>
-				<li><a href="/students/list">Refresh</a></li>
+				<li><a href="/admin/adminpage"> Go Back </a></li>
 				<li><a href="/">Log Out</a></li>
 			</ul>
 		</div>

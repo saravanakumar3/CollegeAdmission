@@ -19,7 +19,7 @@ label{
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
-   color:#91EEE4;
+   color:rgb(0, 0, 255);
 }
 .box {
 	width: 85%;
@@ -38,7 +38,7 @@ label{
 	border: none;
 	border-radius: 9px;
 	padding-left: 8px;
-	 color:#ECC4F3;
+	 color:rgb(128, 0, 0);
 }
 h4,a{
 color:#91EEE4;

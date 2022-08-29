@@ -6,23 +6,39 @@
 <html lang="En">
 <head>
 <meta charset="ISO-8859-1">
-<title>Course List</title>
+<title>Payment List</title>
 <style type="text/css">
 <%@include file="/WEB-INF/css/list-card.css"%>
 </style>
 </head>
 <body>
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>Madurai Government Arts College</a>
+			</div>
+			<ul>
+				<li><a href="/admin/adminpage">Home</a></li>
+				
+				<li><a href="/">Log Out</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div id="table root">
+	<br>
+	<br>
+	<br>
 		<table>
 			<caption></caption>
 			<thead>
 			<tr>
 			<th>UserId </th>
-				<th>paymentId </th>
-				<th>courseName</th>
+				<th>PaymentId </th>
+				<th>CourseName</th>
 					<th>Amount</th>
 					<th>PaymentDate</th>
-					<th>cardholderName</th> 
+					<th>CardholderName</th> 
+					<th>Update Status</th> 
 				</tr>
 			</thead>
 			<tbody>
@@ -34,6 +50,7 @@
 						<td>${CardDetails.amount}</td>
 						<td>${CardDetails.paymentDate}</td>
 						<td>${CardDetails.cardholderName}</td>
+					    <td><a  class ="botton" href="/studentcourse/addform?id=${CardDetails.userId}&&id1=${CardDetails.courseName}" >Update Status</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

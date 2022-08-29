@@ -51,6 +51,7 @@ public class CourseController {
 	    		}
 	    	else {
 	    	    try{courseService.save(course);
+	    	    
 		        return "redirect:/course/courselist"; }
 		        	catch(Exception er)
 		    		{model.addAttribute("message", "this Course is already exist");

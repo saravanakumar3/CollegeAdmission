@@ -22,7 +22,7 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
-				<li><a href="/admin/login">Refresh</a></li>
+				
 				<li><a href="/">Login out</a></li>
 			</ul>
 		</div>

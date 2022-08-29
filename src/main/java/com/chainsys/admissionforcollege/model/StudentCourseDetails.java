@@ -29,6 +29,8 @@ public class StudentCourseDetails {
 	@NotBlank( message ="This field can not be Empty")
 	@Column(name ="paymentstatus")
      private String paymentstatus ;
+	@Column(name ="course_name")
+    private String courseName;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="userid",nullable=false, insertable=false, updatable=false)
 	private Student student;
@@ -70,6 +72,12 @@ public class StudentCourseDetails {
 	}
 	public void setPaymentstatus(String paymentstatus) {
 		this.paymentstatus = paymentstatus;
+	}
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
 
 }

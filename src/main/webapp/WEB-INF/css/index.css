@@ -209,3 +209,125 @@ h1,h2{
 .style{
 	  font-family: 'Josefin Sans', sans-serif;
 }
+.column3 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  border-radius:20%;
+  height: 20%; 
+}
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.top{
+ margin-top:20%
+ 
+}
+.top1{
+ margin-top:15%
+}
+.slider{
+ margin-left:15%
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+ 
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #F9351B;
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 5px;
+    background:#E1F8D4;
+    
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+.left{
+margin-left:15%;
+ border-radius: 50%;
+}
+.slider1{
+margin-left:17%;
+}
+.slider2{
+margin-left:13%;
+}
+.map{
+	width:95%;
+	height:400px;
+	margin-left:1%;
+}
+.box{
+	width: 95%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	background-color:#F4F7BC;
+}

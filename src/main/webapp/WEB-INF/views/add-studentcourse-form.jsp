@@ -11,7 +11,6 @@
 <style type="text/css">
 <%@include file="/WEB-INF/css/add-studentcourse-form.css"%>
 </style>
-
 <body> 
 	<nav>
 		<div class="menu">
@@ -20,15 +19,10 @@
 			</div>
 			<ul>
 				<li><a href="/admin/adminpage">Home</a></li>
-				<li><a href="/studentcourse/addform">Refresh</a></li>
 				<li><a href="/">log out</a></li>
 			</ul>
 		</div>
 	</nav>
-	<br>
-	<br>
- <iframe class="iframe" src="/details/list" height="250px" width="100%" title="Iframe Example" ></iframe>  
-	<br>
 	<br>
 	<div  class="root">
 	<br>
@@ -37,22 +31,16 @@
 			<form:form action="addstudentcoursedetails" method="post" modelAttribute="addstudentCourse">
 				<h2  style ="color:green"> Student Status update  form</h2>
 				<div>
-					<label for="courseId" class="form-label">CourseId</label>
+					<label for="courseId"  class="form-label">CourseId</label>
 					<div>
-						<form:select path="courseId" class="form-control" required="true">
-							<form:option value="1">1</form:option>
-							<form:option value=" 2">2</form:option>
-							<form:option value="3">3</form:option>
-							<form:option value="4">4</form:option>	
-						</form:select>
+						<form:input path="courseId" id ="courseId" class="form-control" onblur="setId();"/>
 					</div>
 				</div>
 				<br>
 				<div>
 					<label for="userid" class="form-label">UserId</label></div>
 					<div>
-						<form:input path="userid" class="form-control" placeholder="CourseId"
-							title="userid can't be empty" required="true"/>
+						<form:input path="userid" class="form-control" />
 					</div>
 				
 					<form:errors path="userid" cssClass="text-success" />
@@ -61,21 +49,25 @@
 				 <div>
 					<label for="registrationNumber" >RegistrationNumber</label>
 					<div>
-						<form:input path="registrationNumber" class="form-control"
-							title="RegistrationNumber can't be empty" required="true" id="registrationNumber"/>
-					<form:errors path="registrationNumber" cssClass="text-success" />
+						<form:input path="registrationNumber" class="form-control" />
 					</div>
-				</div> 
+				</div>
+					<label for="courseName" >CourseName</label>
+					<div>
+						<form:input path="courseName" id="courseName" class="form-control" onblur="setId();"/>
+					</div>
+				</div>
 				<br><div>
 					<label for="paymentstatus">Payment Status</label>
 					<div>
 						<form:input path="paymentstatus" class="form-control" placeholder="Payment Status"
-							title="Paymentstatus can't be empty" required="true"  />
+							 required="true"  />
 					</div>
 				</div>
-				<form:errors path="paymentstatus" cssClass="text-success" />
+				
 				<br>
 				<div>
+				
 				<br>
 				<form:button class="click-button">Update</form:button></a>
 				</div>
@@ -85,6 +77,22 @@
 	</div> 
 	<script type="text/javascript">
     document.getElementById('registrationNumber').value = Math.floor(Math.random() * 1000);
+   function setId(){
+   var name = document.getElementById('courseName').value;
+   var id;
+   if(name == "Fashion Designer"){
+	   id=2;
+   }else if (name == "Lawyer"){
+	   id=1;
+   }
+   else if (name == "Hotel Manager"){
+	   id=3;
+	  
+   } else if (name == " Journalism"){
+	   id=4;
+   }
+   document.getElementById('courseId').value = id; 	
+   }
 </script>
 </body>
 </html>

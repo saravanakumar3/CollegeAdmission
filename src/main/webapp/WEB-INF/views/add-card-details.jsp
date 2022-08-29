@@ -19,6 +19,7 @@
 				<a>Madurai Government Arts College</a>
 			</div>
 			<ul>
+			<li><a href="/">Home</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -36,7 +37,7 @@
 					<div>
 					<label for="userId">User Id</label>
 					<div>
-						<form:input path="userId" class="form-control" required="true"/>
+						<form:input path="userId" class="form-control" type="hidden" />
 						 <form:errors path="userId" />
 					</div>	
 				</div>
@@ -66,8 +67,8 @@
 				<div>
 					<label for="paymentDate">PaymentDate</label>
 					<div>
-						<form:input path="paymentDate" class="form-control" type="date"  required="true"  />
-					   <form:errors path="paymentDate" cssClass="text-success"/>
+						<form:input path="paymentDate"  class="form-control"   readonly="true"/>
+					   
 					</div>
 				</div>
 				<br>
@@ -109,9 +110,6 @@
 			</form:form>
 		</div>
 	</div>
-	<script type="text/javascript">
-    document.getElementById('paymentId').value = Math.floor(Math.random() * 1000);
-    
-</script>
+
 </body>
 </html>

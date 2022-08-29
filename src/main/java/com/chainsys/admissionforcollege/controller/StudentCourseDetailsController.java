@@ -28,17 +28,16 @@ public class StudentCourseDetailsController {
 	    		return "list-studentcoursedetails";
 	    	}
 	    	@GetMapping("/addform")
-	    	public String showAddStudentCourseDetailse(Model model) {
+	    	public String showAddStudentCourseDetailse(@RequestParam("id") int id,@RequestParam("id1") String id1 ,Model model) {
 	    		StudentCourseDetails studentCourseDetails = new StudentCourseDetails();
+	    		studentCourseDetails.setUserid(id);
+	    		studentCourseDetails.setCourseName(id1);
 	    		model.addAttribute("addstudentCourse", studentCourseDetails);
 	    		return "add-studentcourse-form";
 	    	}
 	    	@PostMapping("/addstudentcoursedetails")
-	    	public String addNewStudentCourseDetails(@Valid@ModelAttribute("addstudentCourse") StudentCourseDetails studentCourseDetails,
-	    		    BindingResult bindingResult,Model model){
-	        	if (bindingResult.hasErrors()) {
-	        		return "add-studentcourse-form";
-	        	}else
+	    	public String addNewStudentCourseDetails(@ModelAttribute("addstudentCourse") StudentCourseDetails studentCourseDetails,Model model){
+	       
 	        		
 	        		studentCourseDetailsService.save(studentCourseDetails);
 	    		return STUDENTCOURSE;

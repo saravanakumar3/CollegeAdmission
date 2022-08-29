@@ -14,24 +14,24 @@
 <h1>Madurai Government Arts College</h1>
 <div class="navbar">
  <a href="/">Log Out</a>
-   <a href="/studentcourse/addform">Payment Update</a>
+
   <div class="dropdown">
     <button class="dropbtn">List  
-      <i class="fa fa-caret-down"></i> <!-- Compliant icon fonts usage -->
+      <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-content">
       <a href="/students/list">Students list</a>
-      <a href="/admincourse/list">Course list</a>
+      <a href="/details/list">Playment List</a>
       <a href="/studentcourse/list">Student Course Detail list</a>
     </div>
   </div> 
   <div class="dropdown">
     <button class="dropbtn">Admin Feature  
-      <i class="fa fa-caret-down"></i> <!-- Compliant icon fonts usage -->
+      <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-content">
      <a href="/admin/addstudents">Add Student</a>
-      <a href="/admincourse/addcourse">Add Course</a>
+     
     </div>
   </div> 
 </div>

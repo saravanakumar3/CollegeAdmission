@@ -37,6 +37,7 @@
 					<th>UserId</th>
 					<th>RegistrationNumber</th>
 					<th>PaymentStatus</th>
+					<th>CourseName</th>
 					<th>Deleted</th>
 				</tr>
 			</thead>
@@ -44,9 +45,10 @@
 				<c:forEach var="StudentCourseDetails" items= "${alladdstudentCourseDetails}">
 					<tr>
 						<td>${StudentCourseDetails.courseId}</td>
-						<td>${StudentCourseDetails.userid}</td>
-						<td>${StudentCourseDetails.registrationNumber}</td>
+						<td>${StudentCourseDetails.userid }</td>
+						<td>${StudentCourseDetails.registrationNumber }</td>
 						<td>${StudentCourseDetails.paymentstatus}</td>
+						<td>${StudentCourseDetails.courseName}</td>
 						 <td><a href="/studentcourse/deletestudentcoursedetails?id=${StudentCourseDetails.courseId}&&cid=${StudentCourseDetails.userid}"}>Delete</a></td>
 					</tr>
 
